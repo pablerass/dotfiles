@@ -14,5 +14,3 @@ source $HOME/dotfiles/functions
 source $HOME/dotfiles/z.sh
 
 export LANG=es_ES.UTF-8
-
-setxkbmap es
