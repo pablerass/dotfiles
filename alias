@@ -6,13 +6,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ll='ls -atrhlF'
-alias log='tail -f /var/log/nginx/error.log'
 alias p='python'
 alias ut='python -m unittest'
-alias api='cd /home/ivan/workspace/blibb-api'
-alias web=' cd /home/ivan/workspace/blibb-web'
-alias depweb='cd /home/ivan/workspace/deploy-web'
-alias depap='cd /home/ivan/wokspace/deploy-api'
 alias ..='cd ..'
 
 # Git
@@ -89,8 +84,6 @@ alias fn='find . -name'
 alias hi='history | tail -20'
 alias s='sudo '
 
-alias rake="noglob rake"
-
 alias lolcat='adb logcat | coloredlogcat.py'
 
 alias reload!='. ~/.zshrc'
@@ -120,12 +113,3 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 	 
 ## Get server cpu info ##
 alias cpuinfo='lscpu'
-
-#API
-function jsonCurl(){
-	if [ $1 ];then
-		curl $1 | pjson
-	else
-		echo "No url present"
-	fi
-}
