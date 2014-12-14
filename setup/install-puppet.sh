@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Add repositories
-wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb
-sudo dpkg -i puppetlabs-release-precise.deb
-rm puppetlabs-release-precise.deb
+wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
+sudo dpkg -i puppetlabs-release-trusty.deb
+rm puppetlabs-release-trusty.deb
 
 # Update repos and packages
 sudo apt-get update -y
