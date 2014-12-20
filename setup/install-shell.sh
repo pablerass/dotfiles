@@ -9,6 +9,8 @@ sudo apt-get install git vim zsh htop curl -y
 # Install oh-my-zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
+# Add autocompletion plugins
+git clone https://github.com/jplitza/zsh-virsh-autocomplete.git ~/.oh-my-zsh/custom/plugins/virsh
 # Remove current config files
 cd ~
 
