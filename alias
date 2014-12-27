@@ -5,7 +5,7 @@ alias advpn='sudo openvpn --script-security 2 --config ~/.ssh/client.ovpn  --aut
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ll='ls -atrhlF'
+alias ll='ls -ahlF'
 alias p='python'
 alias ut='python -m unittest'
 alias ..='cd ..'
