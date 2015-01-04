@@ -30,7 +30,6 @@ then
 fi
 
 # Set new config files
-ln -s dotfiles/bin bin
 ln -s dotfiles/gitconfig .gitconfig
 ln -s dotfiles/vimrc .vimrc
 ln -s dotfiles/zshrc .zshrc
