@@ -6,4 +6,4 @@ My dotfiles.
 ```sh
 cd $HOME
 git clone https://github.com/pablerass/dotfiles.git
-dotfiles/install.sh
+dotfiles/setup/install.sh
