@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Eclipse
+Comment=Eclipse IDE installed on /opt
+Icon=/opt/eclipse/icon.xpm
+Exec=/opt/eclipse/eclipse
+Terminal=False
+Type=Application
+Categories=Development;IDE;Java;

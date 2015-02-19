@@ -24,10 +24,16 @@ then
 	mv ~/.vimrc ~/.vimrc.bak
 fi
 
+if [ -f ~/bin ];
+then
+	mv ~/bin ~/.bin.bak
+fi
+
 # Set new config files
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/bin ~/bin
 
 # Configure vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim

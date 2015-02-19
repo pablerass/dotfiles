@@ -30,6 +30,13 @@ else
 	rm ~/.vimrc -f
 fi
 
+if [ -f ~/.bin.bak ];
+then
+	mv ~/.bin.bak ~/bin -f
+else
+	rm ~/bin -f
+fi
+
 # Removing vim configuration
 rm ~/.vim -rf
 
