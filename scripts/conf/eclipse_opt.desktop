@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Eclipse
 Comment=Eclipse IDE installed on /opt
-Icon=/opt/eclipse/icon.xpm
+TryExec=/opt/eclipse/eclipse
 Exec=/opt/eclipse/eclipse
+Icon=/opt/eclipse/icon.xpm
+Categories=Development;IDE;Java;
 Terminal=False
 Type=Application
-Categories=Development;IDE;Java;
+StartupNotify=true
