@@ -8,3 +8,6 @@ sudo apt-get update -y
 
 # Install packages
 sudo apt-get install caffeine -y
+
+# Configure startup indicator
+sed -i 's/\/usr\/bin\/caffeine/\/usr\/bin\/caffeine-indicator/' ~/.config/autostart/caffeine.desktop
