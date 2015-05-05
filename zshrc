@@ -14,3 +14,8 @@ source $HOME/dotfiles/functions
 source $HOME/dotfiles/z.sh
 
 export LANG=es_ES.UTF-8
+
+# Configure installed apps
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+	source /usr/local/bin/virtualenvwrapper.sh
+fi

@@ -49,10 +49,13 @@ set exrc
 set secure
 " Enable line numbers
 set number
+" Disable line wrapping
+set nowrap
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
+hi CursorLine cterm=NONE ctermbg=darkgrey
 " Make tabs as wide as two spaces
 set tabstop=4
 " Show “invisible” characters

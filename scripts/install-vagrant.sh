@@ -4,4 +4,4 @@
 sudo apt-get update -y
 
 # Install additional packages
-sudo apt-get install vagrant virtualbox -y
+sudo apt-get install vagrant -y
