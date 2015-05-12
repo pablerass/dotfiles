@@ -1,13 +1,12 @@
 #!/bin/bash
 
+DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+
 # Install packages
 sudo apt-get install git vim zsh htop curl -y
 
 # Install oh-my-zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-
-# Add autocompletion plugins
-git clone https://github.com/jplitza/zsh-virsh-autocomplete.git ~/.oh-my-zsh/custom/plugins/virsh
 
 # Remove current config files
 if [ -f ~/.gitconfig ];
@@ -42,9 +41,8 @@ mkdir -p ~/.vim/swaps
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/undos
 
-# Add vim plugins
-git clone https://github.com/bling/vim-airline.git ~/.vim/bundle/vim-airline
-git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+# Add plugin repos
+$DIR/repos.sh
 
 # Set default shell
 sudo chsh -s $(which zsh) $USER
