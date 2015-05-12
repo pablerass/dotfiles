@@ -8,6 +8,7 @@ wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
 # Add autocompletion plugins
 git clone https://github.com/jplitza/zsh-virsh-autocomplete.git ~/.oh-my-zsh/custom/plugins/virsh
+
 # Remove current config files
 if [ -f ~/.gitconfig ];
 then
@@ -40,6 +41,10 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 mkdir -p ~/.vim/swaps
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/undos
+
+# Add vim plugins
+git clone https://github.com/bling/vim-airline.git ~/.vim/bundle/vim-airline
+git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 
 # Set default shell
 sudo chsh -s $(which zsh) $USER

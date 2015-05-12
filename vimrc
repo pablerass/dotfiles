@@ -113,5 +113,10 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
+" vim-airline configuration
+let g:airline_theme = 'powerlineish'
+let g:airline_powerline_fonts = 1
+set t_Co=256
+
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
