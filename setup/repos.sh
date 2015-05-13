@@ -3,10 +3,10 @@
 GITHUB_URL=https://github.com
 
 # oh-my-zsh plugins
-LOCAL_DIR=~/.oh-my-zsh/custom/plugins/virsh/.git
+LOCAL_DIR=~/.oh-my-zsh/custom/plugins/virsh
 if [ -d $LOCAL_DIR ]
 then
-	git -C $LOCAL_DIR pull origin master 
+	git -C $LOCAL_DIR pull origin master
 else
 	git clone $GITHUB_URL/jplitza/zsh-virsh-autocomplete.git $LOCAL_DIR
 fi
@@ -15,7 +15,7 @@ fi
 LOCAL_DIR=~/.vim/bundle/vim-airline
 if [ -d $LOCAL_DIR ]
 then
-	git -C $LOCAL_DIR pull origin master 
+	git -C $LOCAL_DIR pull origin master
 else
 	git clone $GITHUB_URL/bling/vim-airline.git $LOCAL_DIR
 fi
@@ -23,7 +23,7 @@ fi
 LOCAL_DIR=~/.vim/bundle/vim-fugitive
 if [ -d $LOCAL_DIR ]
 then
-	git -C $LOCAL_DIR pull origin master 
+	git -C $LOCAL_DIR pull origin master
 else
 	git clone $GITHUB_URL/tpope/vim-fugitive.git $LOCAL_DIR
 fi
