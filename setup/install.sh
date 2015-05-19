@@ -19,6 +19,11 @@ then
 	mv ~/.zshrc ~/.zshrc.bak
 fi
 
+if [ -f ~/.tmux.conf ];
+then
+	mv ~/.tmux.conf ~/.tmux.conf.bak
+fi
+
 if [ -f ~/.vimrc ];
 then
 	mv ~/.vimrc ~/.vimrc.bak
@@ -31,8 +36,9 @@ fi
 
 # Set new config files
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/bin ~/bin
 
 # Configure vim

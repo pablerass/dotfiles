@@ -16,11 +16,18 @@ else
 	rm ~/.gitconfig -f
 fi
 
-if [ -f .~/zshrc.bak ];
+if [ -f ~/.zshrc.bak ];
 then
 	mv ~/.zshrc.bak ~/.zshrc -f
 else
 	rm ~/.zshrc -f
+fi
+
+if [ -f ~/.tmux.conf.bak ];
+then
+	mv ~/.tmux.conf.bak ~/.tmux.conf -f
+else
+	rm ~/.tmux.conf -f
 fi
 
 if [ -f ~/.vimrc.bak ];
