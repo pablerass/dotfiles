@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Add repositories
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7F0CEB10
-sudo sh -c "deb http://download.virtualbox.org/virtualbox/debian trusty contrib > /etc/apt/sources.list.d/virtualbox.list"
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo sh -c "echo deb http://download.virtualbox.org/virtualbox/debian trusty contrib > /etc/apt/sources.list.d/virtualbox.list"
 
 # Update repos and packages
 sudo apt-get update -y

@@ -2,7 +2,7 @@ execute pathogen#infect()
 filetype plugin indent on
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " F2 to enable/disable NerdTree
@@ -49,10 +49,13 @@ set exrc
 set secure
 " Enable line numbers
 set number
+" Disable line wrapping
+set nowrap
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
+hi CursorLine cterm=NONE ctermbg=darkgrey
 " Make tabs as wide as two spaces
 set tabstop=4
 " Show “invisible” characters
@@ -109,6 +112,11 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" vim-airline configuration
+let g:airline_theme = 'powerlineish'
+let g:airline_powerline_fonts = 1
+set t_Co=256
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/

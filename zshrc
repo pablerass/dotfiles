@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
-plugins=(git vagrant docker systemadmin pip python pyenv virsh)
+plugins=(git tmux vagrant docker systemadmin pip python pyenv mvn ant virsh aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,3 +14,8 @@ source $HOME/dotfiles/functions
 source $HOME/dotfiles/z.sh
 
 export LANG=es_ES.UTF-8
+
+# Configure installed apps
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+	source /usr/local/bin/virtualenvwrapper.sh
+fi

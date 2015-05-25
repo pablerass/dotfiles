@@ -5,6 +5,9 @@ editor = vim
 name = Pablo Muñoz
 email = pablerass@gmail.com
 
+[include]
+path = ~/dotfiles/gitconfig.local
+
 [color]
 ui = auto
 branch = auto
@@ -34,6 +37,8 @@ st = status
 wtf = !git-wtf
 x = !gitx
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+unstage = reset HEAD --
+last = log -1 HEAD
 
 [merge]
 tool = vimdiff

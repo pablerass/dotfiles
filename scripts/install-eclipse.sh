@@ -6,7 +6,7 @@ script_path=`dirname $script`
 
 # Specify eclipse version
 ver=luna
-rel=SR1a
+rel=SR2
 package=java
 file=eclipse-$package-$ver-$rel-linux-gtk-x86_64.tar.gz
 
@@ -21,4 +21,5 @@ sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
 rm $file
 
 # Create eclipse launch
-echo sudo cp $script_path/conf/eclipse_opt.desktop /usr/share/applications/eclipse_opt.desktop
+sudo cp $script_path/conf/eclipse_opt.desktop /usr/share/applications/eclipse_opt.desktop
+
