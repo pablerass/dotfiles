@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Specify kernel version
+# Specify version
 ver=3.18.7
 dist_ver=$ver-vivid
 full_ver=$ver-031807
@@ -16,4 +16,4 @@ wget kernel.ubuntu.com/~kernel-ppa/mainline/v$dist_ver/linux-image-$full_ver-gen
 sudo dpkg -i linux-headers-$full_ver*.deb linux-image-$full_ver*.deb
 
 # Delete kernel packages
-rm linux-*-$full_ver*.deb
+rm -f linux-*-$full_ver*.deb
