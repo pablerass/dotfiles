@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
-plugins=(git tmux vagrant docker systemadmin pip python pyenv mvn ant virsh aws)
+plugins=(git tig tmux vagrant docker systemadmin pip python pyenv mvn ant virsh virtualbox aws)
 
 source $ZSH/oh-my-zsh.sh
 
