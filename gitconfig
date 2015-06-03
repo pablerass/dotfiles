@@ -42,6 +42,7 @@ last = log -1 HEAD
 
 [merge]
 tool = vimdiff
+conflictstype = diff3
 
 [push]
 default = simple
