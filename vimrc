@@ -5,6 +5,13 @@ autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Mark overlength with a linesize of 120
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+" Auto text wrapping
+autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
+
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
 
@@ -117,6 +124,3 @@ endif
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
 set t_Co=256
-
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
