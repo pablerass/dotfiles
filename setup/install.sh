@@ -46,6 +46,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 mkdir -p ~/.vim/swaps
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/undos
+mkdir -p ~/.vim/spell
 
 # Add plugin repos
 $DIR/repos.sh

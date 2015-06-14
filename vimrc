@@ -2,8 +2,9 @@ execute pathogen#infect()
 filetype plugin indent on
 
 autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Open NERDTree at startup
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Mark overlength with a linesize of 120
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -111,6 +112,11 @@ endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" Enable spell in different languages
+noremap <leader>CS :setlocal spell spelllang=es_es<CR>
+noremap <leader>CE :setlocal spell spelllang=en_us<CR>
+noremap <leader>CF :setlocal spell spelllang=fr_fr<CR>
+noremap <leader>NC :setlocal nospell<CR>
 
 " Automatic commands
 if has("autocmd")
