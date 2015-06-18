@@ -117,6 +117,7 @@ noremap <leader>CS :setlocal spell spelllang=es_es<CR>
 noremap <leader>CE :setlocal spell spelllang=en_us<CR>
 noremap <leader>CF :setlocal spell spelllang=fr_fr<CR>
 noremap <leader>NC :setlocal nospell<CR>
+autocmd BufRead,BufNewFile *.md,*.rst setlocal spell spelllang=en_us
 
 " Automatic commands
 if has("autocmd")
