@@ -10,9 +10,6 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-" Auto text wrapping
-autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
-
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
 
@@ -119,15 +116,22 @@ noremap <leader>CF :setlocal spell spelllang=fr_fr<CR>
 noremap <leader>NC :setlocal nospell<CR>
 autocmd BufRead,BufNewFile *.md,*.rst setlocal spell spelllang=en_us
 
-" Automatic commands
-if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-endif
-
 " vim-airline configuration
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
 set t_Co=256
+
+" Automatic commands
+" Enable file type detection
+filetype on
+" Treat .json files as .js
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+" Auto text wrapping
+autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
+" Disable automatic indent
+autocmd BufRead,BufNewFile *.yml,*.py setlocal noautoindent nocindent nosmartindent indentexpr=
+" Set tab space to 2
+autocmd BufRead,BufNewFile *.yml setlocal tabstop=2
+" Force space instead of tabs
+autocmd BufRead,BufNewFile *.yml,*.py setlocal expandtab
