@@ -133,4 +133,4 @@ autocmd BufRead,BufNewFile *.yml,*.py setlocal noautoindent nocindent nosmartind
 " Set tab space to 2
 autocmd BufRead,BufNewFile *.yml setlocal tabstop=2
 " Force space instead of tabs
-autocmd BufRead,BufNewFile *.yml,*.py setlocal expandtab
+autocmd BufRead,BufNewFile *.yml,*.rst,*.md,*.py setlocal expandtab

@@ -7,7 +7,7 @@ plugins=(git tig tmux vagrant docker systemadmin pip python pyenv npm mvn ant vi
 source $ZSH/oh-my-zsh.sh
 
 # Customize
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:
+export PATH=$PATH:$HOME/bin:$HOME/bin/local
 
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/functions
