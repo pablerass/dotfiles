@@ -9,3 +9,7 @@ sudo apt-get update -y
 
 # Install packages
 sudo apt-get install mongodb-org -y
+
+# Install additional tools
+sudo apt-get install python-matplotlib
+sudo -H pip install mtools
