@@ -15,6 +15,7 @@ wget http://download.eclipse.org/technology/epp/downloads/release/$ver/$rel/$fil
 
 # Install eclipse
 tar -zxvf $file && sudo mv eclipse /opt
+sudo chown root:root /opt/eclipse
 sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
 
 # Delete eclipse
@@ -22,4 +23,3 @@ rm $file
 
 # Create eclipse launch
 sudo cp $script_path/conf/eclipse_opt.desktop /usr/share/applications/eclipse_opt.desktop
-

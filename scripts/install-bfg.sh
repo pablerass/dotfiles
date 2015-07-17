@@ -16,12 +16,15 @@ cat <<'EOF' > $exe
 java -jar /opt/bgf/bgf.jar $@
 EOF
 
-sudo chmod a+x $exe
+sudo chmod a+r $jar
+sudo chmod a+rx $exe
 
 # Move files
 sudo mkdir $dir
 
-sudo mv $exe $dir/$exe
+sudo mv $exe $dir
 sudo mv $jar $dir
+
+sudo chown root:root -R $dir
 
 sudo ln -s /opt/bgf/bgf /usr/local/bin/bgf
