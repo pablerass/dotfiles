@@ -1,6 +1,11 @@
 #!/bin/bash
 
-for KEY_FILE in $HOME/.ssh/id_*
+SSH_DIR=$HOME/.ssh
+OWN_KEY=$SSH_DIR/id_rsa.$USER
+
+for KEY_FILE in $SSH_DIR/id_*
 do
-	ssh-add $KEY_FILE
+	if [ $KEY_FILE != $OWN_KEY ]; then
+		ssh-add $KEY_FILE
+	fi
 done
