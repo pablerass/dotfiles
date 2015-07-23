@@ -5,9 +5,9 @@ script=$(readlink -f $0)
 script_path=`dirname $script`
 
 # Specify eclipse version
-ver=luna
-rel=SR2
-package=java
+ver=mars
+rel=R
+package=jee
 file=eclipse-$package-$ver-$rel-linux-gtk-x86_64.tar.gz
 
 # Download eclipse
@@ -16,6 +16,7 @@ wget http://download.eclipse.org/technology/epp/downloads/release/$ver/$rel/$fil
 # Install eclipse
 tar -zxvf $file && sudo mv eclipse /opt
 sudo chown root:root /opt/eclipse
+sudo chmod -R a+rX /opt/eclipse
 sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
 
 # Delete eclipse
