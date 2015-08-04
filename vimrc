@@ -130,8 +130,8 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Auto text wrapping
 autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
 " Disable automatic indent
-autocmd BufRead,BufNewFile *.yml,*.py setlocal noautoindent nocindent nosmartindent indentexpr=
+autocmd BufRead,BufNewFile *.yml,*.py,*.html setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
 autocmd BufRead,BufNewFile *.yml setlocal tabstop=2
 " Force space instead of tabs
-autocmd BufRead,BufNewFile *.yml,*.rst,*.md,*.py setlocal expandtab
+autocmd BufRead,BufNewFile *.yml,*.rst,*.md,*.py,*.html setlocal expandtab
