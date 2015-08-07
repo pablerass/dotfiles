@@ -126,6 +126,8 @@ set t_Co=256
 filetype on
 " Treat .json files as .js
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+" Treat .md as markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 " Auto text wrapping
 autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
