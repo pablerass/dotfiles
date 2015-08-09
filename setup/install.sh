@@ -3,7 +3,7 @@
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 # Install packages
-sudo apt-get install git tig vim zsh htop curl -y
+sudo apt-get install -y git vim-gui-common tmux tig vim zsh htop curl
 
 # Install oh-my-zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh

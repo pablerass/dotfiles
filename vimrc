@@ -13,6 +13,7 @@ match OverLength /\%81v.\+/
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
 
+" Common C-c C-v functionality with system buffer
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
