@@ -30,13 +30,12 @@ untracked = cyan
 [alias]
 aa = add --all
 br = branch
-ci = commit -a
+ca = commit -a
 co = checkout
 dc = diff --cached
 st = status
-wtf = !git-wtf
-x = !gitx
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+lo = log --color --pretty=oneline --abbrev-commit --
 unstage = reset HEAD --
 last = log -1 HEAD
 
