@@ -4,4 +4,4 @@
 sudo apt-get install python-pip python3-pip -y
 
 # Install python libs
-sudo pip install virtualenv virtualenvwrapper
+sudo -H pip3 install --upgrade virtualenv virtualenvwrapper flake8 flake8-docstrings

@@ -27,3 +27,4 @@ update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree
 update_repo $GITHUB_URL/bling/vim-airline.git $VIM_PLUGINS_DIR/vim-airline
 update_repo $GITHUB_URL/davidhalter/jedi-vim.git $VIM_PLUGINS_DIR/jedi-vim
 update_repo $GITHUB_URL/tpope/vim-fugitive.git $VIM_PLUGINS_DIR/vim-fugitive
+update_repo $GITHUB_URL/nvie/vim-flake8.git $VIM_PLUGINS_DIR/vim-flake8
