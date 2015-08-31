@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add repositories
-sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -y
 
 # Update repos and packages
 sudo apt-get update -y
