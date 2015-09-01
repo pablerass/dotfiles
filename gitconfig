@@ -36,12 +36,22 @@ dc = diff --cached
 st = status
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 lo = log --color --pretty=oneline --abbrev-commit --
+lp = log -p --
 unstage = reset HEAD --
 last = log -1 HEAD
 
 [merge]
 tool = vimdiff
 conflictstype = diff3
+
+[mergetool]
+prompt = false
+
+[diff]
+tool = vimdiff
+
+[difftool]
+prompt = false
 
 [push]
 default = simple
