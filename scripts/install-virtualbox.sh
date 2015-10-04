@@ -8,4 +8,7 @@ sudo sh -c "echo deb http://download.virtualbox.org/virtualbox/debian trusty con
 sudo apt-get update -y
 
 # Install packages
-sudo apt-get install virtualbox-4.3 -y
+sudo apt-get install virtualbox-5.0 -y
+
+# Add to virtualbox group
+sudo usermod -a -G vboxusers $USER

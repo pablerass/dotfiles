@@ -15,3 +15,5 @@ sudo apt-get install lxc-docker -y
 sudo sh -c "curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
 sudo chmod +x /usr/local/bin/docker-compose
 
+# Add current user to docker group
+sudo usermod -a -G docker $USER
