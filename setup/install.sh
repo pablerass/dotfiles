@@ -3,7 +3,7 @@
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 # Install packages
-sudo apt-get install -y git tmux tig vim zsh htop curl
+sudo apt-get install -y git tmux vim zsh htop curl
 
 # Install gui packages
 if ls /usr/bin/*session | grep gnome; then
