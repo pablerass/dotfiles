@@ -120,6 +120,26 @@ autocmd BufRead,BufNewFile *.md,*.rst setlocal spell spelllang=en_us
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
 set t_Co=256
+" Configure buffers
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Buffer configuration
+" This allows buffers to be hidden if you've modified a buffer
+set hidden
+" To open a new empty buffer
+nmap <leader>T :enew<cr>
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one, this replicates the
+" idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
 
 " Automatic commands
 " Enable file type detection
