@@ -5,4 +5,4 @@
 sudo apt-get install jq
 
 # Install python libs
-sudo pip install awscli
+sudo -H pip install awscli
