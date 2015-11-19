@@ -6,7 +6,7 @@
 sudo apt-get update -y
 
 # Install packages
-sudo apt-get install ruby2.0 ruby2.0-dev gradle -y
+sudo apt-get install ruby2.0 ruby2.0-dev -y
 
 # Create update symbolic links
 for link in ruby gem irb rdoc erb; do
