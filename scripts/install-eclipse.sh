@@ -6,7 +6,7 @@ script_path=`dirname $script`
 
 # Specify eclipse version
 ver=mars
-rel=R
+rel=1
 package=jee
 file=eclipse-$package-$ver-$rel-linux-gtk-x86_64.tar.gz
 
