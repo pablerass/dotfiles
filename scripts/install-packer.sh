@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Specify version
-app=terraform
-ver=0.6.8
+app=packer
+ver=0.8.6
 arch=amd64
 package=${app}_${ver}_linux_${arch}.zip
 
