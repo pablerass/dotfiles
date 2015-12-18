@@ -2,6 +2,7 @@
 
 # Install packages
 sudo apt-get install python-pip python3-pip -y
+suso apt-get install python-dev libffi-dev libssl-dev -y
 
 # Install python libs
 sudo -H pip3 install --upgrade \
