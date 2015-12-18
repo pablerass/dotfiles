@@ -7,10 +7,10 @@ arch=amd64
 package=${app}_${ver}_linux_${arch}.zip
 
 # Download deb packages
-wget -N https://dl.bintray.com/mitchellh/$app/$package
+wget -N https://releases.hashicorp.com/$app/$ver/$package
 
 # Install packages
-sudo unzip -u $package -d /opt/$app
+sudo unzip -o -u $package -d /opt/$app
 
 # Delete packages
 rm -f $package

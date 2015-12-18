@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # Specify version
+app=vagrant
 ver=1.7.4
 arch=x86_64
-package=vagrant_${ver}_${arch}.deb
+package=${app}_${ver}_${arch}.deb
 
 # Download deb packages
-wget -N https://dl.bintray.com/mitchellh/vagrant/$package
+wget -N https://releases.hashicorp.com/$app/$ver/$package
 
 # Install packages
 sudo dpkg -i $package
