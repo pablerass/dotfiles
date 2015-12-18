@@ -7,4 +7,5 @@ sudo apt-get install python-pip python3-pip -y
 sudo -H pip3 install --upgrade \
 		virtualenv virtualenvwrapper \
 		flake8 flake8-docstrings \
-		ipython[all]
+		ipython[all] simplejson pyyaml \
+		requests[security]
