@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Add repositories
 sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify.list'

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Add repositories
 sudo add-apt-repository ppa:caffeine-developers/ppa -y

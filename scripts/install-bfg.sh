@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Specify eclipse version
 url="https://search.maven.org/remote_content?g=com.madgag&a=bfg&v=LATEST"

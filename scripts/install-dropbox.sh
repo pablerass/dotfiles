@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Add repositories
 sudo sh -c 'echo "deb http://linux.dropbox.com/ubuntu trusty main" > /etc/apt/sources.list.d/dropbox.list'

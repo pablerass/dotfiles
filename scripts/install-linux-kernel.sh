@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Specify version
 ver=3.18.7

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Add repositories
 sudo sh -c "echo deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse > /etc/apt/sources.list.d/mongodb.list"

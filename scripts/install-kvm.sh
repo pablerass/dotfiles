@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Documentation
 # http://sharadchhetri.com/2014/10/09/install-kvm-kernel-based-virtual-machine-ubuntu-14-04-lts-desktop/

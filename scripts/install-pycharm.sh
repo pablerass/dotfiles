@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Add repositories
 sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" > /etc/apt/sources.list.d/getdeb.list'

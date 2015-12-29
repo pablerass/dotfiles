@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Add repositories
 wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb

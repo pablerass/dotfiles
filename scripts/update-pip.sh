@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Update pip versions
 sudo -H pip install -U pip

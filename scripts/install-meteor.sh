@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Install packages
 curl https://install.meteor.com | /bin/sh
