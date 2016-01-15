@@ -20,5 +20,5 @@ sudo apt-get update -y
 # Install packages
 sudo apt-get install nodejs -y
 
-# Create needed symbolic links
-sudo ln -s /etc/bash_completion.d/npm /usr/share/npm/lib/utils/completion.sh
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
