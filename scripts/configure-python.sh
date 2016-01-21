@@ -10,3 +10,6 @@ sudo -H pip3 install --upgrade \
 		flake8 flake8-docstrings \
 		ipython[all] simplejson pyyaml \
 		requests[security]
+
+sudo -H pip install --upgrade \
+		requests[security]
