@@ -20,11 +20,14 @@ function update_repo {
 
 ## Repos
 # oh-my-zsh plugins
-update_repo $GITHUB_URL/jplitza/zsh-virsh-autocomplete.git $OH_MY_ZSH_PLUGINS_DIR/virsh
+update_repo $GITHUB_URL/jplitza/zsh-virsh-autocomplete.git \
+			$OH_MY_ZSH_PLUGINS_DIR/virsh
 
 # Vim plugins
 update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree
-update_repo $GITHUB_URL/bling/vim-airline.git $VIM_PLUGINS_DIR/vim-airline
+update_repo $GITHUB_URL/vim-airline/vim-airline.git $VIM_PLUGINS_DIR/vim-airline
+update_repo $GITHUB_URL/vim-airline/vim-airline-themes.git \
+			$VIM_PLUGINS_DIR/vim-airline-themes
 update_repo $GITHUB_URL/davidhalter/jedi-vim.git $VIM_PLUGINS_DIR/jedi-vim
 update_repo $GITHUB_URL/tpope/vim-fugitive.git $VIM_PLUGINS_DIR/vim-fugitive
 update_repo $GITHUB_URL/nvie/vim-flake8.git $VIM_PLUGINS_DIR/vim-flake8
