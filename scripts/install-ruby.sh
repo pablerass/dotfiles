@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-# Add repositories
-
 # Update repos and packages
 sudo apt-get update -y
 

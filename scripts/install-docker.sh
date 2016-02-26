@@ -1,21 +1,30 @@
 #!/bin/bash -e
 
+source /etc/lsb-release
+
+DISTRO=$DISTRIB_CODENAME
+COMPOSE_VERSION=1.6.0
+MACHINE_VERSION=0.6.0
+
 # Add repositories
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
-sudo sh -c "echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo sh -c "echo deb https://apt.dockerproject.org/repo ubuntu-$DISTRO main > /etc/apt/sources.list.d/docker.list"
 
 # Update repos and packages
 sudo apt-get update -y
 
+# Remove previous
+sudo apt-get purge 'lxc-docker*' -y
+
 # Install packages
-sudo apt-get install lxc-docker -y
+sudo apt-get install docker-engine=$ENGINE_VERSION* -y
 
 # Install docker-compose
-sudo sh -c "curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo sh -c "curl -L https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Install docker-machine
-sudo sh -c "curl -L https://github.com/docker/machine/releases/download/v0.5.3/docker-machine_linux-amd64 >/usr/local/bin/docker-machine"
+sudo sh -c "curl -L https://github.com/docker/machine/releases/download/v$MACHINE_VERSION/docker-machine_linux-amd64 >/usr/local/bin/docker-machine"
 sudo chmod +x /usr/local/bin/docker-machine
 
 # Add current user to docker group
