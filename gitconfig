@@ -6,7 +6,7 @@ name = Pablo Muñoz
 email = pablerass@gmail.com
 
 [include]
-path = ~/dotfiles/gitconfig.local
+path = ~/.gitconfig.local
 
 [color]
 ui = auto
