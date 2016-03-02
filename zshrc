@@ -31,5 +31,3 @@ fi
 # Load travis configuration
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-# Load travis configuration
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
