@@ -31,3 +31,5 @@ update_repo $GITHUB_URL/vim-airline/vim-airline-themes.git \
 update_repo $GITHUB_URL/davidhalter/jedi-vim.git $VIM_PLUGINS_DIR/jedi-vim
 update_repo $GITHUB_URL/tpope/vim-fugitive.git $VIM_PLUGINS_DIR/vim-fugitive
 update_repo $GITHUB_URL/nvie/vim-flake8.git $VIM_PLUGINS_DIR/vim-flake8
+update_repo $GITHUB_URL/JamshedVesuna/vim-markdown-preview \
+			$VIM_PLUGINS_DIR/vim-markdown-preview

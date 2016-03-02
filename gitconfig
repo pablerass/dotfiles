@@ -58,3 +58,6 @@ default = simple
 
 [credential]
 helper = cache --timeout=3600
+
+[url "https://github.com/pablerass/"]
+    insteadOf = pablerass://

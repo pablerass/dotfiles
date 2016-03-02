@@ -148,7 +148,6 @@ filetype on
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-
 " Auto text wrapping
 autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
 " Disable automatic indent
@@ -157,3 +156,6 @@ autocmd BufRead,BufNewFile *.yml,*.py,*.html setlocal noautoindent nocindent nos
 autocmd BufRead,BufNewFile *.yml setlocal tabstop=2
 " Force space instead of tabs
 autocmd BufRead,BufNewFile *.yml,*.rst,*.md,*.py,*.html setlocal expandtab
+
+" Markdown configuration
+let vim_markdown_preview_github=1
