@@ -60,4 +60,7 @@ default = simple
 helper = cache --timeout=3600
 
 [url "https://github.com/pablerass/"]
-    insteadOf = pablerass://
+insteadOf = pablerass://
+
+[credential "https://github.com/"]
+username = pablerass
