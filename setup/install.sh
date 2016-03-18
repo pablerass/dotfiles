@@ -8,7 +8,7 @@ $DIR/scripts/configure-python.sh
 
 # Install gui packages
 if ls /usr/bin/*session | grep gnome; then
-	sudo apt-get install -y vim-gui-common guake
+	sudo apt-get install -y vim-gui-common
 fi
 
 # Install oh-my-zsh
