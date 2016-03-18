@@ -11,3 +11,6 @@ sudo -H pip3 install --upgrade \
 		ipython[all] simplejson pyyaml \
 		requests[security] \
 		grip
+
+sudo -H pip install --upgrade \
+		jedi flake8 flake8-docstrings
