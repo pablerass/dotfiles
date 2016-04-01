@@ -3,7 +3,6 @@
 source /etc/lsb-release
 
 DISTRO=$DISTRIB_CODENAME
-COMPOSE_VERSION=1.6.0
 MACHINE_VERSION=0.6.0
 
 # Add repositories
@@ -20,8 +19,7 @@ sudo apt-get purge 'lxc-docker*' -y
 sudo apt-get install docker-engine=$ENGINE_VERSION* -y
 
 # Install docker-compose
-sudo sh -c "curl -L https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
-sudo chmod +x /usr/local/bin/docker-compose
+sudo -H pip3 install --upgrade docker-compose
 
 # Install docker-machine
 sudo sh -c "curl -L https://github.com/docker/machine/releases/download/v$MACHINE_VERSION/docker-machine_linux-amd64 >/usr/local/bin/docker-machine"
