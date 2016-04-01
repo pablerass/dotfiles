@@ -37,6 +37,7 @@ st = status
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 lo = log --color --pretty=oneline --abbrev-commit --
 lp = log -p --
+lf = log --follow --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 unstage = reset HEAD --
 last = log -1 HEAD
 clear = clean -fdx
