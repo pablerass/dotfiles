@@ -58,6 +58,9 @@ prompt = false
 [push]
 default = simple
 
+[branch]
+autosetuprebase = always
+
 [credential]
 helper = cache --timeout=3600
 
