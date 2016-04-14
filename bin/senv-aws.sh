@@ -13,7 +13,7 @@ CONF_ENV_DIR=$CONF_DIR/$ENV
 # Check if environment exists
 if [ ! -d $CONF_ENV_DIR ]; then
 	echo "ERROR: $ENV environment does not exist"
-	exit -1
+	exit 1
 fi
 
 # Update all config files

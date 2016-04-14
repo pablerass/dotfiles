@@ -13,23 +13,23 @@ CONF_ENV_DIR=$CONF_DIR/$ENV
 # Check if environment exists
 if [ ! -d $CONF_ENV_DIR ]; then
 	echo "ERROR: $ENV environment does not exist"
-	exit -1
+	exit 1
 fi
 
 # Update config file
 CONF_FILE=$CONF_DIR/config
 CONF_ENV_FILE=$CONF_ENV_DIR/config
 
-if [ ! -e $CONF_ENV_FILE ] || [ -L $CONF_FILE ]; then
-	if [ -f $CONF_ENV_FILE ]; then
-		ln -sf $CONF_ENV_FILE $CONF_FILE
-	else
-		echo "ERROR: $ENV environment configuration file does not exist"
-		exit -2
-	fi
-else
+if [ -e $CONF_FILE ] && [ ! -L $CONF_FILE ]; then
 	echo "ERROR: $CONF_FILE is not a symbolic link"
-	exit -3
+	exit 2
+fi
+
+if [ -f $CONF_ENV_FILE ]; then
+	ln -sf $CONF_ENV_FILE $CONF_FILE
+else
+	echo "ERROR: $ENV environment configuration file does not exist"
+	exit 3
 fi
 
 # Update private key files
