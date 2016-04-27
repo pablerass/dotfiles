@@ -11,7 +11,7 @@ package=jee
 file=eclipse-$package-$ver-$rel-linux-gtk-x86_64.tar.gz
 
 # Download eclipse
-#wget -N http://download.eclipse.org/technology/epp/downloads/release/$ver/$rel/$file
+wget -N http://download.eclipse.org/technology/epp/downloads/release/$ver/$rel/$file
 
 # Install eclipse
 if [ -d /opt/eclipse ]; then
