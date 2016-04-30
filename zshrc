@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
 plugins=(gnu-utils systemadmin sudo man rsync tmux tmuxinator git tig \
-		vagrant docker docker-compose aws virtualbox virsh \
+		vagrant docker docker-compose aws virtualbox virsh heroku \
 		pip python pyenv node npm bower grunt \
 		ruby gem rbenv rake mvn ant gradle )
 
@@ -31,3 +31,6 @@ fi
 # Load travis configuration
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
