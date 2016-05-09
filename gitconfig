@@ -41,6 +41,7 @@ lf = log --follow --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 unstage = reset HEAD --
 last = log -1 HEAD
 clear = clean -fdx
+lone = clone --depth 1
 
 [merge]
 tool = vimdiff
