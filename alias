@@ -1,115 +1,68 @@
-# Adbrain
-alias advpn='sudo openvpn --script-security 2 --config ~/.ssh/client.ovpn  --auth-user-pass ~/.advpn.txt'
-
-# some more ls aliases
+## Common commands
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+
 alias ll='ls -ahlF'
-alias p='python'
-alias ut='python -m unittest'
-alias ..='cd ..'
 
-# Git
-alias gs='git status'
-alias gc='git commit -m'
-alias gp='git pull'
-alias ga='git add .'
-alias gsa='git ls-files --others --exclude-standard'
-
-alias size='du -hs'
-alias i='sudo apt-get install'
-alias u='sudo apt-get update'
-alias upgrade='sudo apt-get dist-upgrade'
-alias search='sudo apt-cache search'
-alias install='sudo dpkg -i'
-alias hosts='sudo vi /etc/hosts'
-alias vmkernel='sudo /etc/init.d/vboxdrv setup'
-alias rs='python manage.py runserver'
 alias vi='vim'
-alias listen='sudo netstat -plunt'
-
-# IP
-alias ipas='ip a s'
-alias ports='netstat -tulanp'
-alias ping='ping -c 5'
-
-alias copykey='xclip -sel clip < ~/.ssh/id_rsa.pub'
-
-# Java
-alias setjava6='sudo update-java-alternatives -s java-6-oracle'
-alias setjava7='sudo update-java-alternatives -s java-7-oracle'
-alias setjava8='sudo update-java-alternatives -s java-8-oracle'
-
-# Vagrant
-alias up='vagrant up'
-alias valt='vagrant halt'
-alias vssh='vagrant ssh'
-
-# Docker
-alias d="docker"
-alias dr="docker run"
-alias drm="docker rm"
-alias dps="docker ps"
-alias ds="docker stop"
-alias dlogs="docker logs"
 
 alias log='tail -f -n50 '
-alias df='df -H'
-alias du='du -ch'
 
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-else # OS X `ls`
-	colorflag="-G"
-fi
-
-# List only directories
-alias lsd='ls -lF ${colorflag} | grep "^d"'
-# List all files colorized in long format
-alias l="ls -lF ${colorflag}"
-# List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
-
-alias t='tmux a || tmux new-s'
-
-# ----------------------------------------------------------------------
-# ALIASES / FUNCTIONS
-# ----------------------------------------------------------------------
-
-# disk usage with human sizes and minimal depth
-alias du1='du -h --max-depth=1'
 alias fn='find . -name'
-alias hi='history | tail -20'
-alias s='sudo '
-
-alias lolcat='adb logcat | coloredlogcat.py'
 
 alias reload!='. ~/.zshrc'
 
-alias untar="tar -xvzf"
+alias s='sudo '
 
-# View HTTP traffic
-alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias mirror='rsync -avh --delete'
 
-# reboot / halt / poweroff
-alias reboot='sudo /sbin/reboot'
-alias poweroff='sudo /sbin/poweroff'
-alias halt='sudo /sbin/halt'
-alias shutdown='sudo /sbin/shutdown'
+## Tools
+# Ansible
+alias ap='ansible-playbook'
 
-## pass options to free ## 
+# Docker
+alias drun='docker run'
+alias dstop='docker stop'
+alias dps='docker ps'
+alias dpsa='docker ps --all'
+alias drm='docker rm'
+alias drmf='docker rm -f'
+alias drmi='docker rmi'
+alias dimg='docker images'
+alias dpush='docker push'
+alias dpull='docker push'
+
+# Python
+alias wo='workon'
+alias de='deactivate'
+alias mkve='mkvirtualenv'
+alias mkve2='mkvirtualenv -p python2'
+alias mkve3='mkvirtualenv -p python3'
+alias rmve='rmvirtualenv'
+
+# Vagrant
+alias vup='vagrant up'
+alias valt='vagrant halt'
+alias vssh='vagrant ssh'
+
+## Monitoring
+# Disk
+alias df='df -h'
+alias du='du -ch'
+alias du1='du -ch --max-depth=1'
+alias size='du -hs'
+
+# Network
+alias ports='netstat -tulanp'
+alias listen='sudo netstat -plunt'
+
+# Memory
 alias meminfo='free -m -l -t'
- 
-## get top process eating memory
+
+# Processes
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-  
-## get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
-	 
-## Get server cpu info ##
+
+# CPU
 alias cpuinfo='lscpu'
