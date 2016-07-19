@@ -3,7 +3,7 @@
 source /etc/lsb-release
 
 DISTRO=$DISTRIB_CODENAME
-MACHINE_VERSION=0.6.0
+MACHINE_VERSION=0.7.0
 
 # Add repositories
 sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
