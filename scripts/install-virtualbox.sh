@@ -6,7 +6,7 @@ VERSION=5.0
 DISTRO=$DISTRIB_CODENAME
 
 # Add repositories
-wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo sh -c "echo deb http://download.virtualbox.org/virtualbox/debian $DISTRO contrib > /etc/apt/sources.list.d/virtualbox.list"
 
 # Update repos and packages

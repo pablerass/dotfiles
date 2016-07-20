@@ -21,4 +21,4 @@ sudo apt-get update -y
 sudo apt-get install nodejs -y
 
 # Install nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
