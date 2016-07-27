@@ -11,7 +11,7 @@ $DIR/update-pip.sh
 
 # Install python libs
 sudo -H pip3 install --upgrade \
-		flake8 flake8-docstrings \
+		jedi flake8 flake8-docstrings \
 		ipython[all] simplejson pyyaml \
 		requests[security] \
 		grip
