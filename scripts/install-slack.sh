@@ -2,7 +2,7 @@
 
 # Specify version
 app=slack-desktop
-ver=2.0.6
+ver=2.1.0
 arch=amd64
 package=${app}-${ver}-${arch}.deb
 
