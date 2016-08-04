@@ -11,11 +11,11 @@ $DIR/update-pip.sh
 
 # Install python libs
 sudo -H pip3 install --upgrade \
-		jedi flake8 flake8-docstrings \
+		jedi flake8 flake8-docstrings ropevim \
 		ipython[all] simplejson pyyaml \
 		requests[security] \
 		grip
 
 sudo -H pip install --upgrade \
 		virtualenv virtualenvwrapper \
-		jedi flake8 flake8-docstrings
+		jedi flake8 flake8-docstrings ropevim
