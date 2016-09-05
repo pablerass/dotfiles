@@ -16,7 +16,7 @@ sudo apt-get update -y
 sudo apt-get purge 'lxc-docker*' -y
 
 # Install packages
-sudo apt-get install docker-engine=$ENGINE_VERSION* -y
+sudo apt-get install docker-engine -y
 
 # Install docker-compose
 sudo -H pip3 install --upgrade docker-compose
