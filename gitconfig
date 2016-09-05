@@ -1,5 +1,6 @@
 [core]
 editor = vim
+autocrlf = input
 
 [user]
 name = Pablo Muñoz
@@ -59,6 +60,9 @@ prompt = false
 
 [push]
 default = simple
+
+[pull]
+rebase = true
 
 [branch]
 autosetuprebase = always
