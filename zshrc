@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
 plugins=(gnu-utils systemadmin sudo man rsync tmux tmuxinator git tig \
-		vagrant docker docker-compose aws virtualbox virsh heroku \
+		vagrant terraform docker docker-compose aws virtualbox virsh heroku \
 		pip python pyenv node npm bower grunt \
 		ruby gem rbenv rake mvn ant gradle )
 
