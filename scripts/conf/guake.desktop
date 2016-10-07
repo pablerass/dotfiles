@@ -2,7 +2,7 @@
 Icon=guake
 Name=Guake
 Comment=Drop-dowm terminal
-Exec=/usr/bin/caffeine-indicator
+Exec=/usr/bin/guake
 Terminal=false
 Type=Application
 Categories=Utility;
