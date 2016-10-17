@@ -2,7 +2,7 @@
 
 # Specify version
 app=packer
-ver=0.8.6
+ver=0.10.2
 arch=amd64
 package=${app}_${ver}_linux_${arch}.zip
 
@@ -10,6 +10,7 @@ package=${app}_${ver}_linux_${arch}.zip
 wget -N https://releases.hashicorp.com/$app/$ver/$package
 
 # Install packages
+sudo rm -Rf /opt/$app
 sudo unzip -o -u $package -d /opt/$app
 
 # Delete packages
