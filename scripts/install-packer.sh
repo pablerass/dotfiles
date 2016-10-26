@@ -2,7 +2,7 @@
 
 # Specify version
 app=packer
-ver=0.10.2
+ver=0.11.0
 arch=amd64
 package=${app}_${ver}_linux_${arch}.zip
 
