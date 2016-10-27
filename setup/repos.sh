@@ -22,6 +22,8 @@ function update_repo {
 # oh-my-zsh plugins
 update_repo $GITHUB_URL/jplitza/zsh-virsh-autocomplete.git \
 			$OH_MY_ZSH_PLUGINS_DIR/virsh
+update_repo $GITHUB_URL/technosophos/glide-zsh.git \
+			$OH_MY_ZSH_PLUGINS_DIR/glide
 
 # Vim plugins
 update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree
