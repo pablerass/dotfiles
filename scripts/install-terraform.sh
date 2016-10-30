@@ -18,3 +18,8 @@ rm -f $package
 
 # Configure path
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app' > /etc/profile.d/${app}.sh"
+
+# Install additional apps
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+$DIR/install-terragrunt.sh
