@@ -18,21 +18,12 @@ rm -f $package
 
 # Configure path
 sudo sh -c "echo 'export GOROOT=/opt/$app' > /etc/profile.d/${app}.sh"
+sudo sh -c "echo 'export GOPATH=~/workspace/$app' >> /etc/profile.d/${app}.sh"
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' >> /etc/profile.d/${app}.sh"
 
-# Install glide
-glide_version=0.12.3
-glide_package=glide-v$glide_version-linux-$arch.tar.gz
-glide_tmp_dir=linux-$arch
+# Install additional apps
+export GOROOT=/opt/$app
 
-# Download package
-wget -N https://github.com/Masterminds/glide/releases/download/v$glide_version/$glide_package
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Install packages
-sudo tar -xzf $glide_package
-sudo mv $glide_tmp_dir/glide /opt/$app/bin
-
-# Delete packages
-sudo rm -Rf $glide_tmp_dir
-rm -f $glide_package
-
+$DIR/install-glide.sh
