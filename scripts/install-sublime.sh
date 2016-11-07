@@ -1,13 +1,13 @@
 #!/bin/bash -e
 
 # Specify version
-app=vagrant
-ver=1.8.7
-arch=x86_64
+app=sublime-text
+ver=build-3126
+arch=amd64
 package=${app}_${ver}_${arch}.deb
 
 # Download deb packages
-wget -N https://releases.hashicorp.com/$app/$ver/$package
+wget -N https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
 
 # Install packages
 sudo dpkg -i $package
