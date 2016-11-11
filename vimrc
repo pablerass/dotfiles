@@ -153,9 +153,9 @@ autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
 " Disable automatic indent
 autocmd BufRead,BufNewFile *.yml,*.py,*.html setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
-autocmd BufRead,BufNewFile *.yml setlocal tabstop=2
+autocmd BufRead,BufNewFile *.yml,*.xml setlocal tabstop=2
 " Force space instead of tabs
-autocmd BufRead,BufNewFile *.yml,*.tf,*.rst,*.md,*.py,*.html,*.rb setlocal expandtab
+autocmd BufRead,BufNewFile *.yml,*.tf,*.rst,*.md,*.py,*.html,*.rb,*.xml setlocal expandtab
 
 " Markdown configuration
 let vim_markdown_preview_github=1
