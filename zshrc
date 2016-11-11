@@ -32,8 +32,8 @@ fi
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 
-### Added by the Heroku Toolbelt
+# Tools variables
 export PATH="/usr/local/heroku/bin:$PATH"
-
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export GOPATH="~/workspace/go"
