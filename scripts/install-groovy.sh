@@ -18,4 +18,4 @@ rm -f $package
 
 # Configure path
 sudo sh -c "echo 'export GROOVY_HOME=/opt/$app/groovy-${ver}' > /etc/profile.d/${app}.sh"
-sudo sh -c "echo 'export PATH=\$PATH:$GROOVY_HOME/bin' >> /etc/profile.d/${app}.sh"
+sudo sh -c "echo 'export PATH=\$PATH:\$GROOVY_HOME/bin' >> /etc/profile.d/${app}.sh"
