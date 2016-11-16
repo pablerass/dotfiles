@@ -39,3 +39,5 @@ update_repo $GITHUB_URL/JamshedVesuna/vim-markdown-preview.git \
 			$VIM_PLUGINS_DIR/vim-markdown-preview
 update_repo $GITHUB_URL/airblade/vim-gitgutter.git \
 			$VIM_PLUGINS_DIR/vim-gitgutter
+update_repo $GITHUB_URL/vim-scripts/netrw.vim.git \
+			$VIM_PLUGINS_DIR/netwr
