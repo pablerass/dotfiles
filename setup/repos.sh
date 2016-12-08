@@ -41,3 +41,5 @@ update_repo $GITHUB_URL/airblade/vim-gitgutter.git \
 			$VIM_PLUGINS_DIR/vim-gitgutter
 update_repo $GITHUB_URL/vim-scripts/netrw.vim.git \
 			$VIM_PLUGINS_DIR/netwr
+update_repo $GITHUB_URL/Glench/Vim-Jinja2-Syntax.git \
+			$VIM_PLUGINS_DIR/vim-jinja2-syntax
