@@ -18,6 +18,8 @@ source $HOME/dotfiles/z.sh
 
 export LANG=es_ES.UTF-8
 
+export EDITOR=/usr/bin/vim
+
 # Configure terminal color for tmux compatibility
 if [[ $TERM == xterm ]]; then
 	TERM=xterm-256color
