@@ -33,7 +33,6 @@ fi
 # Load travis configuration
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-
 # Tools variables
 export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR="~/.nvm"
