@@ -2,7 +2,7 @@
 
 source /etc/lsb-release
 
-VERSION=5.0
+VERSION=5.1
 DISTRO=$DISTRIB_CODENAME
 
 # Add repositories
