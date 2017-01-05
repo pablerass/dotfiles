@@ -28,8 +28,8 @@ fi
 if [ -f $CONF_ENV_FILE ]; then
 	ln -sf $CONF_ENV_FILE $CONF_FILE
 else
-	echo "ERROR: $ENV environment configuration file does not exist"
-	exit 3
+    rm $CONF_FILE
+	echo "WARNING: $ENV environment configuration file does not exist"
 fi
 
 # Update private key files
@@ -40,8 +40,8 @@ for KEY_FILE in `ls -d $KEYS`; do
 	if [ -L $KEY_FILE ]; then
 		rm $KEY_FILE
 	else
-		if [ ! -d $CONF_FILE ]; then
-			echo "WARNING: $CONF_FILE is not a symbolic link"
+		if [ ! -d $KEY_FILE ]; then
+			echo "WARNING: $KEY_FILE is not a symbolic link"
 		fi
 	fi
 done

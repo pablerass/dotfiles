@@ -10,7 +10,7 @@ if [ -z $ENV ]; then
 fi
 
 echo "AWS environment"
-$DIR/senv-aws.sh $ENV
+$DIR/senv-aws $ENV
 
 echo "SSH environment"
-$DIR/senv-ssh.sh $ENV
+$DIR/senv-ssh $ENV
