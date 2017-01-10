@@ -1,0 +1,42 @@
+#!/bin/bash
+
+CONF_DIR=$HOME/conf/openvpn
+
+start() {
+    for CONF_FILE in $CONF_DIR/*.ovpn; do
+        CONF_FILENAME=$(basename $CONF_FILE)
+        CONF=${CONF_FILENAME%.*}
+        echo "Connection to $CONF OpenVPN"
+        sudo /usr/sbin/openvpn \
+            --config $CONF_FILE \
+            --daemon ovpn-$CONF
+    done
+}
+
+stop() {
+    for CONF_FILE in $CONF_DIR/*.ovpn; do
+        CONF_FILENAME=$(basename $CONF_FILE)
+        CONF=${CONF_FILENAME%.*}
+        COMMAND="/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
+        if pgrep -f "$COMMAND" > /dev/null 2>&1; then
+            echo "Stopping $CONF OpenVPN connection"
+            sudo pkill -f "/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
+        fi
+    done
+}
+
+case "$1" in
+    ""|start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop && start
+        ;;
+    *)
+        echo "usage: $0 start|stprestart" >&2
+        exit 1
+        ;;
+esac
