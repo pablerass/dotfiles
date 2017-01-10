@@ -6,6 +6,7 @@ SCRIPTS_DIR=$DIR/../scripts
 # Call other install scripts
 $SCRIPTS_DIR/conf-python.sh
 $SCRIPTS_DIR/conf-openvpn-conn.sh
+$SCRIPTS_DIR/conf-mfa.sh
 $SCRIPTS_DIR/install-awscli.sh
 $SCRIPTS_DIR/install-docker.sh
 $SCRIPTS_DIR/install-git-latest.sh

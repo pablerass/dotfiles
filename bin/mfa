@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CONF_DIR=$HOME/conf/mfa
+CONF=default
+
+if [ ! -z "$1" ]; then
+    CONF=$1
+fi
+
+CONF_FILE=$CONF_DIR/$CONF
+
+if [ ! -e $CONF_FILE ]; then
+    echo "MFA $CONF does not exists" 1>&2
+    exit 1
+fi
+
+oathtool --totp --base32 $(cat $CONF_DIR/$CONF)
