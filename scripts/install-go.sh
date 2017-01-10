@@ -21,6 +21,8 @@ sudo sh -c "echo 'export GOROOT=/opt/$app' > /etc/profile.d/${app}.sh"
 sudo sh -c "echo 'export GOPATH=~/workspace/$app' >> /etc/profile.d/${app}.sh"
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' >> /etc/profile.d/${app}.sh"
 
+mkdir -p ~/workspace/$app
+
 # Install additional apps
 export GOROOT=/opt/$app
 
