@@ -6,5 +6,13 @@ OPENVPN_CONF_DIR=$HOME/conf/openvpn
 mkdir -p $OPENVPN_CONF_DIR
 
 # Set visudo config
-export OPENVPN_LINE="$USER ALL=(ALL:ALL) NOPASSWD:/usr/sbin/openvpn --config $OPENVPN_CONF_DIR/*.ovpn --daemon ovpn-*"
-sudo -E bash -c 'echo "$OPENVPN_LINE" | (EDITOR="tee" visudo -f /etc/sudoers.d/openvpn-conn)'
+CMND_ALIAS="VPN_$(echo $USER | tr '[:lower:]' '[:upper:]')"
+
+export OPENVPN_LINE="""Cmnd_Alias $CMND_ALIAS= \\
+	/usr/sbin/openvpn --config $OPENVPN_CONF_DIR/*.ovpn --daemon ovpn-*, \\
+	/usr/bin/pkill -f /usr/sbin/openvpn --config $OPENVPN_CONF_DIR/*.ovpn --daemon ovpn-*
+
+$USER ALL=(ALL:ALL) NOPASSWD:$CMND_ALIAS"""
+export SUDOERS_FILE=/etc/sudoers.d/openvpn-conn-$USER
+
+sudo -E bash -c 'echo "$OPENVPN_LINE" | (EDITOR="tee" visudo -s -f $SUDOERS_FILE)'

@@ -20,7 +20,7 @@ stop() {
         COMMAND="/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
         if pgrep -f "$COMMAND" > /dev/null 2>&1; then
             echo "Stopping $CONF OpenVPN connection"
-            sudo pkill -f "/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
+            sudo /usr/bin/pkill -f "/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
         fi
     done
 }
