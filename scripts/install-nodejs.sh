@@ -2,7 +2,7 @@
 
 source /etc/lsb-release
 
-VERSION=4.x
+VERSION=6.x
 DISTRO=$DISTRIB_CODENAME
 
 # Remove chris-lea-ppa if configured
@@ -23,4 +23,3 @@ sudo apt-get install nodejs -y
 # Install nvm
 NVM_VERSION=0.33.0
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash
-rm -Rf \~
