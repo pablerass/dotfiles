@@ -9,6 +9,9 @@ if [ -z $ENV ]; then
 	read -p "Environment: " ENV
 fi
 
+echo "Conf environment"
+$DIR/senv-conf $ENV
+
 echo "AWS environment"
 $DIR/senv-aws $ENV
 

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+ENV=$1
+
+# Get environment if not specified
+if [ -z $ENV ]; then
+	read -p "Conf environment: " ENV
+fi
+
+BASE_DIR=$HOME
+CONF_ENV_DIR=$BASE_DIR/$ENV/conf
+
+# Check if environment conf exists
+if [ ! -d $CONF_ENV_DIR ]; then
+	echo "ERROR: $ENV environment does not exist"
+	exit 1
+fi
+
+# Update config file
+CONF_LINK=$BASE_DIR/conf
+
+if [ -e $CONF_LINK ] && [ ! -L $CONF_LINK ]; then
+	echo "ERROR: $CONF_LINK is not a symbolic link"
+	exit 2
+fi
+
+if [ -d $CONF_ENV_DIR ]; then
+	ln -sf $CONF_ENV_DIR $CONF_LINK
+else
+    rm $CONF_LINK
+	echo "WARNING: $ENV environment configuration dir does not exist"
+fi
