@@ -36,7 +36,7 @@ case "$1" in
         stop && start
         ;;
     *)
-        echo "usage: $0 start|stprestart" >&2
+        echo "usage: $0 start|stop|restart" >&2
         exit 1
         ;;
 esac
