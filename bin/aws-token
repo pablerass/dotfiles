@@ -1,0 +1,23 @@
+#!/bin/bash
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+CONF_DIR=$HOME/conf/mfa
+CONF=default
+
+if [ ! -z "$1" ]; then
+    CONF=$1
+fi
+
+CONF_FILE=$CONF_DIR/$CONF
+
+if [ ! -e $CONF_FILE ]; then
+    echo "MFA $CONF does not exists" 1>&2
+    exit 1
+fi
+
+SERIAL=$(cat $CONF_FILE/$CONF)
+
+aws sts --serial-numer $SERIAL \
+        --token-code $(oathtool --totp --base32 $SERIAL) \
+    | jq ".Credentials.SessionToken"
