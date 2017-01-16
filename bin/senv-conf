@@ -24,9 +24,9 @@ if [ -e $CONF_LINK ] && [ ! -L $CONF_LINK ]; then
 	exit 2
 fi
 
+rm $CONF_LINK
 if [ -d $CONF_ENV_DIR ]; then
-	ln -sf $CONF_ENV_DIR $CONF_LINK
+	ln -s $CONF_ENV_DIR $CONF_LINK
 else
-    rm $CONF_LINK
 	echo "WARNING: $ENV environment configuration dir does not exist"
 fi
