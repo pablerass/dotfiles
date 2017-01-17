@@ -1,16 +1,23 @@
 #!/bin/bash
 
 CONF_DIR=$HOME/conf/openvpn
+CONF=default
+
+if [ ! -z "$2" ]; then
+    CONF=$2
+fi
+
+CONF_FILE=$CONF_DIR/$CONF.ovpn
 
 start() {
-    for CONF_FILE in $CONF_DIR/*.ovpn; do
-        CONF_FILENAME=$(basename $CONF_FILE)
-        CONF=${CONF_FILENAME%.*}
-        echo "Connection to $CONF OpenVPN"
-        sudo /usr/sbin/openvpn \
-            --config $CONF_FILE \
-            --daemon ovpn-$CONF
-    done
+    if [ ! -e $CONF_FILE ]; then
+        echo "OpenVPN $CONF does not exists" 1>&2
+        exit 1
+    fi
+    echo "Connecting to $CONF OpenVPN"
+    sudo /usr/sbin/openvpn \
+        --config $CONF_FILE \
+        --daemon ovpn-$CONF
 }
 
 stop() {
