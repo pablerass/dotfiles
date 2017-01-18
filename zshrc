@@ -2,10 +2,11 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
-plugins=(gnu-utils systemadmin sudo man rsync tmux tmuxinator git tig \
+plugins=(gnu-utils systemadmin systemd sudo man rsync tmux git \
 		vagrant terraform docker docker-compose aws virtualbox virsh heroku \
-		pip python pyenv node npm bower grunt \
-		ruby gem rbenv rake mvn ant gradle golang glide)
+		pip python pyenv node npm nvm bower yarn grunt gulp meteor \
+		ruby gem rbenv rvm rake mvn ant gradle golang glide \
+		knife kitchen)
 
 source $ZSH/oh-my-zsh.sh
 

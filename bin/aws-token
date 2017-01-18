@@ -16,8 +16,8 @@ if [ ! -e $CONF_FILE ]; then
     exit 1
 fi
 
-SERIAL=$(cat $CONF_FILE/$CONF)
+SERIAL=arn:aws:iam::852120833692:mfa/pablo.munoz
 
-aws sts --serial-numer $SERIAL \
-        --token-code $(oathtool --totp --base32 $SERIAL) \
-    | jq ".Credentials.SessionToken"
+aws sts get-session-token \
+    --serial-number $SERIAL --token-code $($DIR/mfa $CONF) \
+  | jq -r ".Credentials.SessionToken"
