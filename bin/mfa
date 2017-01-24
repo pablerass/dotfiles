@@ -14,4 +14,6 @@ if [ ! -e $CONF_FILE ]; then
     exit 1
 fi
 
-oathtool --totp --base32 $(cat $CONF_DIR/$CONF)
+KEY=$(cat $CONF_FILE | grep -E "^key" | cut -f2)
+
+oathtool --totp --base32 $TOKEN

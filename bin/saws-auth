@@ -1,0 +1,30 @@
+#!/bin/bash
+
+CONF_DIR=$HOME/conf/mfa
+CONF=default
+
+if [ ! -z "$1" ]; then
+    CONF=$1
+fi
+
+CONF_FILE=$CONF_DIR/$CONF
+
+if [ ! -e $CONF_FILE ]; then
+    echo "MFA $CONF does not exists" 1>&2
+    exit 1
+fi
+
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+
+SERIAL=$(cat $CONF_FILE | grep -E "^serial" | cut -f2)
+KEY=$(cat $CONF_FILE | grep -E "^key" | cut -f2)
+TOKEN=$(oathtool --totp --base32 $KEY)
+
+SESSION=$(aws sts get-session-token \
+        --serial-number $SERIAL --token-code $TOKEN)
+
+export AWS_ACCESS_KEY_ID=$(echo $SESSION | jq -r ".Credentials.AccessKeyId")
+export AWS_SECRET_ACCESS_KEY=$(echo $SESSION | jq -r ".Credentials.SecretAccessKey")
+export AWS_SESSION_TOKEN=$(echo $SESSION | jq -r ".Credentials.SessionToken")

@@ -66,3 +66,6 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
 # CPU
 alias cpuinfo='lscpu'
+
+# bin
+alias aaws='source ~/bin/saws-auth'
