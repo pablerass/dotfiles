@@ -16,4 +16,4 @@ fi
 
 KEY=$(cat $CONF_FILE | grep -E "^key" | cut -f2)
 
-oathtool --totp --base32 $TOKEN
+oathtool --totp --base32 $KEY
