@@ -3,13 +3,12 @@
 CONF_DIR=$HOME/conf/openvpn
 CONF=default
 
-if [ ! -z "$2" ]; then
-    CONF=$2
+if [ ! -z "$1" ] && [ "$1" != "start" ] && [ "$1" != "stop" ]; then
+    CONF=$1
 fi
 
-CONF_FILE=$CONF_DIR/$CONF.ovpn
-
 start() {
+    CONF_FILE=$CONF_DIR/$CONF.ovpn
     if [ ! -e $CONF_FILE ]; then
         echo "OpenVPN $CONF does not exists" 1>&2
         exit 1
@@ -21,29 +20,22 @@ start() {
 }
 
 stop() {
-    for CONF_FILE in $CONF_DIR/*.ovpn; do
-        CONF_FILENAME=$(basename $CONF_FILE)
-        CONF=${CONF_FILENAME%.*}
-        COMMAND="/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
+    for STOP_CONF_FILE in $CONF_DIR/*.ovpn; do
+        STOP_CONF_FILENAME=$(basename $STOP_CONF_FILE)
+        STOP_CONF=${STOP_CONF_FILENAME%.*}
+        COMMAND="/usr/sbin/openvpn --config $STOP_CONF_FILE --daemon ovpn-$STOP_CONF"
         if pgrep -f "$COMMAND" > /dev/null 2>&1; then
-            echo "Stopping $CONF OpenVPN connection"
-            sudo /usr/bin/pkill -f "/usr/sbin/openvpn --config $CONF_FILE --daemon ovpn-$CONF"
+            echo "Stopping $STOP_CONF OpenVPN connection"
+            sudo /usr/bin/pkill -f "/usr/sbin/openvpn --config $STOP_CONF_FILE --daemon ovpn-$STOP_CONF"
         fi
     done
 }
 
 case "$1" in
-    ""|start)
-        start
-        ;;
     stop)
         stop
         ;;
-    restart)
-        stop && start
-        ;;
     *)
-        echo "usage: $0 start|stop|restart" >&2
-        exit 1
+        stop && start
         ;;
 esac
