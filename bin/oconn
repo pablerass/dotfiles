@@ -19,6 +19,17 @@ start() {
         --daemon ovpn-$CONF
 }
 
+status() {
+    for STATUS_CONF_FILE in $CONF_DIR/*.ovpn; do
+        STATUS_CONF_FILENAME=$(basename $STATUS_CONF_FILE)
+        STATUS_CONF=${STATUS_CONF_FILENAME%.*}
+        COMMAND="/usr/sbin/openvpn --config $STATUS_CONF_FILE --daemon ovpn-$STATUS_CONF"
+        if pgrep -f "$COMMAND" > /dev/null 2>&1; then
+            echo "$STATUS_CONF OpenVPN connection is running"
+        fi
+    done
+}
+
 stop() {
     for STOP_CONF_FILE in $CONF_DIR/*.ovpn; do
         STOP_CONF_FILENAME=$(basename $STOP_CONF_FILE)
@@ -32,6 +43,9 @@ stop() {
 }
 
 case "$1" in
+    status)
+        status
+        ;;
     stop)
         stop
         ;;
