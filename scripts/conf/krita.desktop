@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Krita
+Icon=krita.png
+Exec=/opt/krita/krita
+StartupNotify=false
+StartupWMClass=krita

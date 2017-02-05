@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Kdenlive
+Icon=kdenlive.png
+Exec=/opt/kdenlive/kdenlive
+StartupNotify=false
+StartupWMClass=kdenlive
