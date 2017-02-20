@@ -14,6 +14,6 @@ if [ ! -e $CONF_FILE ]; then
     exit 1
 fi
 
-KEY=$(cat $CONF_FILE | grep -E "^key" | cut -f2)
+KEY=$(cat $CONF_FILE | grep -E "^key" | cut -d';' -f2)
 
-oathtool --totp --base32 $KEY
+oathtool --totp --base32 $KEY --window 0 --time-step-size 30

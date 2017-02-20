@@ -18,8 +18,8 @@ unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
 unset AWS_SESSION_TOKEN
 
-SERIAL=$(cat $CONF_FILE | grep -E "^serial" | cut -f2)
-KEY=$(cat $CONF_FILE | grep -E "^key" | cut -f2)
+SERIAL=$(cat $CONF_FILE | grep -E "^serial" | cut -d';' -f2)
+KEY=$(cat $CONF_FILE | grep -E "^key" | cut -d';' -f2)
 TOKEN=$(oathtool --totp --base32 $KEY)
 
 SESSION=$(aws sts get-session-token \
