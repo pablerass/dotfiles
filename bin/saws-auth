@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/bash -x
 
 CONF_DIR=$HOME/conf/mfa
-CONF=default
+CONF=default-aws
 
 if [ ! -z "$1" ]; then
     CONF=$1
