@@ -50,6 +50,6 @@ case "$1" in
         stop
         ;;
     *)
-        stop && start
+        start
         ;;
 esac
