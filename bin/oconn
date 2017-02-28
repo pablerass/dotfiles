@@ -31,15 +31,18 @@ status() {
 }
 
 stop() {
-    for STOP_CONF_FILE in $CONF_DIR/*.ovpn; do
-        STOP_CONF_FILENAME=$(basename $STOP_CONF_FILE)
-        STOP_CONF=${STOP_CONF_FILENAME%.*}
-        COMMAND="/usr/sbin/openvpn --config $STOP_CONF_FILE --daemon ovpn-$STOP_CONF"
-        if pgrep -f "$COMMAND" > /dev/null 2>&1; then
-            echo "Stopping $STOP_CONF OpenVPN connection"
-            sudo /usr/bin/pkill -f "/usr/sbin/openvpn --config $STOP_CONF_FILE --daemon ovpn-$STOP_CONF"
-        fi
-    done
+    STOP_CONF_FILE=$CONF_DIR/$CONF.ovpn
+    if [ ! -e $CONF_FILE ]; then
+        echo "OpenVPN $CONF does not exists" 1>&2
+        exit 1
+    fi
+    STOP_CONF_FILENAME=$(basename $STOP_CONF_FILE)
+    STOP_CONF=${STOP_CONF_FILENAME%.*}
+    COMMAND="/usr/sbin/openvpn --config $STOP_CONF_FILE --daemon ovpn-$STOP_CONF"
+    if pgrep -f "$COMMAND" > /dev/null 2>&1; then
+        echo "Stopping $STOP_CONF OpenVPN connection"
+        sudo /usr/bin/pkill -f "/usr/sbin/openvpn --config $STOP_CONF_FILE --daemon ovpn-$STOP_CONF"
+    fi
 }
 
 case "$1" in
@@ -50,6 +53,6 @@ case "$1" in
         stop
         ;;
     *)
-        start
+        stop && start
         ;;
 esac
