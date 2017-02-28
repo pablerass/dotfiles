@@ -11,7 +11,6 @@ CONF_FILE=$CONF_DIR/$CONF
 
 if [ ! -e $CONF_FILE ]; then
     echo "MFA $CONF does not exists" 1>&2
-    exit 1
 fi
 
 unset AWS_ACCESS_KEY_ID
