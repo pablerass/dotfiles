@@ -4,4 +4,4 @@
 sudo apt-get -y install ruby ruby-dev
 
 # Install repositories
-sudo gem istall bundler
+sudo gem install bundler
