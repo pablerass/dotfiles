@@ -17,6 +17,12 @@ export PATH=$PATH:$HOME/bin:$HOME/bin/local
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/functions
 source $HOME/dotfiles/z.sh
+if [ -f $HOME/.alias.local ]; then
+    source $HOME/.alias.local
+fi
+if [ -f $HOME/.functions.local ]; then
+    source $HOME/.functions.local
+fi
 
 export LANG=es_ES.UTF-8
 
