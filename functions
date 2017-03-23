@@ -30,8 +30,43 @@ function dips(){
 	docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
 }
 
-function mkdircd () { 
+function mkdircd () {
 	mkdir -p "$@" && cd $_;
+}
+
+function tplan () {
+    COMMAND=plan
+    rm -Rf .terraform
+
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+    fi
+
+    if [ -f "${ECO}.tfvars" ]; then
+        VAR_FILE_ARG="-var-file=${ECO}.tfvars"
+    fi
+
+    aaws $ECO
+    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG
+}
+
+function tapply () {
+    COMMAND=apply
+
+    rm -Rf .terraform
+
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+    fi
+
+    if [ -f "${ECO}.tfvars" ]; then
+        VAR_FILE_ARG="-var-file=${ECO}.tfvars"
+    fi
+
+    aaws $ECO
+    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG
 }
 
 # Prompt function because PROMPT_COMMAND is awesome
