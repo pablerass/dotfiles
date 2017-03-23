@@ -34,7 +34,7 @@ function mkdircd () {
 	mkdir -p "$@" && cd $_;
 }
 
-function tplan () {
+function tfplan () {
     COMMAND=plan
     rm -Rf .terraform
 
@@ -51,7 +51,7 @@ function tplan () {
     TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG
 }
 
-function tapply () {
+function tfapply () {
     COMMAND=apply
 
     rm -Rf .terraform
