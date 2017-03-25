@@ -34,6 +34,17 @@ function mkdircd () {
 	mkdir -p "$@" && cd $_;
 }
 
+function ansplay () {
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+        shift
+    fi
+
+    aaws $ECO
+    ansible-playbook -i inventories/$ECO -e "ecosystem=$ECO" $*
+}
+
 function tfplan () {
     COMMAND=plan
     rm -Rf .terraform
@@ -41,6 +52,7 @@ function tfplan () {
     ECO=devops
     if [ ! -z "$1" ]; then
         ECO=$1
+        shift
     fi
 
     if [ -f "${ECO}.tfvars" ]; then
@@ -48,7 +60,7 @@ function tfplan () {
     fi
 
     aaws $ECO
-    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG
+    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG $*
 }
 
 function tfapply () {
@@ -59,6 +71,7 @@ function tfapply () {
     ECO=devops
     if [ ! -z "$1" ]; then
         ECO=$1
+        shift
     fi
 
     if [ -f "${ECO}.tfvars" ]; then
@@ -66,7 +79,7 @@ function tfapply () {
     fi
 
     aaws $ECO
-    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG
+    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG $*
 }
 
 # Prompt function because PROMPT_COMMAND is awesome
