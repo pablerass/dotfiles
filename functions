@@ -34,7 +34,7 @@ function mkdircd () {
 	mkdir -p "$@" && cd $_;
 }
 
-function ansplay () {
+function anplay () {
     ECO=devops
     if [ ! -z "$1" ]; then
         ECO=$1
@@ -45,6 +45,7 @@ function ansplay () {
     ansible-playbook -i inventories/$ECO -e "ecosystem=$ECO" $*
 }
 
+# TODO: Manage this three functions in a more interesting way
 function tfplan () {
     COMMAND=plan
     rm -Rf .terraform
@@ -65,6 +66,25 @@ function tfplan () {
 
 function tfapply () {
     COMMAND=apply
+
+    rm -Rf .terraform
+
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+        shift
+    fi
+
+    if [ -f "${ECO}.tfvars" ]; then
+        VAR_FILE_ARG="-var-file=${ECO}.tfvars"
+    fi
+
+    aaws $ECO
+    TF_VAR_ecosystem=$ECO terragrunt $COMMAND $VAR_FILE_ARG $*
+}
+
+function tfdestroy () {
+    COMMAND=destroy
 
     rm -Rf .terraform
 

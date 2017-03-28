@@ -6,6 +6,7 @@ alias ll='ls -ahlF'
 alias vi='vim'
 
 alias log='tail -f -n50 '
+alias logsys='tail -f -n50 /var/log/syslog'
 
 alias fn='find . -name'
 
