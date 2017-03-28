@@ -2,7 +2,7 @@
 
 # Specify version
 app=terragrunt
-ver=0.9.6
+ver=0.11.0
 arch=amd64
 package=${app}_linux_${arch}
 
