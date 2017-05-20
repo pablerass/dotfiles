@@ -29,6 +29,8 @@ set wildmenu
 set esckeys
 " Allow backspace in insert mode
 set backspace=indent,eol,start
+" Persiste undo
+set undofile
 " Optimize for fast terminal connections
 set ttyfast
 " Add the g flag to search/replace by default
@@ -43,9 +45,7 @@ set noeol
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+set undodir=~/.vim/undos
 
 " Respect modeline in files
 set modeline
