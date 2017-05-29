@@ -5,7 +5,7 @@ ZSH_THEME="candy"
 plugins=(gnu-utils systemadmin systemd man rsync tmux git \
 		vagrant terraform terragrunt aws heroku \
 		docker docker-compose virtualbox virsh \
-		pip python pyenv node npm nvm bower yarn grunt gulp meteor \
+		pip python pyenv node npm nvm bower yarn grunt gulp meteor stack \
 		ruby gem rbenv rvm rake mvn ant gradle golang glide \
 		knife kitchen)
 
