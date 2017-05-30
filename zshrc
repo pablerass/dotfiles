@@ -5,8 +5,9 @@ ZSH_THEME="candy"
 plugins=(gnu-utils systemadmin systemd man rsync tmux git \
 		vagrant terraform terragrunt aws heroku \
 		docker docker-compose virtualbox virsh \
-		pip python pyenv node npm nvm bower yarn grunt gulp meteor stack \
-		ruby gem rbenv rvm rake mvn ant gradle golang glide \
+		pip python pyenv node npm nvm bower yarn grunt gulp meteor \
+		ruby gem rbenv rvm rake mvn ant gradle \
+        stack cargo rust golang glide\
 		knife kitchen)
 
 source $ZSH/oh-my-zsh.sh
@@ -46,3 +47,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH="~/workspace/go"
+
+# Load rust configuration
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
