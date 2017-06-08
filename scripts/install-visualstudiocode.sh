@@ -2,12 +2,12 @@
 
 # Specify version
 app=code
-ver=1.7.2-1479766213
+ver=1.12.2-1494422229
 arch=amd64
 package=${app}_${ver}_${arch}.deb
 
 # Download deb packages
-wget -N https://az764295.vo.msecnd.net/stable/7ba55c5860b152d999dda59393ca3ebeb1b5c85f/${package}
+wget -N https://az764295.vo.msecnd.net/stable/19222cdc84ce72202478ba1cec5cb557b71163de/${package}
 
 # Install packages
 sudo dpkg -i $package
