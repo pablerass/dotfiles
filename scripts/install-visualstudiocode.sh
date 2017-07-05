@@ -17,7 +17,7 @@ rm -f $package
 
 # Install extensions
 code --install-extension ms-vscode.csharp
-code --install-extension ms-vscode.cpptools
-code --install-extension lukehoban.Go
-code --install-extension donjayamanne.python
-code --install-extension vscodevim.vim
+#code --install-extension ms-vscode.cpptools
+#code --install-extension lukehoban.Go
+#code --install-extension donjayamanne.python
+#code --install-extension vscodevim.vim
