@@ -33,6 +33,7 @@ aa = add --all
 br = branch
 ca = commit -a
 co = checkout
+cob = checkout -b
 dc = diff --cached
 st = status
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
