@@ -17,3 +17,6 @@ $DIR/senv-aws $ENV
 
 echo "SSH environment"
 $DIR/senv-ssh $ENV
+
+echo "Chef environment"
+$DIR/senv-chef $ENV
