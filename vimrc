@@ -118,6 +118,9 @@ noremap <leader>CF :setlocal spell spelllang=fr_fr<CR>
 noremap <leader>NC :setlocal nospell<CR>
 autocmd BufRead,BufNewFile *.md,*.rst setlocal spell spelllang=en_us
 
+" jedi-vim configuration
+let g:jedi#popup_on_dot = 0
+
 " vim-airline configuration
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
