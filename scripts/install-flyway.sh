@@ -12,6 +12,7 @@ wget -N $base_url/$ver/$package
 # Unzip package
 sudo tar xzf $package -C /opt
 sudo mv /opt/${app}-$ver /opt/$app
+sudo chmod a+x /opt/flyway/flyway
 
 # Remove temporal package
 rm -f $package
