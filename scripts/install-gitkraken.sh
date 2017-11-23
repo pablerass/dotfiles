@@ -1,13 +1,10 @@
 #!/bin/bash -e
 
 # Specify version
-app=vagrant
-ver=2.0.1
-arch=x86_64
-package=${app}_${ver}_${arch}.deb
+package=gitkraken-amd64.deb
 
 # Download deb packages
-wget -N https://releases.hashicorp.com/$app/$ver/$package
+wget -N https://release.gitkraken.com/linux/$package
 
 # Install packages
 sudo dpkg -i $package
