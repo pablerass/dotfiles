@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DEVICE=$(xinput list --name-only | grep -e "Wacom Intuos .* Pen stylus")
+SCREEN=$(xrandr --listactivemonitors | grep "^ 0" | rev | cut -d' ' -f1 | rev)
+
+xsetwacom set "${DEVICE}" MapToOutput "${SCREEN}"
