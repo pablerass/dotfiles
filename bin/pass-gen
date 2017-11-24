@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SIZE=20
+
+if [ -n "$1" ]; then
+    SIZE=$1
+fi
+apg -m $SIZE -x $SIZE -a 1 -E@ -E\' -E\" -E/ -E\\

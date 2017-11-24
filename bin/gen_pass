@@ -1,3 +1,0 @@
-#!/bin/bash
-
-apg -m 20 -x 20 -a 1 -E@ -E\' -E\" -E/ -E\\

@@ -1,6 +1,10 @@
 #!/bin/bash
 
-DEVICE=$(xinput list --name-only | grep -e "Wacom Intuos .* Pen stylus")
 SCREEN=$(xrandr --listactivemonitors | grep "^ 0" | rev | cut -d' ' -f1 | rev)
+DEVICE=$(xinput list --name-only | grep -e "Wacom Intuos .* Pen stylus")
+if [ -n "$DEVICE" ]; then
+    echo "No device found"
+    exit 1
+fi
 
 xsetwacom set "${DEVICE}" MapToOutput "${SCREEN}"
