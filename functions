@@ -76,6 +76,10 @@ function tfdestroy () {
     tfeco destroy $*
 }
 
+function httpdump() {
+    sudo tcpdump -A -s 0 $* | egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'
+}
+
 # Prompt function because PROMPT_COMMAND is awesome
 function set_prompt() {
     # show the host only and be done with it.
