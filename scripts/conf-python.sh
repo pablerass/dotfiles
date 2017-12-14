@@ -10,7 +10,7 @@ sudo apt-get install python3-dev libffi-dev libssl-dev -y
 $DIR/update-pip.sh
 
 # Install python libs
-sudo -H pip3 install --upgrade --force \
+sudo -H pip3 install --upgrade \
 		jedi flake8 flake8-docstrings ropevim \
 		ipython[all] simplejson pyyaml \
 		virtualenv virtualenvwrapper \
