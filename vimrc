@@ -156,9 +156,9 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 " Auto text wrapping
 autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
 " Disable automatic indent
-autocmd BufRead,BufNewFile *.yml,*.py,*.html,*.xml setlocal noautoindent nocindent nosmartindent indentexpr=
+autocmd BufRead,BufNewFile *.yml,*.py,*.html,*.xml,*.css,*.js,*.json setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
-autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.feature,*.json setlocal tabstop=2
+autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.feature,*.json,*.js setlocal tabstop=2
 " Force space instead of tabs
 autocmd BufRead,BufNewFile *.sh setlocal expandtab!
 
