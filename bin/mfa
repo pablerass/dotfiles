@@ -16,4 +16,4 @@ fi
 
 KEY=$(cat $CONF_FILE | grep -E "^key" | cut -d';' -f2)
 
-oathtool --totp --base32 $KEY | tee /dev/tty | tr -d '\n' | xclip -selection c
+oathtool --totp --base32 "$KEY" | tee /dev/tty | tr -d '\n' | xclip -selection c
