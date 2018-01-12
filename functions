@@ -50,14 +50,13 @@ function tfeco () {
     rm -Rf .terraform/terraform.tfstate
 
     if [ ! -z "$1" ]; then
-        COMMAND=$1
+        ECO=$1
+        aaws $ECO
         shift
     fi
 
-    ECO=devops
     if [ ! -z "$1" ]; then
-        ECO=$1
-        aaws $ECO
+        COMMAND=$1
         shift
     fi
 
@@ -65,15 +64,33 @@ function tfeco () {
 }
 
 function tfplan () {
-    tfeco plan $*
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+        shift
+    fi
+
+    tfeco $ECO plan $*
 }
 
 function tfapply () {
-    tfeco apply $*
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+        shift
+    fi
+
+    tfeco $ECO apply $*
 }
 
 function tfdestroy () {
-    tfeco destroy $*
+    ECO=devops
+    if [ ! -z "$1" ]; then
+        ECO=$1
+        shift
+    fi
+
+    tfeco $ECO destroy $*
 }
 
 function httpdump() {
