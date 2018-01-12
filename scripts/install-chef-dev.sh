@@ -6,11 +6,11 @@ source /etc/lsb-release
 app=chefdk
 ver=1.1.16
 arch=amd64
-distro=$DISTRIB_RELEASE
+os_version=$DISTRIB_RELEASE
 package=chefdk_${ver}-1_${arch}.deb
 
 # Download deb package
-wget -N https://packages.chef.io/files/stable/chefdk/${ver}/ubuntu/${distro}/${package}
+wget -N https://packages.chef.io/files/stable/chefdk/${ver}/ubuntu/${os_version}/${package}
 
 # Install package
 sudo dpkg -i $package
