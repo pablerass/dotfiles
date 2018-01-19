@@ -23,15 +23,15 @@ LC=$BLUE
 HD=$FULL
 
 function dsall(){
-	docker stop $(docker ps -a -q)
+    docker stop $(docker ps -a -q)
 }
 
 function dips(){
-	docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+    docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
 }
 
 function mkdircd () {
-	mkdir -p "$@" && cd $_;
+    mkdir -p "$@" && cd $_;
 }
 
 function anplay () {
@@ -45,7 +45,6 @@ function anplay () {
     ansible-playbook -i inventories/$ECO -e "ecosystem=$ECO" $*
 }
 
-# TODO: Manage this three functions in a more interesting way
 function tfeco () {
     rm -Rf .terraform/terraform.tfstate
 
@@ -94,7 +93,9 @@ function tfdestroy () {
 }
 
 function httpdump() {
-    sudo tcpdump -A -s 0 $* | egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'
+    sudo tcpdump -A -s 0 $* | \
+        egrep --line-buffered "^........(GET |HTTP\/|POST |HEAD )|^[A-Za-z0-9-]+: " | \
+        sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'
 }
 
 # Prompt function because PROMPT_COMMAND is awesome

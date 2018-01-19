@@ -41,7 +41,7 @@ lo = log --color --pretty=oneline --abbrev-commit --
 lp = log -p --
 lf = log --follow --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 posh = push origin HEAD
-polh = pull origin HEAD
+polh = "! git pull origin $(git symbolic-ref HEAD --short)"
 unstage = reset HEAD --
 last = log -1 HEAD
 clear = clean -fdx
