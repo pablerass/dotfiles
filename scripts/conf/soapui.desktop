@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=SoapUI
+Comment=SoapUI
+TryExec=/opt/soapui/bin/soapui.sh
+Exec=/opt/soapui/bin/soapui.sh
+Categories=Development;IDE;Java;
+Terminal=False
+Type=Application
+StartupNotify=true
