@@ -154,7 +154,7 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 " Auto text wrapping
-autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80
+autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=79
 " Disable automatic indent
 autocmd BufRead,BufNewFile *.yml,*.py,*.html,*.xml,*.css,*.js,*.json setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
