@@ -1,9 +1,12 @@
 [Desktop Entry]
 Name=SoapUI
 Comment=SoapUI
-TryExec=/opt/soapui/bin/soapui.sh
-Exec=/opt/soapui/bin/soapui.sh
+Exec=soapui.sh
+Path=/opt/soapui/bin
+Icon=com-eviware-soapui-soapui
 Categories=Development;IDE;Java;
 Terminal=False
 Type=Application
 StartupNotify=true
+OnlyShowIn=Unity;
+StartupWMClass=com-eviware-soapui-SoapUI
