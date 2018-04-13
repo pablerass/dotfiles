@@ -40,12 +40,18 @@ then
 	mv ~/bin ~/.bin.bak
 fi
 
+if [ -f ~/.tmuxinator ];
+then
+	mv ~/.tmuxinator ~/.tmuxinator.bak
+fi
+
 # Set new config files
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/bin ~/bin
+ln -s ~/dotfiles/tmuxinator ~/.tmuxinator
 
 # Configure vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
