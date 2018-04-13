@@ -16,3 +16,5 @@ $SCRIPTS_DIR/install-slack.sh
 $SCRIPTS_DIR/install-terraform.sh
 $SCRIPTS_DIR/install-vagrant.sh
 $SCRIPTS_DIR/install-virtualbox.sh
+$SCRIPTS_DIR/install-ruby.sh
+$SCRIPTS_DIR/install-tmuxinator.sh
