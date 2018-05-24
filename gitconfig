@@ -44,7 +44,7 @@ posh = push origin HEAD
 polh = "! git pull origin $(git symbolic-ref HEAD --short)"
 unstage = reset HEAD --
 last = log -1 HEAD
-clear = clean -fdx
+cleanf = clean -fdx
 lone = clone --depth 1
 
 [merge]
