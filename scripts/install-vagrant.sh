@@ -2,7 +2,7 @@
 
 # Specify version
 app=vagrant
-ver=2.0.1
+ver=2.1.1
 arch=x86_64
 package=${app}_${ver}_${arch}.deb
 
