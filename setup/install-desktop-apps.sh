@@ -13,6 +13,7 @@ sudo apt-get install -y \
 # Call other install scripts
 $SCRIPTS_DIR/install-additional-fonts.sh
 $SCRIPTS_DIR/install-caffeine.sh
+$SCRIPTS_DIR/install-sound-switcher-indicator.sh
 $SCRIPTS_DIR/install-cardreader.sh
 $SCRIPTS_DIR/install-chrome.sh
 $SCRIPTS_DIR/install-dropbox.sh
