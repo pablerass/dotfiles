@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CONF_DIR=$HOME/conf/dns
+CONF=vpn
+
+if [ ! -z "$1" ]; then
+    CONF=$1
+fi
+
+CONF_FILE=$CONF_DIR/resolv.conf.$CONF
+
+if [ ! -e $CONF_FILE ]; then
+    echo "DNS $CONF does not exists" 1>&2
+    exit 1
+fi
+
+sudo cp $CONF_FILE /etc/resolv.conf
