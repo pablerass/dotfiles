@@ -13,7 +13,7 @@ sudo sh -c "echo deb http://download.virtualbox.org/virtualbox/debian $DISTRO co
 sudo apt-get update -y
 
 # Install packages
-sudo apt-get install virtualbox-$VERSION -y
+sudo apt-get install virtualbox-$VERSION virtualbox-ext-pack -y
 
 # Add to virtualbox group
 sudo usermod -a -G vboxusers $USER
