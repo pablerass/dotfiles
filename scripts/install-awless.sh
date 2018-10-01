@@ -2,7 +2,7 @@
 
 # Specify version
 app=awless
-ver=0.1.9
+ver=0.1.11
 arch=amd64
 package=${app}-linux-${arch}.tar.gz
 

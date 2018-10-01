@@ -23,4 +23,3 @@ $SCRIPTS_DIR/install-google-talk-plugin.sh
 $SCRIPTS_DIR/install-openshot.sh
 $SCRIPTS_DIR/install-simplescreenrecorder.sh
 $SCRIPTS_DIR/install-spotify.sh
-$SCRIPTS_DIR/install-xclip.sh

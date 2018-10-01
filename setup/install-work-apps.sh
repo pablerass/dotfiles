@@ -5,10 +5,13 @@ SCRIPTS_DIR=$DIR/../scripts
 
 # Call other install scripts
 $SCRIPTS_DIR/conf-python.sh
+$SCRIPTS_DIR/conf-mfa.sh
 $SCRIPTS_DIR/install-ansible.sh
 $SCRIPTS_DIR/install-awscli.sh
+$SCRIPTS_DIR/install-awless.sh
 $SCRIPTS_DIR/install-chrome.sh
 $SCRIPTS_DIR/install-docker.sh
+$SCRIPTS_DIR/install-guake.sh
 $SCRIPTS_DIR/install-git-latest.sh
 $SCRIPTS_DIR/install-go.sh
 $SCRIPTS_DIR/install-nodejs.sh
