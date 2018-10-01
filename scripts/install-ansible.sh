@@ -1,8 +1,4 @@
 #!/bin/bash -e
 
-source /etc/lsb-release
-
 # Install packages
-sudo -H pip install --upgrade \
-		"ansible>=2.3.0<2.4.0" \
-		"ansible-container"
+sudo -H pip3 install --upgrade "ansible>=2.6.0<2.7.0"
