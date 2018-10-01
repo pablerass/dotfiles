@@ -5,10 +5,6 @@ source /etc/lsb-release
 VERSION=6.x
 DISTRO=$DISTRIB_CODENAME
 
-# Remove chris-lea-ppa if configured
-sudo add-apt-repository -y -r ppa:chris-lea/node.js
-sudo rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list
-
 # Add repositories
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
 sudo sh -c "echo deb https://deb.nodesource.com/node_$VERSION $DISTRO main > /etc/apt/sources.list.d/nodesource.list"
