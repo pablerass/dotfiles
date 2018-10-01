@@ -3,12 +3,12 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
 plugins=(gnu-utils systemadmin systemd man rsync tmux tmuxinator git \
-		vagrant terraform terragrunt aws awless heroku \
-		docker docker-compose virtualbox virsh \
-		pip python pyenv node npm nvm bower yarn grunt gulp meteor \
-		ruby gem rbenv rvm rake mvn ant gradle \
-        stack cargo rust golang glide\
-		knife kitchen)
+         vagrant terraform terragrunt aws awless heroku \
+         docker docker-compose virtualbox virsh \
+         pip python pyenv node npm nvm bower yarn grunt gulp meteor \
+         ruby gem rbenv rvm rake mvn ant gradle \
+         stack cargo rust golang glide\
+         knife kitchen)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -33,12 +33,13 @@ unsetopt beep
 
 # Configure terminal color for tmux compatibility
 if [[ $TERM == xterm ]]; then
-	TERM=xterm-256color
+    TERM=xterm-256color
 fi
 
 # Configure installed apps
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-	source /usr/local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 # Load travis configuration
