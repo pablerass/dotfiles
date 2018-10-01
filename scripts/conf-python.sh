@@ -13,4 +13,4 @@ $DIR/update-pip.sh
 sudo -H pip3 install --upgrade \
 		jedi flake8 flake8-docstrings ropevim \
 		ipython[all] virtualenv virtualenvwrapper \
-		requests[security] pipenv
+		requests[security] pipenv grip
