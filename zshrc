@@ -25,8 +25,6 @@ if [ -f $HOME/.functions.local ]; then
     source $HOME/.functions.local
 fi
 
-export LANG=es_ES.UTF-8
-
 export EDITOR=/usr/bin/vim
 
 unsetopt beep
