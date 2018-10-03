@@ -9,7 +9,7 @@ $SCRIPTS_DIR/conf-mfa.sh
 $SCRIPTS_DIR/install-additional-fonts.sh
 $SCRIPTS_DIR/install-ansible.sh
 $SCRIPTS_DIR/install-awscli.sh
-$SCRIPTS_DIR/install-awless.sh
+$SCRIPTS_DIR/install-aws-vault.sh
 $SCRIPTS_DIR/install-chrome.sh
 $SCRIPTS_DIR/install-docker.sh
 $SCRIPTS_DIR/install-guake.sh

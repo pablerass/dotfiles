@@ -23,6 +23,13 @@ alias mirror='rsync -avh --delete'
 # Ansible
 alias ap='ansible-playbook'
 
+# AWS
+alias av='aws-vault --backend file'
+alias avadd='aws-vault --backend file add'
+alias avexec='aws-vault --backend file exec'
+alias avrem='aws-vault --backend file remove'
+alias aaws='source ~/bin/saws-auth'
+
 # Docker
 alias drun='docker run'
 alias dstop='docker stop'
@@ -74,6 +81,3 @@ alias cpuinfo='lscpu'
 
 # xclip
 alias cxclip='xclip -selection clipboard'
-
-# bin
-alias aaws='source ~/bin/saws-auth'
