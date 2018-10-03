@@ -1,4 +1,7 @@
+alias reload=". ~/.zshrc"
+
 ## Common commands
+
 alias grep='grep --color=auto'
 
 alias ll='ls -ahlF'
