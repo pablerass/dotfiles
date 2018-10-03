@@ -27,6 +27,7 @@ alias ap='ansible-playbook'
 alias av='aws-vault --backend file'
 alias avadd='aws-vault --backend file add'
 alias avexec='aws-vault --backend file exec'
+alias avlogin='aws-vault --backend file login'
 alias avrem='aws-vault --backend file remove'
 alias aaws='source ~/bin/saws-auth'
 
