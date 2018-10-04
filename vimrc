@@ -8,7 +8,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Mark overlength with a linesize of 120
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+match OverLength /\%100v.\+/
 
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
