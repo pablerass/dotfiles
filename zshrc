@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="candy"
+ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
+ZSH_THEME="mycandy"
 
 plugins=(gnu-utils systemadmin systemd man rsync tmux tmuxinator git \
          vagrant terraform terragrunt aws awless heroku \

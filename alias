@@ -57,6 +57,9 @@ alias vup='vagrant up'
 alias valt='vagrant halt'
 alias vssh='vagrant ssh'
 
+# Terraform
+alias tfmt='terraform fmt'
+
 ## Monitoring
 # Disk
 alias df='df -h'
