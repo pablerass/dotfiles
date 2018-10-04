@@ -9,7 +9,7 @@ sudo sh -c "echo deb http://apt.kubernetes.io/ kubernetes-$DISTRO main > /etc/ap
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install kubeadm -y
+sudo apt install kubeadm -y

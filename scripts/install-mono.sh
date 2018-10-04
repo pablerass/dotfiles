@@ -9,7 +9,7 @@ sudo sh -c "echo deb https://download.mono-project.com/repo/ubuntu ${DISTRO} mai
 wget -q -O - http://download.mono-project.com/repo/xamarin.gpg | sudo apt-key add -
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install -y mono-complete
+sudo apt install -y mono-complete

@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Install packages
-sudo apt-get install docker.io -y
+sudo apt install docker.io -y
 
 # Configure service
 sudo systemctl start docker

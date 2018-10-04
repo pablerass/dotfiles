@@ -11,10 +11,10 @@ sudo sh -c "echo deb https://deb.nodesource.com/node_$VERSION $DISTRO main > /et
 sudo sh -c "echo deb-src https://deb.nodesource.com/node_$VERSION $DISTRO main >> /etc/apt/sources.list.d/nodesource.list"
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install nodejs -y
+sudo apt install nodejs -y
 
 # Install nvm
 NVM_VERSION=0.33.0

@@ -10,7 +10,7 @@ sudo dpkg -i puppetlabs-release-$DISTRO
 rm puppetlabs-release-$DISTRO
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install puppet -y
+sudo apt install puppet -y

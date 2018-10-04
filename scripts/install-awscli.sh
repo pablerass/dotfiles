@@ -2,7 +2,7 @@
 
 # Install packages
 #	jq - enables json parsing from bash
-sudo apt-get install jq -y
+sudo apt install jq -y
 
 # Install python libs
 sudo -H pip install -U awscli #awsebcli s3cmd

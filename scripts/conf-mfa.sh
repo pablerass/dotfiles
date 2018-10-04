@@ -6,4 +6,4 @@ MFA_CONF_DIR=$HOME/conf/mfa
 mkdir -p $MFA_CONF_DIR
 
 # Install tools
-sudo apt-get install oathtool xclip -y
+sudo apt install oathtool xclip -y

@@ -10,7 +10,7 @@ package=${app}_${ver}_${arch}.deb
 wget -N https://github.com/buttercup/buttercup-desktop/releases/download/v${ver}/${package}
 
 # Install packages
-sudo apt-get install gconf2 libappindicator1 libindicator7 -y
+sudo apt install gconf2 libappindicator1 libindicator7 -y
 sudo dpkg -i $package
 
 # Delete packages

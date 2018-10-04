@@ -4,7 +4,7 @@
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -y
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install simplescreenrecorder -y
+sudo apt install simplescreenrecorder -y

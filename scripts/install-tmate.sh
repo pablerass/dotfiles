@@ -4,7 +4,7 @@
 sudo add-apt-repository ppa:tmate.io/archive -y
 
 # Update repos
-sudo apt-get update -y
+sudo apt update -y
 
 # Install package
-sudo apt-get install tmate -y
+sudo apt install tmate -y

@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Install packages
-sudo apt-get install fonts-crosextra-caladea fonts-crosextra-carlito ttf-mscorefonts-installer -y
+sudo apt install fonts-crosextra-caladea fonts-crosextra-carlito ttf-mscorefonts-installer -y
 
 # Install powerline fonts
 wget -N https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf

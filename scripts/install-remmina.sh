@@ -4,8 +4,8 @@
 sudo apt-add-repository -y ppa:remmina-ppa-team/remmina-next
 
 # Update repos and packages
-sudo apt-get -y update
+sudo apt -y update
 
 # Install packages
-sudo apt-get -y install remmina remmina-plugin-rdp libfreerdp-plugins-standard
+sudo apt -y install remmina remmina-plugin-rdp libfreerdp-plugins-standard
 
