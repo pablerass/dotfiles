@@ -1,7 +1,4 @@
-alias reload=". ~/.zshrc"
-
 ## Common commands
-
 alias grep='grep --color=auto'
 
 alias ll='ls -ahlF'
@@ -9,7 +6,6 @@ alias ll='ls -ahlF'
 alias vi='vim'
 
 alias log='tail -f -n50 '
-alias logsys='tail -f -n50 /var/log/syslog'
 
 alias fn='find . -name'
 
@@ -29,7 +25,7 @@ alias avadd='aws-vault --backend file add'
 alias avexec='aws-vault --backend file exec'
 alias avlogin='aws-vault --backend file login'
 alias avrem='aws-vault --backend file remove'
-alias avde='unset AWS_DEFAULT_REGION AWS_VAULT AWS_REGION AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN AWS_SECURITY_TOKEN'
+alias avde='if [[ ! -z "$AWS_VAULT" ]]; then exit; fi'
 
 # Docker
 alias drun='docker run'
