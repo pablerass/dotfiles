@@ -12,4 +12,5 @@ for ext in ${EXTENSIONS[@]}; do
 	gnome-shell-extension-tool -e $ext_uuid || :
 	rm $ext
 done
+gsettings set org.gnome.shell.overrides workspaces-only-on-primary true
 killall -3 gnome-shell
