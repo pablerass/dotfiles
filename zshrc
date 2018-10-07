@@ -9,7 +9,7 @@ plugins=(gnu-utils systemadmin systemd man rsync tmux tmuxinator git \
          pip python pyenv node npm nvm bower yarn grunt gulp meteor \
          ruby gem rbenv rvm rake mvn ant gradle \
          stack cargo rust golang glide\
-         knife kitchen)
+         knife kitchen kubectl oc)
 
 source $ZSH/oh-my-zsh.sh
 
