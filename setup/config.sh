@@ -5,6 +5,7 @@ DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 # Install packages
 sudo apt-get install -y git tmux vim zsh htop curl
 $DIR/scripts/conf-python.sh
+$DIR/scripts/conf-gnome-shell.sh
 
 # Install gui packages
 if ls /usr/bin/*session | grep gnome; then
