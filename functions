@@ -22,15 +22,6 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
-function curl() {
-    LOCK_URL="http://tiny.cc/hasselhoffme"
-    if [[ "$1" == "-L" && "$2" == "$LOCK_URL" ]]; then
-        dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
-    else
-        /usr/bin/curl $*
-    fi
-}
-
 function dsall(){
     docker stop $(docker ps -a -q)
 }
