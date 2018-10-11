@@ -37,7 +37,8 @@ alias drmf='docker rm -f'
 alias drmi='docker rmi'
 alias dimg='docker images'
 alias dpush='docker push'
-alias dpull='docker push'
+alias dpull='docker pull'
+alias dsh='docker run --rm -i -t'
 
 # Python
 alias wo='workon'
