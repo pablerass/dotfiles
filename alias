@@ -22,7 +22,7 @@ alias ap='ansible-playbook'
 # AWS
 alias av='aws-vault --backend file'
 alias avadd='aws-vault --backend file add'
-alias avexec='aws-vault --backend file exec'
+alias avexec='aws-vault --backend file exec --assume-role-ttl=1h'
 alias avlogin='aws-vault --backend file login'
 alias avrem='aws-vault --backend file remove'
 alias avde='if [[ ! -z "$AWS_VAULT" ]]; then exit; fi'
