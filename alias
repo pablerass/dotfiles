@@ -39,6 +39,7 @@ alias dimg='docker images'
 alias dpush='docker push'
 alias dpull='docker pull'
 alias dsh='docker run --rm -i -t'
+alias dcmd='docker run --rm -i -v $(pwd):/tmp -w /tmp'
 
 # Python
 alias wo='workon'
