@@ -3,15 +3,21 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
 ZSH_THEME="mycandy"
 
-plugins=(gnu-utils systemadmin systemd man rsync tmux tmuxinator git \
-         vagrant terraform terragrunt aws awless heroku \
-         docker docker-compose virtualbox virsh \
-         pip python pyenv node npm nvm bower yarn grunt gulp meteor \
-         ruby gem rbenv rvm rake mvn ant gradle \
-         stack cargo rust golang glide\
-         knife kitchen kubectl oc minikube helm)
+plugins=(gnu-utils systemadmin systemd man rsync \
+    tmux tmuxinator git \
+    vagrant terraform terragrunt aws awless \
+    docker docker-compose virtualbox virsh \
+    pip python pyenv \
+    node npm nvm bower yarn grunt gulp \
+    ruby gem rbenv rvm rake \
+    mvn ant gradle \
+    stack cargo rust golang glide \
+    knife kitchen \
+    kubectl oc minikube helm)
 
 source $ZSH/oh-my-zsh.sh
+# Tmuxinator not properly loaded
+source ~/.oh-my-zsh/plugins/tmuxinator/_tmuxinator
 
 # Customize
 export PATH=$PATH:$HOME/bin:$HOME/bin/local

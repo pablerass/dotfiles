@@ -15,8 +15,6 @@ alias s='sudo '
 
 alias mirror='rsync -avh --delete'
 
-alias mux=tmuxinator
-
 ## Tools
 # Ansible
 alias ap='ansible-playbook'
