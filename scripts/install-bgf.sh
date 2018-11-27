@@ -2,7 +2,8 @@
 
 # Specify eclipse version
 url="https://search.maven.org/remote_content?g=com.madgag&a=bfg&v=LATEST"
-dir=/opt/bgf
+app=bgf
+dir=/opt/$app
 jar=bgf.jar
 exe=bgf
 
@@ -20,11 +21,11 @@ sudo chmod a+r $jar
 sudo chmod a+rx $exe
 
 # Move files
-sudo mkdir $dir
+sudo mkdir -p $dir
 
 sudo mv $exe $dir
 sudo mv $jar $dir
 
 sudo chown root:root -R $dir
 
-sudo ln -s /opt/bgf/bgf /usr/local/bin/bgf
+sudo ln -sf /opt/bgf/bgf /usr/local/bin/bgf
