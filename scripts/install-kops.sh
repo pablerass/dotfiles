@@ -1,8 +1,8 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 # Specify version
-app=minikube
-ver=v0.32.0
+app=kops
+ver=1.10.1
 arch=amd64
 package=${app}-linux-${arch}
 
