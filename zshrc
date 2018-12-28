@@ -13,7 +13,7 @@ plugins=(gnu-utils systemadmin systemd man rsync \
     mvn ant gradle \
     stack cargo rust golang glide \
     knife kitchen \
-    kubectl oc minikube helm)
+    kubectl oc minikube kops helm)
 
 source $ZSH/oh-my-zsh.sh
 # Tmuxinator not properly loaded
