@@ -26,6 +26,8 @@ update_repo $GITHUB_URL/technosophos/glide-zsh.git \
 			$OH_MY_ZSH_PLUGINS_DIR/glide
 update_repo $GITHUB_URL/pablerass/zsh-terragrunt-autocomplete.git \
 			$OH_MY_ZSH_PLUGINS_DIR/terragrunt
+update_repo $GITHUB_URL/TamCore/oh-my-zsh-minishift.git \
+			$OH_MY_ZSH_PLUGINS_DIR/minishift
 
 # Vim plugins
 update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree
