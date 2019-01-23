@@ -2,7 +2,7 @@
 
 # Specify version
 app=minikube
-ver=v0.32.0
+ver=v0.33.1
 arch=amd64
 package=${app}-linux-${arch}
 
@@ -19,3 +19,6 @@ rm -f $package
 
 # Configure path
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app' > /etc/profile.d/${app}.sh"
+
+# Remove update warning
+/opt/$app/minikube config set WantUpdateNotification false
