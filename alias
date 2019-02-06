@@ -6,7 +6,6 @@ alias ll='ls -ahlF'
 alias vi='vim'
 
 alias log='tail -f -n50 '
-alias logsys='tail -f -n50 /var/log/syslog'
 
 alias fn='find . -name'
 
@@ -20,6 +19,14 @@ alias mirror='rsync -avh --delete'
 # Ansible
 alias ap='ansible-playbook'
 
+# AWS
+alias av='aws-vault --backend file'
+alias avadd='aws-vault --backend file add'
+alias avexec='aws-vault --backend file exec --assume-role-ttl=1h'
+alias avlogin='aws-vault --backend file login'
+alias avrem='aws-vault --backend file remove'
+alias avde='if [[ ! -z "$AWS_VAULT" ]]; then exit; fi'
+
 # Docker
 alias drun='docker run'
 alias dstop='docker stop'
@@ -30,7 +37,9 @@ alias drmf='docker rm -f'
 alias drmi='docker rmi'
 alias dimg='docker images'
 alias dpush='docker push'
-alias dpull='docker push'
+alias dpull='docker pull'
+alias dsh='docker run --rm -i -t'
+alias dcmd='docker run --rm -i -v $(pwd):/tmp -w /tmp'
 
 # Python
 alias wo='workon'
@@ -45,6 +54,9 @@ alias lsve='lsvirtualenv -b'
 alias vup='vagrant up'
 alias valt='vagrant halt'
 alias vssh='vagrant ssh'
+
+# Terraform
+alias tfmt='terraform fmt'
 
 ## Monitoring
 # Disk
@@ -71,6 +83,3 @@ alias cpuinfo='lscpu'
 
 # xclip
 alias cxclip='xclip -selection clipboard'
-
-# bin
-alias aaws='source ~/bin/saws-auth'

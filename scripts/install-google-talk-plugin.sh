@@ -7,7 +7,7 @@ if [ ! -e /etc/apt/sources.list.d/google-talkplugin.list ]; then
 fi
 
 # Update repos
-sudo apt-get update -y
+sudo apt update -y
 
 # Install additional packages
-sudo apt-get install google-talkplugin -y
+sudo apt install google-talkplugin -y

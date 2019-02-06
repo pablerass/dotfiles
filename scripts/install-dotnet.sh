@@ -14,11 +14,11 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 #sudo dpkg -i packages-microsoft-prod.deb
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Uninstall
-sudo apt-get purge -y dotnet-host || true
+sudo apt purge -y dotnet-host || true
 
 # Install packages
-sudo apt-get install -y apt-transport-https $package
+sudo apt install -y apt-transport-https $package
 

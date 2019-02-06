@@ -8,7 +8,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Mark overlength with a linesize of 120
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+match OverLength /\%100v.\+/
 
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
@@ -154,7 +154,7 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 " Auto text wrapping
-autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=79
+autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=99
 " Disable automatic indent
 autocmd BufRead,BufNewFile *.yml,*.py,*.html,*.xml,*.css,*.js,*.json setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2

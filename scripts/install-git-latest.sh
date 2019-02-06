@@ -4,7 +4,7 @@
 sudo apt-add-repository ppa:git-core/ppa -y
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install git -y
+sudo apt install git -y

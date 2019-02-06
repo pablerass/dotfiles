@@ -4,7 +4,7 @@
 sudo add-apt-repository ppa:inkscape.dev/stable -y
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install inkscape -y
+sudo apt install inkscape -y

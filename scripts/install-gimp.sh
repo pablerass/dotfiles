@@ -4,7 +4,7 @@
 sudo apt-add-repository ppa:otto-kesselgulasch/gimp -y
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install gimp -y
+sudo apt install gimp -y

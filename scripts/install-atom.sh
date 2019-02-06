@@ -4,10 +4,10 @@
 sudo add-apt-repository ppa:webupd8team/atom -y
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get -y install atom
+sudo apt -y install atom
 
 # Install Atom packages
 apm install project-manager

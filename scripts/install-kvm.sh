@@ -6,10 +6,10 @@
 # Add repositories
 
 # Update repos and packages
-sudo apt-get update -y
+sudo apt update -y
 
 # Install packages
-sudo apt-get install qemu-kvm libvirt-bin bridge-utils -y
-sudo apt-get install ubuntu-vm-builder virt-manager -y
+sudo apt install qemu-kvm libvirt-bin bridge-utils -y
+sudo apt install ubuntu-vm-builder virt-manager -y
 
 # Configure packages
