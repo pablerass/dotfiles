@@ -14,6 +14,8 @@ for ext in ${EXTENSIONS[@]}; do
 	rm $ext
 done
 
+# Touchpad behavior
+gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
 # Config workspaces
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 gsettings set org.gnome.mutter dynamic-workspaces false

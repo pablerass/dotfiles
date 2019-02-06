@@ -10,7 +10,8 @@ sudo apt install python3-pip -y
 $DIR/update-pip.sh
 
 # Install python libs
-sudo -H pip3 install --upgrade \
+sudo -H pip3 install --ignore-installed \
+		--upgrade --upgrade-strategy=eager \
 		jedi flake8 flake8-docstrings ropevim \
 		ipython[all] virtualenv virtualenvwrapper \
 		requests[security] pipenv grip
