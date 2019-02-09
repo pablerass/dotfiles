@@ -2,7 +2,7 @@
 
 # Specify version
 app=go
-ver=1.7.3
+ver=1.11.5
 arch=amd64
 package=${app}${ver}.linux-${arch}.tar.gz
 
@@ -27,5 +27,3 @@ mkdir -p ~/workspace/$app
 export GOROOT=/opt/$app
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-$DIR/install-glide.sh

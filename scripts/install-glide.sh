@@ -2,7 +2,7 @@
 
 # Specify version
 app=glide
-ver=0.12.3
+ver=0.13.2
 arch=amd64
 package=$app-v$ver-linux-${arch}.tar.gz
 tmp_dir=linux-$arch
