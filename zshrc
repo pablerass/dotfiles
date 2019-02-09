@@ -54,7 +54,7 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export GOPATH="~/workspace/go"
+export GOPATH="$HOME/workspace/go"
 
 # Load rust configuration
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env

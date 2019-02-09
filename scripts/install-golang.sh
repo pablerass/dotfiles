@@ -18,7 +18,6 @@ rm -f $package
 
 # Configure path
 sudo sh -c "echo 'export GOROOT=/opt/$app' > /etc/profile.d/${app}.sh"
-sudo sh -c "echo 'export GOPATH=$HOME/workspace/$app' >> /etc/profile.d/${app}.sh"
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' >> /etc/profile.d/${app}.sh"
 
 mkdir -p ~/workspace/$app
