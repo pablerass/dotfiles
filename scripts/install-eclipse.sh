@@ -5,9 +5,9 @@ script=$(readlink -f $0)
 script_path=`dirname $script`
 
 # Specify eclipse version
-ver=neon
+ver=2018-12
 rel=R
-package=jee
+package=java
 file=eclipse-$package-$ver-$rel-linux-gtk-x86_64.tar.gz
 
 # Download eclipse
