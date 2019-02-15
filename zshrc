@@ -55,6 +55,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH="$HOME/workspace/go"
+[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && \. "$HOME/.sdkman/bin/sdkman-init.sh"  # This loads sdkman
 
 # Load rust configuration
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/pmunoz/.sdkman"
+[[ -s "/home/pmunoz/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pmunoz/.sdkman/bin/sdkman-init.sh"
