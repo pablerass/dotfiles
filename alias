@@ -66,11 +66,11 @@ alias du1='du -ch --max-depth=1'
 alias size='du -hs'
 
 # Network
-alias ports='netstat -tulanp'
-alias listen='sudo netstat -plunt'
+alias ports='ss -tulanp'
+alias listen='sudo ss -plunt'
 
 # Memory
-alias meminfo='free -m -l -t'
+alias meminfo='free -m -l -t -h'
 
 # Processes
 alias psmem='ps auxf | sort -nr -k 4'
