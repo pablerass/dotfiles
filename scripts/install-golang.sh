@@ -20,9 +20,6 @@ rm -f $package
 sudo sh -c "echo 'export GOROOT=/opt/$app' > /etc/profile.d/${app}.sh"
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' >> /etc/profile.d/${app}.sh"
 
-mkdir -p ~/workspace/$app
-
-# Install additional apps
-export GOROOT=/opt/$app
-
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+mkdir -p ~/workspace/$app/bin
+mkdir -p ~/workspace/$app/src
+mkdir -p ~/workspace/$app/pkg
