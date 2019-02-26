@@ -46,7 +46,8 @@ function ocgp() {
 }
 
 function occp() {
-    COMMAND=$1
+    local COMMAND=$1
+    local RESOURCE
     shift
     if [[ $COMMAND == explain ]] || [[ $COMMAND == describe ]]; then
         RESOURCE=pod
