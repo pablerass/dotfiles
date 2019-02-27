@@ -42,7 +42,7 @@ function httpdump() {
 
 function ocgp() {
     oc get pods --selector="$1" -o json | \
-        jq '.items[] | [select(.status.phase=="Running")] | .metadata.name'
+        jq -r '.items[] | select(.status.phase=="Running") | .metadata.name'
 }
 
 function occp() {
@@ -53,7 +53,7 @@ function occp() {
         RESOURCE=pod
     fi
     FIRST_POD=$(oc get pods --selector="$1" -o json | \
-        jq -r '[.items[] | select(.status.phase=="Running")] | first | .metadata.name')
+        jq -r '[.items[] | select(.status.phase=="Running") | .metadata.name] | first')
     shift
     if [[ -n $FIRST_POD ]]; then
         echo "$COMMAND $RESOURCE - $FIRST_POD"
