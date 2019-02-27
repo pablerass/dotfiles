@@ -52,7 +52,7 @@ function occp() {
     if [[ $COMMAND == explain ]] || [[ $COMMAND == describe ]]; then
         RESOURCE=pod
     fi
-    FIRST_POD=$(oc get pods --selector="app=salesforce-command-adapter" -o json | \
+    FIRST_POD=$(oc get pods --selector="$1" -o json | \
         jq -r '[.items[] | select(.status.phase=="Running")] | first | .metadata.name')
     shift
     if [[ -n $FIRST_POD ]]; then
