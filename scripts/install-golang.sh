@@ -2,7 +2,7 @@
 
 # Specify version
 app=go
-ver=1.11.5
+ver=1.12
 arch=amd64
 package=${app}${ver}.linux-${arch}.tar.gz
 
