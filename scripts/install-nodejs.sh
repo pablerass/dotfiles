@@ -2,7 +2,7 @@
 
 source /etc/lsb-release
 
-VERSION=6.x
+VERSION=8.x
 DISTRO=$DISTRIB_CODENAME
 
 # Add repositories
@@ -17,5 +17,5 @@ sudo apt update -y
 sudo apt install nodejs -y
 
 # Install nvm
-NVM_VERSION=0.33.0
+NVM_VERSION=0.34.0
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash
