@@ -2,22 +2,23 @@
 
 # Specify version
 app=code
-ver=1.12.2-1494422229
+ver=1.32.1-1552006243_amd64
 arch=amd64
 package=${app}_${ver}_${arch}.deb
+cdn_hash=05f146c7a8f7f78e80261aa3b2a2e642586f9eb3
 
 # Download deb packages
-wget -N https://az764295.vo.msecnd.net/stable/19222cdc84ce72202478ba1cec5cb557b71163de/${package}
+curl -s https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+# Update repos and packages
+sudo apt update -y
 
 # Install packages
-sudo dpkg -i $package
-
-# Delete packages
-rm -f $package
+sudo apt install code -y
 
 # Install extensions
-code --install-extension ms-vscode.csharp
+code --install-extension vscodevim.vim
 #code --install-extension ms-vscode.cpptools
 #code --install-extension lukehoban.Go
 #code --install-extension donjayamanne.python
-#code --install-extension vscodevim.vim
