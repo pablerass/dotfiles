@@ -1,7 +1,9 @@
 #!/bin/bash -e
 
+DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+
 # Specify version
-ver=8.8.0
+ver=9.3.1
 package=draw.io-amd64-${ver}.deb
 
 # Download deb packages
@@ -12,3 +14,7 @@ sudo dpkg -i $package
 
 # Delete packages
 rm -f $package
+
+# Correct icon config
+sudo cp $DIR/img/draw-io.png /opt/draw.io
+sudo sed -i 's#^Icon=.*$#Icon=/opt/draw.io/draw-io.png#g' /usr/share/applications/draw.io.desktop
