@@ -2,7 +2,7 @@
 
 # Specify version
 app=terraform
-ver=0.11.11
+ver=0.11.13
 arch=amd64
 package=${app}_${ver}_linux_${arch}.zip
 
