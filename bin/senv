@@ -20,3 +20,6 @@ $DIR/senv-ssh $ENV
 
 echo "Chef environment"
 $DIR/senv-chef $ENV
+
+echo "Kubectl environment"
+$DIR/senv-kube $ENV
