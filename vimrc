@@ -159,8 +159,8 @@ autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=99
 autocmd BufRead,BufNewFile *.sh,*.yml,*.py,*.html,*.xml,*.css,*.js,*.json,*.go setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
 autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.feature,*.json,*.js setlocal tabstop=2
-" Force space instead of tabs
-autocmd BufRead,BufNewFile *.sh setlocal expandtab!
+" Force tabs instead of spaces
+"autocmd BufRead,BufNewFile *.sh setlocal expandtab!
 
 " Markdown configuration
 let vim_markdown_preview_github=1
