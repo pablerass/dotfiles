@@ -41,6 +41,7 @@ alias dpull='docker pull'
 alias dsh='docker run --rm -i -t'
 alias dcmd='docker run --rm -i -v $(pwd):/tmp -w /tmp'
 alias drsh='docker exec -t -i'
+alias dc='docker-compose'
 
 # Python
 alias wo='workon'
