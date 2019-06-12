@@ -47,9 +47,8 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undos
 
-" Respect modeline in files
-set modeline
-set modelines=4
+" Disable modelines
+set nomodeline
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
