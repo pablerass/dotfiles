@@ -5,15 +5,15 @@ ZSH_THEME="mycandy"
 
 plugins=(gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
-    vagrant terraform terragrunt aws aws-vault awless \
-    docker docker-compose virtualbox virsh \
+    vagrant terraform terragrunt aws awless \
+    docker docker-compose virsh \
     pip python pyenv \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
     mvn ant gradle \
     stack cargo rust golang glide \
     knife kitchen \
-    kubectl kubectl-patch oc minikube minishift kops helm)
+    kubectl oc minikube kops helm)
 
 source $ZSH/oh-my-zsh.sh
 # Tmuxinator not properly loaded

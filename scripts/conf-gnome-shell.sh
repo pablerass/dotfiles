@@ -22,6 +22,7 @@ gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
+gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/$USER/images/screenshots"
 
 # Reload gnome-shell
 killall -3 gnome-shell

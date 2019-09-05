@@ -16,6 +16,11 @@ fi
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
 # Remove current config files
+if [ -d ~/.oh-my-zsh/custom ];
+then
+	mv ~/.oh-my-zsh/custom ~/.oh-my-zsh/custom.bak
+fi
+
 if [ -f ~/.gitconfig ];
 then
 	mv ~/.gitconfig ~/.gitconfig.bak
@@ -47,11 +52,12 @@ then
 fi
 
 # Set new config files
+ln -s ~/dotfiles/bin ~/bin
+ln -s ~/dotfiles/zsh_custom ~/.oh-my-zsh/custom
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/tmuxinator ~/.tmuxinator
 
 # Configure vim
