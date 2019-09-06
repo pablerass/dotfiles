@@ -1,9 +1,11 @@
-#!/bin/bash
+#!/bin/bash -e
 
 ## Variables
 GITHUB_URL=https://github.com
 
-OH_MY_ZSH_PLUGINS_DIR=~/.oh-my-zsh/custom/plugins
+OH_MY_ZSH_CUSTOM_DIR=~/.oh-my-zsh/custom
+OH_MY_ZSH_PLUGINS_DIR=$OH_MY_ZSH_CUSTOM_DIR/plugins
+OH_MY_ZSH_OWN_CUSTOM_DIR=~/dotfiles/zsh_custom
 VIM_PLUGINS_DIR=~/.vim/bundle
 
 ## Functions
@@ -18,6 +20,17 @@ function update_repo {
 	fi
 }
 
+## Links
+for plugin in $OH_MY_ZSH_OWN_CUSTOM_DIR/plugins/*; do
+    ln -sf $plugin $OH_MY_ZSH_PLUGINS_DIR/$(basename $plugin)
+done
+
+for theme in $OH_MY_ZSH_OWN_CUSTOM_DIR/themes/*; do
+    ln -sf $theme $OH_MY_ZSH_CUSTOM_DIR/$(basename $theme)
+done
+
+exit
+
 ## Repos
 # oh-my-zsh plugins
 update_repo $GITHUB_URL/jplitza/zsh-virsh-autocomplete.git \
@@ -26,8 +39,8 @@ update_repo $GITHUB_URL/technosophos/glide-zsh.git \
 			$OH_MY_ZSH_PLUGINS_DIR/glide
 update_repo $GITHUB_URL/pablerass/zsh-terragrunt-autocomplete.git \
 			$OH_MY_ZSH_PLUGINS_DIR/terragrunt
-update_repo $GITHUB_URL/TamCore/oh-my-zsh-minishift.git \
-			$OH_MY_ZSH_PLUGINS_DIR/minishift
+update_repo $GITHUB_URL/matthieusb/zsh-sdkman
+			$OH_MY_ZSH_PLUGINS_DIR/sdkman
 
 # Vim plugins
 update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree
@@ -49,3 +62,4 @@ update_repo $GITHUB_URL/Glench/Vim-Jinja2-Syntax.git \
 			$VIM_PLUGINS_DIR/vim-jinja2-syntax
 update_repo $GITHUB_URL/hashivim/vim-hashicorp-tools \
 			$VIM_PLUGINS_DIR/vim-hashicorp-tools
+

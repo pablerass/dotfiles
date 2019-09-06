@@ -2,7 +2,7 @@
 
 # Specify version
 app=groovy-sdk
-ver=2.4.7
+ver=2.5.8
 package=apache-${app}-${ver}.zip
 base_url=https://dl.bintray.com/groovy/maven
 

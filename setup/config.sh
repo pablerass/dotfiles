@@ -16,11 +16,6 @@ fi
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
 # Remove current config files
-if [ -d ~/.oh-my-zsh/custom ];
-then
-	mv ~/.oh-my-zsh/custom ~/.oh-my-zsh/custom.bak
-fi
-
 if [ -f ~/.gitconfig ];
 then
 	mv ~/.gitconfig ~/.gitconfig.bak
@@ -67,8 +62,8 @@ mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/undos
 mkdir -p ~/.vim/spell
 
-# Add plugin repos
-$DIR/repos.sh
+# Add plugins
+$DIR/plugins.sh
 
 # Set default shell
 sudo chsh -s $(which zsh) $USER
