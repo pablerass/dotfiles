@@ -15,7 +15,3 @@ sudo apt update -y
 
 # Install packages
 sudo apt install nodejs -y
-
-# Install nvm
-NVM_VERSION=0.34.0
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash
