@@ -8,7 +8,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 # Install docker-compose
-sudo -H pip3 install --upgrade docker-compose
+sudo -H pip install --upgrade docker-compose
 
 # Add current user to docker group
 sudo usermod -a -G docker $USER
