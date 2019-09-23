@@ -29,6 +29,7 @@ alias avde='if [[ ! -z "$AWS_VAULT" ]]; then exit; fi'
 
 # Docker
 alias drun='docker run'
+alias dstart='docker start'
 alias dstop='docker stop'
 alias dps='docker ps'
 alias dpsa='docker ps --all'
