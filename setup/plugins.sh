@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 ## Variables
 GITHUB_URL=https://github.com
@@ -22,14 +22,12 @@ function update_repo {
 
 ## Links
 for plugin in $OH_MY_ZSH_OWN_CUSTOM_DIR/plugins/*; do
-    ln -sf $plugin $OH_MY_ZSH_PLUGINS_DIR/$(basename $plugin)
+    ln -sf $plugin $OH_MY_ZSH_PLUGINS_DIR/
 done
 
 for theme in $OH_MY_ZSH_OWN_CUSTOM_DIR/themes/*; do
-    ln -sf $theme $OH_MY_ZSH_CUSTOM_DIR/$(basename $theme)
+    ln -sf $theme $OH_MY_ZSH_CUSTOM_DIR/themes/
 done
-
-exit
 
 ## Repos
 # oh-my-zsh plugins
@@ -39,8 +37,8 @@ update_repo $GITHUB_URL/technosophos/glide-zsh.git \
 			$OH_MY_ZSH_PLUGINS_DIR/glide
 update_repo $GITHUB_URL/pablerass/zsh-terragrunt-autocomplete.git \
 			$OH_MY_ZSH_PLUGINS_DIR/terragrunt
-update_repo $GITHUB_URL/matthieusb/zsh-sdkman
-			$OH_MY_ZSH_PLUGINS_DIR/sdkman
+update_repo $GITHUB_URL/matthieusb/zsh-sdkman \
+			$OH_MY_ZSH_PLUGINS_DIR/zsh-sdkman
 
 # Vim plugins
 update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree

@@ -9,7 +9,7 @@ plugins=(gnu-utils systemadmin systemd man rsync \
     pip python pyenv \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
-    mvn ant gradle \
+    mvn ant gradle zsh-sdkman \
     stack cargo rust golang glide \
     knife kitchen \
     kubectl oc minikube kops helm)
