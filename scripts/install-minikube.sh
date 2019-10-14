@@ -2,7 +2,7 @@
 
 # Specify version
 app=minikube
-ver=v1.3.1
+ver=v1.4.0
 arch=amd64
 package=${app}-linux-${arch}
 
