@@ -2,8 +2,8 @@
 
 # Specify version
 app=pycharm
-ver=2016.2.3
-package=$app-community-${ver}-no-jdk.tar.gz
+ver=2019.2.3
+package=$app-community-${ver}.tar.gz
 
 # Download deb packages
 wget -N https://download-cf.jetbrains.com/python/$package
@@ -18,3 +18,7 @@ rm -f $package
 
 # Configure path
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' > /etc/profile.d/${app}.sh"
+
+# Configure system
+sudo sh -c "echo 'fs.inotify.max_user_watches = 524288' > /etc/sysctl.d/50-pycharm-inotify.conf"
+sudo sysctl -p --system
