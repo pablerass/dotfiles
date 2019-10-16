@@ -2,7 +2,7 @@
 
 # Specify version
 app=go
-ver=1.12
+ver=1.13
 arch=amd64
 package=${app}${ver}.linux-${arch}.tar.gz
 
@@ -23,7 +23,3 @@ mkdir -p ~/workspace/$app/pkg
 # Configure path
 sudo sh -c "echo 'export GOROOT=/opt/$app' > /etc/profile.d/${app}.sh"
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' >> /etc/profile.d/${app}.sh"
-
-# Install additional tools
-go get -u github.com/go-delve/delve/cmd/dlv
-sudo mv ~/workspace/$app/bin/dlv /opt/$app/bin
