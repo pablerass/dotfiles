@@ -7,7 +7,7 @@ arch=amd64
 package=${app}-linux-${arch}
 
 # Download packages
-wget -N https://github.com/pablerass/aws-vault/releases/download/v${ver}/${package}
+wget -N https://github.com/pablerass/env-vault/releases/download/v${ver}/${package}
 
 # Install packages
 sudo mkdir -p /opt/$app

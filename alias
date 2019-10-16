@@ -27,6 +27,14 @@ alias avlogin='aws-vault --backend file login'
 alias avrem='aws-vault --backend file remove'
 alias avde='if [[ ! -z "$AWS_VAULT" ]]; then exit; fi'
 
+# Env
+alias ev='env-vault --backend file'
+alias evadd='env-vault --backend file add'
+alias evexec='env-vault --backend file exec'
+alias evedit='env-vault --backend file edit'
+alias evrem='env-vault --backend file remove'
+alias evde='if [[ ! -z "$ENV_VAULT" ]]; then exit; fi'
+
 # Docker
 alias drun='docker run'
 alias dstart='docker start'
