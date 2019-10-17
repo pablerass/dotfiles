@@ -2,7 +2,7 @@
 
 # Specify version
 app=insomnia
-ver=5.11.7
+ver=7.0.1
 package=${app}_${ver}_amd64.deb
 
 # Download deb packages
