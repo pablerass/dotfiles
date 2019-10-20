@@ -16,9 +16,10 @@ sudo tar -C /opt -xzf $package
 # Delete packages
 rm -f $package
 
-mkdir -p ~/workspace/$app/bin
-mkdir -p ~/workspace/$app/src
-mkdir -p ~/workspace/$app/pkg
+gopath_dir=$HOME/.gopath
+mkdir -p $gopath_dir/bin
+mkdir -p $gopath_dir/src
+mkdir -p $gopath_dir/pkg
 
 # Configure path
 sudo sh -c "echo 'export GOROOT=/opt/$app' > /etc/profile.d/${app}.sh"
