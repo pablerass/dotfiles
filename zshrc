@@ -45,7 +45,7 @@ if [[ $TERM == xterm ]]; then
 fi
 
 # Configure additional
-export HOSTALIASES=$HOME/conf/hosts
+export HOSTALIASES=$HOME/.hostaliases
 
 # Configure installed apps
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
