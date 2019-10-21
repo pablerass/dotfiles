@@ -2,8 +2,8 @@
 
 # Specify version
 app=idea
-ver=2018.3.4
-package=ideaIC-${ver}-no-jdk.tar.gz
+ver=2019.2.3
+package=ideaIC-${ver}.tar.gz
 
 # Download deb packages
 wget -N https://download.jetbrains.com/$app/$package
