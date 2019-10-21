@@ -2,7 +2,7 @@
 
 # Specify version
 app=env-vault
-ver=0.1.0
+ver=0.2.0
 arch=amd64
 package=${app}-linux-${arch}
 
