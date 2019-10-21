@@ -22,6 +22,9 @@ source ~/.oh-my-zsh/plugins/tmuxinator/_tmuxinator
 # Customize
 export PATH=$PATH:$HOME/bin:$HOME/bin/local
 
+if [ -f $HOME/.zshrc.local ]; then
+    source $HOME/.zshrc.local
+fi
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/functions
 source $HOME/dotfiles/z.sh
