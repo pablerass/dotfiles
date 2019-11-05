@@ -2,7 +2,7 @@
 
 # Specify version
 app=flyway
-ver=4.2.0
+ver=6.0.8
 package=${app}-commandline-${ver}-linux-x64.tar.gz
 base_url=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline
 
