@@ -2,7 +2,7 @@
 
 BASE_DIR="$HOME/.local/share/gnome-shell/extensions"
 EXTENSIONS_URL="https://extensions.gnome.org/extension-data"
-EXTENSIONS="caffeine@patapon.info.v30.shell-extension_ov9BwbU.zip workspace-indicator@gnome-shell-extensions.gcampax.github.com.v36.shell-extension.zip"
+EXTENSIONS="caffeine@patapon.info.v30.shell-extension_ov9BwbU.zip workspace-indicator@gnome-shell-extensions.gcampax.github.com.v36.shell-extension.zip sound-output-device-chooser@kgshank.net.v17.shell-extension.zip"
 
 # Install extensions
 for ext in ${EXTENSIONS[@]}; do
