@@ -8,7 +8,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Mark overlength with a linesize of 120
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%121v.\+/
+match OverLength /\%120v.\+/
 
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
@@ -157,7 +157,7 @@ autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=99
 " Disable automatic indent
 autocmd BufRead,BufNewFile *.sh,*.yml,*.py,*.html,*.xml,*.css,*.js,*.json,*.go setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
-autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.feature,*.json,*.js setlocal tabstop=2
+autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.feature,*.json,*.js,Jenkinsfile* setlocal tabstop=2
 " Force tabs instead of spaces
 autocmd BufRead,BufNewFile *.go setlocal expandtab!
 
