@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mycandy"
 
-plugins=(gnu-utils systemadmin systemd man rsync \
+plugins=(z gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
     vagrant terraform terragrunt aws awless \
     docker docker-compose virsh \
@@ -27,7 +27,6 @@ if [ -f $HOME/.zshrc.local ]; then
 fi
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/functions
-source $HOME/dotfiles/z.sh
 if [ -f $HOME/.alias.local ]; then
     source $HOME/.alias.local
 fi
