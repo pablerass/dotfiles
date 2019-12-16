@@ -6,7 +6,7 @@ plugins=(gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
     vagrant terraform terragrunt aws awless \
     docker docker-compose virsh \
-    pip python pyenv \
+    pip python pyenv virtualenvwrapper \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
     mvn ant gradle \
