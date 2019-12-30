@@ -14,4 +14,4 @@ sudo -H pip install --ignore-installed \
 		--upgrade --upgrade-strategy=eager \
 		jedi flake8 flake8-docstrings ropevim \
 		ipython[all] ipdb virtualenv virtualenvwrapper \
-		requests[security] pipenv grip
+		requests[security] pipenv grip httpie
