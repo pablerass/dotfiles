@@ -43,9 +43,6 @@ if [[ $TERM == xterm ]]; then
     TERM=xterm-256color
 fi
 
-# Configure additional
-export HOSTALIASES=$HOME/.hostaliases
-
 # Configure installed apps
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
