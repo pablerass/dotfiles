@@ -57,11 +57,8 @@ fi
 
 # Tools variables
 export PATH="/usr/local/heroku/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH="$HOME/.gopath"
 export PATH="$GOPATH/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
-[ -s "$PYENV_ROOT" ] && export PATH="$PYENV_ROOT/bin:$PATH"
 [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && \. "$HOME/.sdkman/bin/sdkman-init.sh"  # This loads sdkman
