@@ -6,7 +6,7 @@ plugins=(z gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
     vagrant terraform terragrunt aws awless \
     docker docker-compose virsh \
-    pip python pyenv virtualenvwrapper \
+    pip python pyenv pipenv virtualenvwrapper \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
     mvn ant gradle \
@@ -58,14 +58,10 @@ fi
 # Tools variables
 export PATH="/usr/local/heroku/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH="$HOME/.gopath"
 export PATH="$GOPATH/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+[ -s "$PYENV_ROOT" ] && export PATH="$PYENV_ROOT/bin:$PATH"
 [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && \. "$HOME/.sdkman/bin/sdkman-init.sh"  # This loads sdkman
-
-# Load rust configuration
-[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
