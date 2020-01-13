@@ -13,6 +13,8 @@ alias reload!='. ~/.zshrc'
 
 alias s='sudo '
 
+alias sp='sudo env PATH=$PATH '
+
 alias mirror='rsync -avh --delete'
 
 ## Tools
