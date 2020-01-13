@@ -40,25 +40,10 @@ function httpdump() {
         sed -r 's/^........(GET |HTTP\/|POST |HEAD )/\n\1/g'
 }
 
-function ocgp() {
-    oc get pods --selector="$1" -o json | \
-        jq -r '.items[] | select(.status.phase=="Running") | .metadata.name'
-}
+# Python
+function mkvpe() {
+    VERSION=$1
+    shift
 
-function occp() {
-    local COMMAND=$1
-    local RESOURCE
-    shift
-    if [[ $COMMAND == explain ]] || [[ $COMMAND == describe ]]; then
-        RESOURCE=pod
-    fi
-    FIRST_POD=$(oc get pods --selector="$1" -o json | \
-        jq -r '[.items[] | select(.status.phase=="Running") | .metadata.name] | first')
-    shift
-    if [[ -n $FIRST_POD ]]; then
-        echo "$COMMAND $RESOURCE - $FIRST_POD"
-        oc $COMMAND $RESOURCE $FIRST_POD $*
-    else
-        echo "No running pod found for selector"
-    fi
+    mkvirtualenv -p $PYENV_ROOT/versions/$VERSION/bin/python $*
 }
