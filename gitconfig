@@ -42,6 +42,7 @@ lp = log -p --
 lf = log --follow --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 posh = "! git push origin $(git symbolic-ref HEAD --short)"
 polh = "! git pull origin $(git symbolic-ref HEAD --short)"
+resolve = "! $EDITOR $(git diff --name-only --diff-filter=U | uniq)"
 unstage = reset HEAD --
 last = log -1 HEAD
 cf = clean -fdx
