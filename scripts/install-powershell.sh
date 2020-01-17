@@ -3,13 +3,19 @@
 source /etc/lsb-release
 
 os_version=$DISTRIB_RELEASE
+package=packages-microsoft-prod.deb
 
-# Add repositories
-wget -q -O - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-wget -q -O - https://packages.microsoft.com/config/ubuntu/${os_version}/prod.list | sudo tee /etc/apt/sources.list.d/microsoft.list
+# Download the Microsoft repository GPG keys
+wget -q https://packages.microsoft.com/config/ubuntu/$os_version/$package
 
-# Update repos
+# Register the Microsoft repository GPG keys
+sudo dpkg -i $package
+
+# Delete packages
+rm -f $package
+
+# Update the list of products
 sudo apt update -y
 
-# Install packages
+# Install PowerShell
 sudo apt install -y powershell
