@@ -17,6 +17,8 @@ alias sp='sudo env PATH=$PATH '
 
 alias mirror='rsync -avh --delete'
 
+alias secure='chmod go-rwx --preserve-root'
+
 ## Tools
 # Ansible
 alias ap='ansible-playbook'
