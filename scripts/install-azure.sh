@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-dir=$()
+DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
-$dir/install-powershell.sh
+$DIR/install-powershell.sh
 
 # Install packages
 sudo apt install -y azure-cli
