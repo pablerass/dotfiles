@@ -46,6 +46,11 @@ then
 	mv ~/.tmuxinator ~/.tmuxinator.bak
 fi
 
+if [ -f ~/.terraformrc ];
+then
+	mv ~/.terraformrc ~/.terraformrc.bak
+fi
+
 # Set new config files
 ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/zsh_custom ~/.oh-my-zsh/custom
@@ -54,6 +59,7 @@ ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/tmuxinator ~/.tmuxinator
+ln -s ~/dotfiles/terraformrc ~/.terraformrc
 
 # Configure vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim

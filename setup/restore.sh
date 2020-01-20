@@ -44,6 +44,15 @@ else
 	rm ~/bin -f
 fi
 
+if [ -f ~/.tmuxinator.bak ];
+then
+	mv ~/.tmuxinator.bak ~/.tmuxinator -f
+fi
+
+if [ -f ~/.terraformrc.bak ];
+then
+	mv ~/.terraformrc.bak ~/.terraformrc -f
+fi
 # Removing vim configuration
 rm ~/.vim -rf
 
