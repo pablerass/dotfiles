@@ -9,50 +9,27 @@ base_dir="$(dirname $setup_dir)"
 rm ~/.oh-my-zsh -rf
 
 # Restore backed config files
-if [ -f ~/.gitconfig.bak ];
-then
-	mv ~/.gitconfig.bak ~/.gitconfig -f
-else
-	rm ~/.gitconfig -f
-fi
+function restore_config_link {
+    CONFIG=~/$1
+    CONFIG_BACKUP=$CONFIG.bak
 
-if [ -f ~/.zshrc.bak ];
-then
-	mv ~/.zshrc.bak ~/.zshrc -f
-else
-	rm ~/.zshrc -f
-fi
+    if [ -f $CONFIG.bak ]; then
+        mv $CONFIG.bak $CONFIG -f
+    else
+        if [ -L $CONFIG ]; then
+            rm $CONFIG -f
+        fi
+    fi
+}
 
-if [ -f ~/.tmux.conf.bak ];
-then
-	mv ~/.tmux.conf.bak ~/.tmux.conf -f
-else
-	rm ~/.tmux.conf -f
-fi
+restore_config_link .gitconfig
+restore_config_link .zshrc
+restore_config_link .tmux.conf
+restore_config_link .vimrc
+restore_config_link bin
+restore_config_link .tmuxinator
+restore_config_link .terraformrc
 
-if [ -f ~/.vimrc.bak ];
-then
-	mv ~/.vimrc.bak ~/.vimrc -f
-else
-	rm ~/.vimrc -f
-fi
-
-if [ -f ~/.bin.bak ];
-then
-	mv ~/.bin.bak ~/bin -f
-else
-	rm ~/bin -f
-fi
-
-if [ -f ~/.tmuxinator.bak ];
-then
-	mv ~/.tmuxinator.bak ~/.tmuxinator -f
-fi
-
-if [ -f ~/.terraformrc.bak ];
-then
-	mv ~/.terraformrc.bak ~/.terraformrc -f
-fi
 # Removing vim configuration
 rm ~/.vim -rf
 

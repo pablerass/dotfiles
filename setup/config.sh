@@ -15,51 +15,28 @@ fi
 # Install oh-my-zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
-# Remove current config files
-if [ -f ~/.gitconfig ];
-then
-	mv ~/.gitconfig ~/.gitconfig.bak
-fi
+# Manage configuration files
+function update_config_link {
+    CONFIG=~/$1
+    SOURCE_CONFIG=~/dotfiles/${1#.}
 
-if [ -f ~/.zshrc ];
-then
-	mv ~/.zshrc ~/.zshrc.bak
-fi
+    # Backup file
+    if [ -f $CONFIG ] && [ ! -L $CONFIG ]; then
+        echo "Creating $CONFIG backup"
+        mv $CONFIG $CONFIG.bak
+    fi
 
-if [ -f ~/.tmux.conf ];
-then
-	mv ~/.tmux.conf ~/.tmux.conf.bak
-fi
+    # Create or update link
+    ln -sfn $SOURCE_CONFIG $CONFIG
+}
 
-if [ -f ~/.vimrc ];
-then
-	mv ~/.vimrc ~/.vimrc.bak
-fi
-
-if [ -f ~/bin ];
-then
-	mv ~/bin ~/.bin.bak
-fi
-
-if [ -f ~/.tmuxinator ];
-then
-	mv ~/.tmuxinator ~/.tmuxinator.bak
-fi
-
-if [ -f ~/.terraformrc ];
-then
-	mv ~/.terraformrc ~/.terraformrc.bak
-fi
-
-# Set new config files
-ln -s ~/dotfiles/bin ~/bin
-ln -s ~/dotfiles/zsh_custom ~/.oh-my-zsh/custom
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/zshrc ~/.zshrc
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/tmuxinator ~/.tmuxinator
-ln -s ~/dotfiles/terraformrc ~/.terraformrc
+update_config_link .gitconfig
+update_config_link .zshrc
+update_config_link .tumx.conf
+update_config_link .vimrc
+update_config_link bin
+update_config_link .tmuxinator
+update_config_link .terraformrc
 
 # Configure vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
