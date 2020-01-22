@@ -47,6 +47,10 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undos
 
+" Disable increase and decrease numbers
+map <C-a> <Nop>
+map <C-x> <Nop>
+
 " Disable modelines
 set nomodeline
 " Enable per-directory .vimrc files and disable unsafe commands in them
