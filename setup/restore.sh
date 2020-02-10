@@ -1,9 +1,16 @@
 #!/bin/bash
 
 # Get script directory
-script="$(readlink -f $0)"
-setup_dir="$(dirname $script)"
-base_dir="$(dirname $setup_dir)"
+DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+
+# Request confirmation
+read -p "Are you sure? " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Aborted"
+    exit 0
+fi
 
 # Uninstall oh-my-zsh
 rm ~/.oh-my-zsh -rf
