@@ -32,7 +32,7 @@ function update_config_link {
 
 update_config_link .gitconfig
 update_config_link .zshrc
-update_config_link .tumx.conf
+update_config_link .tmux.conf
 update_config_link .vimrc
 update_config_link bin
 update_config_link .tmuxinator
