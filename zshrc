@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mycandy"
 
-plugins=(z gnu-utils systemadmin systemd man rsync \
+plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
     tmux tmuxinator git \
     vagrant terraform terragrunt nomad aws awless \
     docker docker-compose virsh \

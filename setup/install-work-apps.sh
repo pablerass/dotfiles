@@ -19,16 +19,12 @@ $SCRIPTS_DIR/install-awscli.sh
 $SCRIPTS_DIR/install-aws-vault.sh
 $SCRIPTS_DIR/install-chrome.sh
 $SCRIPTS_DIR/install-docker.sh
-$SCRIPTS_DIR/install-drawio.sh
 $SCRIPTS_DIR/install-guake.sh
 $SCRIPTS_DIR/install-gimp.sh
 $SCRIPTS_DIR/install-git-latest.sh
-$SCRIPTS_DIR/install-google-talk-plugin.sh
 $SCRIPTS_DIR/install-packer.sh
 $SCRIPTS_DIR/install-terraform.sh
 $SCRIPTS_DIR/install-vagrant.sh
 $SCRIPTS_DIR/install-virtualbox.sh
 $SCRIPTS_DIR/install-tmuxinator.sh
-$SCRIPTS_DIR/install-simplescreenrecorder.sh
-$SCRIPTS_DIR/install-slack.sh
 $SCRIPTS_DIR/install-spotify.sh

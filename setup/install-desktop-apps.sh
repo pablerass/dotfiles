@@ -17,6 +17,4 @@ $SCRIPTS_DIR/install-chrome.sh
 $SCRIPTS_DIR/install-dropbox.sh
 $SCRIPTS_DIR/install-gimp.sh
 $SCRIPTS_DIR/install-guake.sh
-$SCRIPTS_DIR/install-google-talk-plugin.sh
-$SCRIPTS_DIR/install-openshot.sh
 $SCRIPTS_DIR/install-spotify.sh
