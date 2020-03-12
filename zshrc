@@ -9,11 +9,9 @@ plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
     pip python pyenv pipenv virtualenvwrapper httpie \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
-    mvn ant gradle \
+    mvn ant gradle golang glide \
     # zsh-sdkman \
-    stack cargo rust golang glide \
-    knife kitchen \
-    kubectl oc minikube kops helm)
+    knife kitchen kubectl oc minikube kops helm)
 
 source $ZSH/oh-my-zsh.sh
 # Tmuxinator not properly loaded
