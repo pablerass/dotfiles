@@ -47,6 +47,10 @@ unstage = reset HEAD --
 last = log -1 HEAD
 cf = clean -fdx
 lone = clone --depth 1
+subinit = submodule update --init --recursive
+
+[grep]
+lineNumber = true
 
 [merge]
 tool = vimdiff

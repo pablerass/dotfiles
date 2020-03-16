@@ -103,6 +103,12 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=5
 
+" Better vimdiff color scheme
+highlight DiffAdd    cterm=none ctermfg=black ctermbg=darkgreen
+highlight DiffDelete cterm=none ctermfg=black ctermbg=darkred
+highlight DiffChange cterm=none ctermfg=black ctermbg=darkcyan
+highlight DiffText   cterm=none ctermfg=darkred ctermbg=darkcyan
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
