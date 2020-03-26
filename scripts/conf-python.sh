@@ -5,6 +5,7 @@ DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 # Install packages
 sudo apt install python python-pip -y
 sudo apt install python3-pip -y
+sudo apt install ctags -y
 
 # Update pip
 $DIR/update-pip.sh

@@ -53,7 +53,8 @@ update_repo $GITHUB_URL/davidhalter/jedi-vim.git $VIM_PLUGINS_DIR/jedi-vim
 update_repo $GITHUB_URL/tpope/vim-fugitive.git $VIM_PLUGINS_DIR/vim-fugitive
 update_repo $GITHUB_URL/tpope/vim-surround $VIM_PLUGINS_DIR/vim-surround
 update_repo $GITHUB_URL/nvie/vim-flake8.git $VIM_PLUGINS_DIR/vim-flake8
-update_repo $GITHUB_URL/python-rope/ropevim.git $VIM_PLUGINS_DIR/ropevim
+update_repo $GITHUB_URL/jmcantrell/vim-virtualenv.git $VIM_PLUGINS_DIR/vim-virtualenv
+update_repo $GITHUB_URL/majutsushi/tagbar $VIM_PLUGINS_DIR/tagbar
 update_repo $GITHUB_URL/JamshedVesuna/vim-markdown-preview.git \
             $VIM_PLUGINS_DIR/vim-markdown-preview
 update_repo $GITHUB_URL/airblade/vim-gitgutter.git \

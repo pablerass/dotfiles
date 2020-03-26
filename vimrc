@@ -171,5 +171,8 @@ autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.feature,*.json,*.js,Je
 " Force tabs instead of spaces
 autocmd BufRead,BufNewFile *.go setlocal expandtab!
 
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " Markdown configuration
 let vim_markdown_preview_github=1
