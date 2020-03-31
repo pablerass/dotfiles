@@ -13,6 +13,6 @@ $DIR/update-pip.sh
 # Install python libs
 sudo -H pip install --ignore-installed \
 		--upgrade --upgrade-strategy=eager \
-		jedi flake8 flake8-docstrings ropevim \
+		jedi flake8 flake8-docstrings \
 		ipython[all] ipdb virtualenv virtualenvwrapper \
 		requests[security] pipenv grip httpie
