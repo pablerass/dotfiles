@@ -11,10 +11,11 @@ sudo apt install ctags -y
 $DIR/update-pip.sh
 
 # Install python libs
+# NOTE: Latest 20.x version of virtualenv broke access to jedi inside vim
 sudo -H pip install --ignore-installed \
         --upgrade --upgrade-strategy=eager \
         jedi flake8 flake8-docstrings \
         ipython[all] ipdb \
-        # Latest 20.x version of virtualenv broke access to jedi inside vim
-        "virtualenv<20.0.0" pipenv virtualenvwrapper \
+        "virtualenv<20" pipenv virtualenvwrapper \
         requests[security] grip httpie
+
