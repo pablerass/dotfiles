@@ -40,9 +40,10 @@ lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s
 lo = log --color --pretty=oneline --abbrev-commit --
 lp = log -p --
 lf = log --follow --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-posh = "! git push origin $(git symbolic-ref HEAD --short)"
-polh = "! git pull origin $(git symbolic-ref HEAD --short)"
-resolve = "! $EDITOR $(git diff --name-only --diff-filter=U | uniq)"
+posh = ! "git push origin $(git symbolic-ref HEAD --short)"
+polh = ! "git pull origin $(git symbolic-ref HEAD --short)"
+resolve = ! "$EDITOR $(git diff --name-only --diff-filter=U)"
+gredit = ! "f() { $EDITOR $(git grep --name-only $@); }; f"
 unstage = reset HEAD --
 last = log -1 HEAD
 cf = clean -fdx
