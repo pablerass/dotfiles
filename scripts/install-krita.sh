@@ -6,7 +6,7 @@ script_path=`dirname $script`
 
 # Specify package
 app=krita
-version=3.3.1
+version=4.2.9
 arch=x86_64
 package=$app-$version-$arch.appimage
 
