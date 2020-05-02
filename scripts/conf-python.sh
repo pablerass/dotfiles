@@ -15,7 +15,8 @@ $DIR/update-pip.sh
 sudo -H pip install --ignore-installed \
         --upgrade --upgrade-strategy=eager \
         jedi flake8 flake8-docstrings \
-        ipython[all] ipdb \
+        ipython ipdb \
+        notebook jupyterlab \
         "virtualenv<20" pipenv virtualenvwrapper \
         requests[security] grip httpie
 
