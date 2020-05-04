@@ -10,6 +10,9 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%120v.\+/
 
+" Clear sign column backgroun to remove gray for gitgutter
+highlight clear SignColumn
+
 " F2 to enable/disable NerdTree
 nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
 

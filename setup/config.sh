@@ -2,6 +2,10 @@
 
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
+# Use latest kernel and xorg
+#source /etc/lsb-relelease
+#sudo apt install --install-recommends linux-generic-hwe-$DISTRIB_RELEASE xserver-xorg-hwe-$DISTRIB_RELEASE -y
+
 # Install packages
 sudo apt-get install -y git tmux vim zsh htop curl
 $DIR/../scripts/conf-python.sh
