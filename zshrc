@@ -6,7 +6,7 @@ plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
     tmux tmuxinator git \
     vagrant terraform terragrunt nomad aws awless \
     docker docker-compose virsh \
-    pip pyenv pipenv virtualenvwrapper httpie jupyter \
+    pip pyenv pipenv virtualenvwrapper httpie \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
     mvn ant gradle golang glide \
