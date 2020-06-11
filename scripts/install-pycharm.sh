@@ -2,7 +2,7 @@
 
 # Specify version
 app=pycharm
-ver=2019.3.2
+ver=2020.1.1
 package=$app-community-${ver}.tar.gz
 
 # Download deb packages
@@ -20,5 +20,5 @@ rm -f $package
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' > /etc/profile.d/${app}.sh"
 
 # Configure system
-sudo sh -c "echo 'fs.inotify.max_user_watches = 524288' > /etc/sysctl.d/50-pycharm-inotify.conf"
+sudo sh -c "echo 'fs.inotify.max_user_watches = 524288' > /etc/sysctl.d/50-${app}-inotify.conf"
 sudo sysctl -p --system

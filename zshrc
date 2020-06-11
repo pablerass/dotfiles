@@ -10,7 +10,6 @@ plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
     mvn ant gradle golang glide \
-    # zsh-sdkman \
     knife kitchen kubectl oc minikube kops helm)
 
 source $ZSH/oh-my-zsh.sh
