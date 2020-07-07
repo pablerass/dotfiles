@@ -3,7 +3,7 @@
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 # Specify version
-ver=13.2.2
+ver=13.3.5
 package=draw.io-amd64-${ver}.deb
 
 # Download deb packages
