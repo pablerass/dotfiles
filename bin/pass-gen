@@ -5,4 +5,7 @@ SIZE=20
 if [ -n "$1" ]; then
     SIZE=$1
 fi
-apg -m $SIZE -x $SIZE -a 1 -E@ -E\' -E\" -E/ -E\\
+if [ -n "$2" ]; then
+    ARGS="-MCLN"
+fi
+apg $ARGS -m $SIZE -x $SIZE -a 1 -E@ -E\' -E\" -E/ -E\\

@@ -19,6 +19,8 @@ alias mirror='rsync -avh --delete'
 
 alias secure='chmod go-rwx --preserve-root'
 
+alias scert='openssl x509 -text -noout -in'
+
 ## Tools
 # Ansible
 alias ap='ansible-playbook'
