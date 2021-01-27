@@ -8,4 +8,4 @@ sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" > /etc/apt/
 sudo apt update -y
 
 # Install packages
-sudo apt install spotify-client -y
+sudo apt install spotify-client spotify-client-gnome-support -y

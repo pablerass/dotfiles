@@ -4,7 +4,7 @@ ZSH_THEME="mycandy"
 
 plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
     tmux tmuxinator git \
-    vagrant terraform terragrunt nomad aws awless \
+    vagrant terraform terragrunt nomad aws awless gcloud \
     docker docker-compose virsh \
     pip pyenv pipenv virtualenvwrapper httpie \
     node npm nvm bower yarn grunt gulp \

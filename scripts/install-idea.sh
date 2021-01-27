@@ -2,7 +2,7 @@
 
 # Specify version
 app=idea
-ver=2020.1.1
+ver=2020.3.1
 package=${app}IC-${ver}.tar.gz
 
 # Download deb packages

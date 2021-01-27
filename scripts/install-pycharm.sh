@@ -2,7 +2,7 @@
 
 # Specify version
 app=pycharm
-ver=2020.1.1
+ver=2020.3.2
 package=$app-community-${ver}.tar.gz
 
 # Download deb packages
