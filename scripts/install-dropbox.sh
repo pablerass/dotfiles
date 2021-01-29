@@ -1,11 +1,17 @@
 #!/bin/bash -e
 
-# Add repositories
-sudo sh -c 'echo "deb http://linux.dropbox.com/ubuntu trusty main" > /etc/apt/sources.list.d/dropbox.list'
-sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+# Specify version
+app=dropbox
+ver=2020.03.04
+arch=amd64
+package=${app}_${ver}_${arch}.deb
 
-# Update repos and packages
-sudo apt update -y
+# Download deb packages
+wget -N https://linux.dropbox.com/packages/ubuntu/dropbox_2020.03.04_amd64.deb
 
-# Install additional packages
-sudo apt install dropbox python-gpgme -y
+# Install packages
+sudo apt install python3-gpg -y
+sudo dpkg -i $package
+
+# Delete packages
+rm -f $package
