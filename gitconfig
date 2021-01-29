@@ -53,6 +53,9 @@ subinit = submodule update --init --recursive
 [grep]
 lineNumber = true
 
+[init]
+defaultBranch = master
+
 [merge]
 tool = vimdiff
 conflictstype = diff3
