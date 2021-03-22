@@ -33,6 +33,8 @@ alias avlogin='aws-vault --backend file login'
 alias avrm='aws-vault --backend file remove'
 alias avde='if [[ ! -z "$AWS_VAULT" ]]; then exit; fi'
 
+alias awsume='source awsume'
+
 # Env
 alias ev='env-vault --backend file'
 alias evadd='env-vault --backend file add'
