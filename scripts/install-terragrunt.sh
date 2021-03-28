@@ -4,11 +4,11 @@
 arch=amd64
 
 grunt_app=terragrunt
-grunt_ver=0.21.11
+grunt_ver=0.19.11
 grunt_package=${grunt_app}_linux_${arch}
 
 form_app=terraform
-form_ver=0.12.19
+form_ver=0.14.8
 form_package=${form_app}_${form_ver}_linux_${arch}.zip
 
 # Download packages
