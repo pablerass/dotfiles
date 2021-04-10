@@ -8,6 +8,7 @@ sudo apt install ctags -y
 
 # Update pip
 $DIR/update-pip.sh
+$DIR/install-pyenv.sh
 
 # Install python libs
 # NOTE: Latest 20.x version of virtualenv broke access to jedi inside vim
