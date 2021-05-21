@@ -3,11 +3,10 @@
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 # Specify version
-ver=14.5.1
-package=drawio-amd64-${ver}.deb
+package=Webex.deb
 
 # Download deb packages
-wget -N https://github.com/jgraph/drawio-desktop/releases/download/v$ver/$package
+wget -N https://binaries.webex.com/WebexDesktop-Ubuntu-Official-Package/$package
 
 # Install packages
 sudo dpkg -i $package
