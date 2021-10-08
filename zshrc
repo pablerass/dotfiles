@@ -54,5 +54,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 export GOPATH="$HOME/.gopath"
 export PATH="$GOPATH/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
 [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && \. "$HOME/.sdkman/bin/sdkman-init.sh"  # This loads sdkman
