@@ -86,8 +86,5 @@ autosetuprebase = always
 [credential]
 helper = cache --timeout=3600
 
-[url "https://github.com/pablerass/"]
+[url "ssh://git@github.com/pablerass/"]
 insteadOf = pablerass://
-
-[credential "https://github.com/"]
-username = pablerass
