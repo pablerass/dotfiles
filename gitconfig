@@ -40,15 +40,18 @@ lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s
 lo = log --color --pretty=oneline --abbrev-commit --
 lp = log -p --
 lf = log --follow --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-posh = ! "git push origin $(git symbolic-ref HEAD --short)"
-polh = ! "git pull origin $(git symbolic-ref HEAD --short)"
-resolve = ! "$EDITOR $(git diff --name-only --diff-filter=U)"
-gredit = ! "f() { $EDITOR $(git grep --name-only $@); }; f"
 unstage = reset HEAD --
 last = log -1 HEAD
 cf = clean -fdx
 lone = clone --depth 1
 subinit = submodule update --init --recursive
+
+posh = ! "git push origin $(git symbolic-ref HEAD --short)"
+polh = ! "git pull origin $(git symbolic-ref HEAD --short)"
+resolve = ! "$EDITOR $(git diff --name-only --diff-filter=U)"
+gredit = ! "f() { $EDITOR $(git grep --name-only $@); }; f"
+cb = ! "git fetch -p && git branch -d $(git for-each-ref refs/heads | sed 's#.*refs/heads/##' | grep -v -E $(git ls-remote --heads -q | sed 's#.*refs/heads/##' | tr '\n' '|' | sed 's/|$//'))"
+cbf = ! "git fetch -p && git branch -D $(git for-each-ref refs/heads | sed 's#.*refs/heads/##' | grep -v -E $(git ls-remote --heads -q | sed 's#.*refs/heads/##' | tr '\n' '|' | sed 's/|$//'))"
 
 [grep]
 lineNumber = true
