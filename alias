@@ -61,6 +61,9 @@ alias dcmd='docker run --rm -i -v $(pwd):/tmp -w /tmp'
 alias drsh='docker exec -t -i'
 alias dc='docker-compose'
 
+# Libreoffice
+alias lo='libreoffice --norestore'
+
 # Python
 alias wo='workon'
 alias de='deactivate'

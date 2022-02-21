@@ -13,7 +13,7 @@ $DIR/../scripts/conf-gnome-shell.sh
 
 # Install gui packages
 if ls /usr/bin/*session | grep gnome; then
-	sudo apt-get install -y vim-gui-common
+	sudo apt-get install -y vim-gui-common fonts-powerline
 fi
 
 # Install oh-my-zsh
