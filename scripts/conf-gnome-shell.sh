@@ -14,10 +14,10 @@ function install_extension {
     rm $ext.zip
 }
 
-install_extension caffeinepatapon.info.v37.shell-extension
-install_extension workspace-indicatorgnome-shell-extensions.gcampax.github.com.v42.shell-extension
-install_extension sound-output-device-chooserkgshank.net.v32.shell-extension
-install_extension extendedgesturesmpiannucci.github.com.v6.shell-extension
+install_extension caffeinepatapon.info.v42.shell-extension
+install_extension workspace-indicatorgnome-shell-extensions.gcampax.github.com.v52.shell-extension
+install_extension sound-output-device-chooserkgshank.net.v43.shell-extension
+install_extension gestureImprovementsgestures.v24.shell-extension
 
 # Touchpad behavior
 gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
