@@ -11,10 +11,10 @@ wget -N https://github.com/ogham/exa/releases/download/v${ver}/${package}
 
 # Install packages
 sudo rm -Rf /opt/$app
-sudo unzip -o -u $package -d /opt
+sudo unzip -o -u $package -d /opt/$app
 
 # Delete packages
 rm -f $package
 
 # Configure path
-sudo sh -c "echo 'export PATH=\$PATH:/opt/$app' > /etc/profile.d/${app}.sh"
+sudo sh -c "echo 'export PATH=\$PATH:/opt/$app/bin' > /etc/profile.d/${app}.sh"
