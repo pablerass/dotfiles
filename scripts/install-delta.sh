@@ -1,16 +1,15 @@
 #!/bin/bash -e
 
 # Specify version
-app=dropbox
-ver=2020.03.04
+app=git-delta
+ver=0.12.0
 arch=amd64
 package=${app}_${ver}_${arch}.deb
 
 # Download deb packages
-wget -N https://linux.dropbox.com/packages/ubuntu/dropbox_2020.03.04_amd64.deb
+wget -N https://github.com/dandavison/delta/releases/download/${ver}/${package}
 
 # Install packages
-sudo apt install python3-gpg -y
 sudo dpkg -i $package
 
 # Delete packages

@@ -7,7 +7,7 @@ DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 #sudo apt install --install-recommends linux-generic-hwe-$DISTRIB_RELEASE xserver-xorg-hwe-$DISTRIB_RELEASE -y
 
 # Install packages
-sudo apt-get install -y git tmux vim zsh htop curl
+sudo apt install -y git tmux vim zsh htop curl fonts-powerline
 $DIR/../scripts/conf-python.sh
 $DIR/../scripts/conf-gnome-shell.sh
 
