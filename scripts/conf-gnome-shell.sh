@@ -17,7 +17,6 @@ function install_extension {
 install_extension caffeinepatapon.info.v42.shell-extension
 install_extension workspace-indicatorgnome-shell-extensions.gcampax.github.com.v52.shell-extension
 install_extension sound-output-device-chooserkgshank.net.v43.shell-extension
-install_extension gestureImprovementsgestures.v24.shell-extension
 
 # Touchpad behavior
 gsettings set org.gnome.desktop.peripherals.touchpad click-method areas

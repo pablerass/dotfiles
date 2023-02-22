@@ -3,13 +3,10 @@
 EXTENSIONS_DIR=$HOME/.config/inkscape/extensions
 
 # Add repositories
-#sudo add-apt-repository ppa:inkscape.dev/stable -y
-#
-## Update repos and packages
-#sudo apt update -y
-#
+sudo add-apt-repository ppa:inkscape.dev/stable -y
+
 ## Install packages
-#sudo apt install inkscape -y
+sudo apt install inkscape -y
 
 # Add extensions
 curl -o $EXTENSIONS_DIR/countersheet.inx https://raw.githubusercontent.com/lifelike/countersheetsextension/master/countersheet.inx
