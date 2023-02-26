@@ -29,5 +29,18 @@ gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/$USER/images/screenshots"
 gsettings set org.gnome.desktop.interface enable-animations false
 
+# Config media shortcuts
+# TODO: Configure this automatically
+# Sound and media - Microphone up - Shift+Ctrl+Alt+K     # This does not exists
+# Sound and media - Microphone mute/unmute - Shift+Ctrl+Alt+U
+# Sound and media - Microphone down- Shift+Ctrl+Alt+J    # This does not exists
+# Sound and media - Next track - Ctrl+Alt+L
+# Sound and media - Play (or play/pause) - Ctrl+Alt+I
+# Sound and media - Previous track - Ctrl+Alt+H
+# Sound and media - Volume down - Ctrl+Alt+K
+# Sound and media - Volume mute/unmute - Ctrl+Alt+U
+# Sound and media - Volume up - Ctrl+Alt+J
+
+
 # Reload gnome-shell
 killall -3 gnome-shell
