@@ -3,12 +3,15 @@ filetype plugin indent on
 
 autocmd StdinReadPre * let s:std_in=1
 " Open NERDTree at startup
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Mark overlength with a linesize of 120
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%120v.\+/
+
+" Add other todo keywords
+autocmd BufEnter * syntax keyword myTodo TUNE containedIn=.*Comment
+highlight def link myTodo TODO
 
 " Clear sign column background to remove gray for gitgutter
 highlight clear SignColumn
