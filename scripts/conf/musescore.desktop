@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=MuseScore
+Icon=musescore.png
+Exec=/opt/musescore/musescore
+StartupNotify=false
+StartupWMClass=MuseScore4
