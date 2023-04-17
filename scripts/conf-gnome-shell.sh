@@ -30,7 +30,7 @@ gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/$USER
 gsettings set org.gnome.desktop.interface enable-animations false
 
 # Config media shortcuts
-# TODO: Configure this automatically
+# TUNE: Configure this automatically
 # Sound and media - Microphone up - Shift+Ctrl+Alt+K     # This does not exists
 # Sound and media - Microphone mute/unmute - Shift+Ctrl+Alt+U
 # Sound and media - Microphone down- Shift+Ctrl+Alt+J    # This does not exists
