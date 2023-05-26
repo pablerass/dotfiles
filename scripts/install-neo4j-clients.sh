@@ -14,3 +14,6 @@ sudo dpkg -i $package
 
 # Delete packages
 rm -f $package
+
+# Manual?
+#sdk install java 19.0.2-open /usr/lib/jvm/java-19-openjdk-amd64
