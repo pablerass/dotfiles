@@ -2,11 +2,11 @@
 
 # Specify version
 app=idea
-ver=2020.3.1
+ver=2023.1.3
 package=${app}IC-${ver}.tar.gz
 
 # Download deb packages
-wget -N https://download-cf.jetbrains.com/idea/$package
+wget -N https://download-cdn.jetbrains.com/idea/$package
 
 # Install packages
 sudo rm -Rf /opt/$app

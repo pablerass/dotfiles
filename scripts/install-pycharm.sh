@@ -2,11 +2,11 @@
 
 # Specify version
 app=pycharm
-ver=2020.3.2
+ver=2023.1.3
 package=$app-community-${ver}.tar.gz
 
 # Download deb packages
-wget -N https://download-cf.jetbrains.com/python/$package
+wget -N https://download-cdn.jetbrains.com/python/$package
 
 # Install packages
 sudo rm -Rf /opt/$app

@@ -26,8 +26,10 @@ gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-locations false
-gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/$USER/images/screenshots"
+# gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/$USER/images/screenshots"
 gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.shell.extensions.ding show-home false
+gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
 
 # Config media shortcuts
 # TUNE: Configure this automatically
