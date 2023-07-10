@@ -61,3 +61,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export GOPATH="$HOME/.gopath"
 export PATH="$GOPATH/bin:$PATH"
 [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && \. "$HOME/.sdkman/bin/sdkman-init.sh"  # This loads sdkman
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
