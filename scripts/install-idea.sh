@@ -12,6 +12,7 @@ wget -N https://download-cdn.jetbrains.com/idea/$package
 sudo rm -Rf /opt/$app
 sudo tar -xzf $package
 sudo mv $app-IC-* /opt/$app
+sudo ln -s /opt/$app/bin/${app}.sh /opt/$app/bin/$app
 
 # Delete packages
 rm -f $package

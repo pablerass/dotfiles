@@ -57,7 +57,7 @@ cbf = ! "git fetch -p && git branch -D $(git for-each-ref refs/heads | sed 's#.*
 lineNumber = true
 
 [init]
-defaultBranch = master
+defaultBranch = main
 
 [merge]
 tool = vimdiff

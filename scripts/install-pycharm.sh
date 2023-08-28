@@ -12,6 +12,7 @@ wget -N https://download-cdn.jetbrains.com/python/$package
 sudo rm -Rf /opt/$app
 sudo tar -xzf $package
 sudo mv $app-community-${ver} /opt/$app
+sudo ln -s /opt/$app/bin/${app}.sh /opt/$app/bin/charm
 
 # Delete packages
 rm -f $package
