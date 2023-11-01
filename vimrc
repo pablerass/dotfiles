@@ -8,6 +8,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Mark overlength with a linesize of 120
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%120v.\+/
+autocmd BufEnter *.csv match none
 
 " Add other todo keywords
 autocmd BufEnter * syntax keyword myTodo TUNE containedIn=.*Comment
@@ -116,6 +117,9 @@ highlight DiffAdd    cterm=none ctermfg=black ctermbg=darkgreen
 highlight DiffDelete cterm=none ctermfg=black ctermbg=darkred
 highlight DiffChange cterm=none ctermfg=black ctermbg=darkcyan
 highlight DiffText   cterm=none ctermfg=darkred ctermbg=darkcyan
+
+" Add count command
+command -nargs=1 Count :%s/<args>//gn
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()

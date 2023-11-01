@@ -49,3 +49,7 @@ function mkvpe() {
     echo $VERSION_PATH
     mkvirtualenv -p $VERSION_PATH/bin/python $*
 }
+
+function uipdb() {
+    export PYTHONBREAKPOINT=ipdb.set_trace
+}
