@@ -45,9 +45,10 @@ function mkvpe() {
     VERSION=$1
     shift
 
-    VERSION_PATH=$(find $PYENV_ROOT/versions -name "$VERSION*" | sort | tail -n 1)
-    echo $VERSION_PATH
-    mkvirtualenv -p $VERSION_PATH/bin/python $*
+    pyenv shell $VERSION
+    pip install -U jedi
+    pyenv virtualenvwrapper
+    mkvirtualenv $*
 }
 
 function uipdb() {

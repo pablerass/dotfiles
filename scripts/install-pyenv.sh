@@ -11,9 +11,18 @@ else
     git -C "$PYENV_DIR" pull origin master
 fi
 
-PYENV_VIRTUALENV_DIR=$PYENV_DIR/plugins/pyenv-virtualenv
+PYENV_PLUGINS_DIR=$PYENV_DIR/plugins
+
+PYENV_VIRTUALENV_DIR=$PYENV_PLUGINS_DIR/pyenv-virtualenv
 if [ ! -e "$PYENV_VIRTUALENV_DIR" ]; then
     git clone https://github.com/pyenv/pyenv-virtualenv.git "$PYENV_VIRTUALENV_DIR"
 else
     git -C "$PYENV_VIRTUALENV_DIR" pull origin master
+fi
+
+PYENV_VIRTUALENVWRAPPER_DIR=$PYENV_PLUGINS_DIR/pyenv-virtualenvwrapper
+if [ ! -e "$PYENV_VIRTUALENVWRAPPER_DIR" ]; then
+    git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git "$PYENV_VIRTUALENVWRAPPER_DIR"
+else
+    git -C "$PYENV_VIRTUALENVWRAPPER_DIR" pull origin master
 fi
