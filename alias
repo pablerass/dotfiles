@@ -68,8 +68,6 @@ alias lo='libreoffice --norestore'
 alias wo='workon'
 alias de='deactivate'
 alias mkve='mkvirtualenv'
-alias mkve2='mkvirtualenv -p python2'
-alias mkve3='mkvirtualenv -p python3'
 alias rmve='rmvirtualenv'
 alias lsve='lsvirtualenv -b'
 

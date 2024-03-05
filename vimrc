@@ -1,3 +1,18 @@
+" virtualenv configuration
+py3 << EOF
+import os.path
+import sys
+import site
+
+if 'VIRTUAL_ENV' in os.environ:
+    virtual_env_dir = os.environ['VIRTUAL_ENV']
+    virtual_env_lib_dir = os.path.join(virtual_env_dir, 'lib')
+    virtual_env_site_packages_dir = os.path.join(
+        virtual_env_lib_dir, os.listdir(virtual_env_lib_dir)[0], 'site-packages')
+
+    site.addsitedir(virtual_env_site_packages_dir)
+EOF
+
 execute pathogen#infect()
 filetype plugin indent on
 
@@ -73,8 +88,8 @@ set nowrap
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=4
+" Make tabs as wide as four spaces
+set tabstop=4 shiftwidth=4
 " Convert tabs to spaces
 set expandtab
 " Show “invisible” characters
@@ -139,6 +154,9 @@ noremap <leader>CF :setlocal spell spelllang=fr_fr<CR>
 noremap <leader>NC :setlocal nospell<CR>
 autocmd BufRead,BufNewFile *.md,*.rst setlocal spell spelllang=en_us
 
+
+
+
 " jedi-vim configuration
 let g:jedi#popup_on_dot = 0
 
@@ -176,10 +194,8 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 " Auto text wrapping
 autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=119
-" Disable automatic indent
-autocmd BufRead,BufNewFile *.sh,*.yml,*.py,*.html,*.xml,*.css,*.js,*.json,*.go,*.tf setlocal noautoindent nocindent nosmartindent indentexpr=
 " Set tab space to 2
-autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.hcl,*.feature,*.json,*.js,Jenkinsfile* setlocal tabstop=2
+autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.hcl,*.feature,*.json,*.js setlocal tabstop=2 shiftwidth=2
 " Force tabs instead of spaces
 autocmd BufRead,BufNewFile *.go setlocal expandtab!
 

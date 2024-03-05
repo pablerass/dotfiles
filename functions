@@ -45,8 +45,8 @@ function mkvpe() {
     VERSION=$1
     shift
 
-    pyenv shell $VERSION
-    pip install -U jedi
+    pyenv shell $VERSION || return
+    pip install virtualenvwrapper
     pyenv virtualenvwrapper
     mkvirtualenv $*
 }
