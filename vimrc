@@ -198,6 +198,8 @@ autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=119
 autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.hcl,*.feature,*.json,*.js setlocal tabstop=2 shiftwidth=2
 " Force tabs instead of spaces
 autocmd BufRead,BufNewFile *.go setlocal expandtab!
+" Disable unwanted autoindent behaviors
+autocmd BufRead,BufNewFile *.py set nocindent nosmartindent indentexpr= " noautoindent
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
