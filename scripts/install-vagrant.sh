@@ -2,9 +2,9 @@
 
 # Specify version
 app=vagrant
-ver=2.3.4
-arch=x86_64
-package=${app}_${ver}_${arch}.deb
+ver=2.4.1
+arch=amd64
+package=${app}_${ver}-1_${arch}.deb
 
 # Download deb packages
 wget -N https://releases.hashicorp.com/$app/$ver/$package
