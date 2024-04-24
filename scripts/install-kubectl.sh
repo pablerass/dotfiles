@@ -1,12 +1,13 @@
 #!/bin/bash -e
 
-source /etc/lsb-release
-DISTRO=$DISTRIB_CODENAME
-DISTRO=xenial # bionic distro does not yet exists in repository
+
+VER=1.29
 
 # Add repositories
-sudo sh -c "echo deb http://apt.kubernetes.io/ kubernetes-$DISTRO main > /etc/apt/sources.list.d/kubernetes.list"
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.pgp] https://pkgs.k8s.io/core:/stable:/v$VER/deb/ /" | \
+    sudo tee /etc/apt/sources.list.d/kubernetes.list
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v$VER/deb/Release.key | \
+    sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg
 
 # Update repos and packages
 sudo apt update -y
