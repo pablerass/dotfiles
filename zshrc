@@ -15,7 +15,7 @@ fi
 
 plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
     tmux tmuxinator git \
-    vagrant terraform nomad aws gcloud \
+    vagrant terraform terragrunt aws gcloud \
     docker docker-compose virsh \
     pip pipenv httpie pyenv \
     node npm nvm bower yarn grunt gulp \
