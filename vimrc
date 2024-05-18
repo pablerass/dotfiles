@@ -154,9 +154,6 @@ noremap <leader>CF :setlocal spell spelllang=fr_fr<CR>
 noremap <leader>NC :setlocal nospell<CR>
 autocmd BufRead,BufNewFile *.md,*.rst setlocal spell spelllang=en_us
 
-
-
-
 " jedi-vim configuration
 let g:jedi#popup_on_dot = 0
 
@@ -190,6 +187,8 @@ nmap <leader>bl :ls<CR>
 filetype on
 " Treat .json files as .js
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+" Treat .hcl files as .tf
+autocmd BufNewFile,BufRead *.hcl set filetype=terraform
 " Treat .md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 " Auto text wrapping
@@ -199,7 +198,7 @@ autocmd BufRead,BufNewFile *.yml,*.xml,*.css,*.sls,*.tf,*.hcl,*.feature,*.json,*
 " Force tabs instead of spaces
 autocmd BufRead,BufNewFile *.go setlocal expandtab!
 " Disable unwanted autoindent behaviors
-autocmd BufRead,BufNewFile *.py set nocindent nosmartindent indentexpr= " noautoindent
+autocmd BufRead,BufNewFile *.py,*.yml set nocindent nosmartindent indentexpr= " noautoindent
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>

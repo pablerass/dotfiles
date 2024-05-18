@@ -1,19 +1,18 @@
 #!/bin/bash -e
 
-# Specify version
-app=awless
-ver=0.1.11
+app=eksctl
 arch=amd64
-package=${app}-linux-${arch}.tar.gz
+package=${app}_Linux_${arch}.tar.gz
 
-# Download packages
-wget -N https://github.com/wallix/$app/releases/download/v$ver/$package
+# Download package
+wget -N "https://github.com/eksctl-io/eksctl/releases/latest/download/$package"
 
 # Install packages
+sudo rm -Rf /opt/$app
 sudo mkdir -p /opt/$app
-sudo tar -C /opt/$app -xzf $package
+sudo tar -C /opt/$app -xf $package
 
-# Delete packages
+# Delete package
 rm -f $package
 
 # Configure path

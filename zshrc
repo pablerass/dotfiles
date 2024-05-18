@@ -13,15 +13,18 @@ if [[ -d "$HOME/.pyenv" ]]; then
     pyenv virtualenvwrapper_lazy
 fi
 
-plugins=(z gnu-utils systemadmin systemd man rsync zsh-completions \
+plugins=(z gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
-    vagrant terraform terragrunt aws gcloud \
+    vagrant terraform terragrunt \
+    aws awsume awless s3cmd gcloud \
     docker docker-compose virsh \
     pip pipenv httpie pyenv \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
+    ansible \
     mvn ant gradle sdk golang glide \
-    kubectl minikube kops helm \
+    kubectl minikube kops helm eksctl \
+    zsh-completions \
     myrtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 

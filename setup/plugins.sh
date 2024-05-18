@@ -41,6 +41,10 @@ update_repo $GITHUB_URL/pablerass/zsh-terragrunt-autocomplete.git \
             $OH_MY_ZSH_PLUGINS_DIR/terragrunt
 update_repo $GITHUB_URL/zsh-users/zsh-completions \
             $OH_MY_ZSH_PLUGINS_DIR/zsh-completions
+update_repo $GITHUB_URL/Sordie/AWSume \
+            $OH_MY_ZSH_PLUGINS_DIR/awsume
+update_repo $GITHUB_URL/FFKL/s3cmd-zsh-plugin \
+            $OH_MY_ZSH_PLUGINS_DIR/s3cmd
 
 # Vim plugins
 update_repo $GITHUB_URL/scrooloose/nerdtree.git $VIM_PLUGINS_DIR/nerdtree

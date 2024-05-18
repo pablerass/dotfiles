@@ -21,6 +21,8 @@ alias secure='chmod go-rwx --preserve-root'
 
 alias scert='openssl x509 -text -noout -in'
 
+alias myip='curl icanhazip.com'
+
 ## Tools
 # Ansible
 alias ap='ansible-playbook'

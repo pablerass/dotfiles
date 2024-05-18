@@ -20,4 +20,3 @@ sudo -H pip install -U s3cmd
 # Install packages
 #	jq - enables json parsing from bash
 sudo apt install jq -y
-
