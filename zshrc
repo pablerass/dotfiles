@@ -16,15 +16,15 @@ fi
 plugins=(z gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
     vagrant terraform terragrunt \
-    aws awsume awless s3cmd gcloud \
-    docker docker-compose virsh \
+    aws awsume s3cmd \
+    docker docker-compose \
     pip pipenv httpie pyenv \
-    node npm nvm bower yarn grunt gulp \
-    ruby gem rbenv rvm rake \
+    node npm nvm \
     rust \
     ansible \
-    mvn ant gradle sdk golang glide \
-    kubectl minikube kops helm eksctl \
+    mvn ant sdk \
+    golang glide \
+    kubectl minikube helm \
     zsh-completions \
     myrtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
