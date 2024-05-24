@@ -2,7 +2,7 @@
 
 source /etc/lsb-release
 
-VERSION=8.x
+VERSION=20.x
 DISTRO=$DISTRIB_CODENAME
 
 # Add repositories

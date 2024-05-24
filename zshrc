@@ -21,6 +21,7 @@ plugins=(z gnu-utils systemadmin systemd man rsync \
     pip pipenv httpie pyenv \
     node npm nvm bower yarn grunt gulp \
     ruby gem rbenv rvm rake \
+    rust \
     ansible \
     mvn ant gradle sdk golang glide \
     kubectl minikube kops helm eksctl \
