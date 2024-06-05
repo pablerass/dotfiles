@@ -3,15 +3,13 @@
 source /etc/lsb-release
 
 DISTRO=$DISTRIB_CODENAME
-
-# Version
-package=dotnet-sdk-2.1.200
+KEYRING=/etc/apt/keyrings/dotnet.key
 
 # Add repositories
-sudo sh -c "echo deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ ${DISTRO} main > /etc/apt/sources.list.d/dotnetdev.list"
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
-#wget -q packages-microsoft-prod.deb https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-#sudo dpkg -i packages-microsoft-prod.deb
+sudo gpg --homedir /tmp --no-default-keyring --keyring $KEYRING \
+    --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
+echo "deb [arch=amd64 signed-by=$KEYRING] https://apt-mo.trafficmanager.net/repos/dotnet-release/ ${DISTRO} main" | \
+   sudo tee /etc/apt/sources.list.d/dotnetdev.list
 
 # Update repos and packages
 sudo apt update -y

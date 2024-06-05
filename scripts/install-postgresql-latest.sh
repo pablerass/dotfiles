@@ -3,10 +3,12 @@
 source /etc/lsb-release
 
 DISTRO=$DISTRIB_CODENAME
+KEYRING=/etc/apt/keyrings/postgresql.asc
 
 # Add repositories
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt $DISTRO-pgdg main > /etc/apt/sources.list.d/postgres.list"
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o $KEYRING
+echo "deb [signed-by=$KEYRING] http://apt.postgresql.org/pub/repos/apt $DISTRO-pgdg main" | \
+   sudo tee /etc/apt/sources.list.d/postgres.list
 
 
 # Update repos

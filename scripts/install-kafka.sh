@@ -4,6 +4,7 @@
 app=kafka
 ver=2.1.0
 package=${app}_2.11-${ver}.tgz
+
 # Download package
 wget -N http://apache.rediris.es/${app}/${ver}/${package}
 

@@ -1,8 +1,12 @@
 #!/bin/bash -e
 
+KEYRING=/etc/apt/keyrings/atlassian-sdk.key
+
 # Add repositories
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B07804338C015B73
-sudo sh -c 'echo "deb https://sdkrepo.atlassian.com/debian/ stable contrib" > /etc/apt/sources.list.d/atlassian-sdk.list'
+sudo gpg --homedir /tmp --no-default-keyring --keyring $KEYRING \
+    --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B07804338C015B73
+echo "deb [signed-by=$KEYRING] https://sdkrepo.atlassian.com/debian/ stable contrib" | \
+   sudo tee /etc/apt/sources.list.d/atlassian-sdk.list
 
 # Update repos and packages
 sudo apt update -y
