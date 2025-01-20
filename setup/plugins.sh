@@ -69,4 +69,5 @@ update_repo $GITHUB_URL/hashivim/vim-hashicorp-tools \
             $VIM_PLUGINS_DIR/vim-hashicorp-tools
 update_repo $GITHUB_URL/mechatroner/rainbow_csv \
             $VIM_PLUGINS_DIR/rainbox_csv
-
+update_repo $GITHUB_URL/github/copilot.vim \
+            $VIM_PLUGINS_DIR/copilot
