@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.2
+Name=AI2 Project Merger Tool
+Comment=AI2 Project Merger Tool
+Exec=java -jar "/opt/aimerger/AI2MergerApp.jar"
+StartupNotify=false
+Terminal=false
