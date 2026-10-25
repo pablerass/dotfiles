@@ -14,7 +14,8 @@ function update_repo {
     REPO=$1
     echo "> Updating $LOCAL_DIR"
     if [ -d "$LOCAL_DIR" ]; then
-        git -C "$LOCAL_DIR" pull origin master || git -C "$LOCAL_DIR" pull origin main
+        BRANCH=$(git -C "$LOCAL_DIR" rev-parse --abbrev-ref HEAD)
+        git -C "$LOCAL_DIR" pull origin $BRANCH
     else
         git clone $REPO "$LOCAL_DIR"
     fi

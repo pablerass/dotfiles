@@ -17,7 +17,7 @@ if ls /usr/bin/*session | grep gnome; then
 fi
 
 # Install oh-my-zsh
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O - | sh
 
 # Manage configuration files
 function update_config_link {
