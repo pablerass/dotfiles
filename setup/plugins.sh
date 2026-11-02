@@ -23,6 +23,7 @@ function update_repo {
 
 ## Links
 for plugin in $OH_MY_ZSH_OWN_CUSTOM_DIR/plugins/*; do
+    [ -e "$plugin" ] || continue
     echo "> Updating $OH_MY_ZSH_PLUGINS_DIR/$(basename $plugin)"
     ln -sf $plugin $OH_MY_ZSH_PLUGINS_DIR/
 done

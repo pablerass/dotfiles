@@ -20,8 +20,7 @@ end
 -- Find the Python interpreter for a project, in order:
 --   1. .venv/venv inside the project (uv, poetry with in-project venvs, python -m venv)
 --   2. The activated virtualenv ($VIRTUAL_ENV)
---   3. A virtualenvwrapper env named as the project ($WORKON_HOME/<project>)
---   4. The system python3
+--   3. The system python3
 local function python_path(root_dir)
     if root_dir then
         for _, venv in ipairs({ ".venv", "venv" }) do
@@ -33,13 +32,6 @@ local function python_path(root_dir)
     end
     if vim.env.VIRTUAL_ENV then
         return vim.fs.joinpath(vim.env.VIRTUAL_ENV, "bin", "python")
-    end
-    if root_dir then
-        local workon_home = vim.env.WORKON_HOME or vim.fs.joinpath(vim.env.HOME, ".virtualenvs")
-        local python = vim.fs.joinpath(workon_home, vim.fs.basename(root_dir), "bin", "python")
-        if vim.uv.fs_stat(python) then
-            return python
-        end
     end
     return vim.fn.exepath("python3")
 end

@@ -67,11 +67,7 @@ alias dc='docker-compose'
 alias lo='libreoffice --norestore'
 
 # Python
-alias wo='workon'
 alias de='deactivate'
-alias mkve='mkvirtualenv'
-alias rmve='rmvirtualenv'
-alias lsve='lsvirtualenv -b'
 
 # Vagrant
 alias vup='vagrant up'

@@ -2,31 +2,19 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mycandy"
 
-# Configure pyenv
-if [[ -d "$HOME/.pyenv" ]]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-    pyenv virtualenvwrapper_lazy
-fi
-
 plugins=(z gnu-utils systemadmin systemd man rsync \
     tmux tmuxinator git \
     vagrant terraform terragrunt \
     aws awsume s3cmd \
     docker docker-compose \
-    pip pipenv httpie pyenv \
+    pip uv httpie \
     node npm nvm \
     rust \
     ansible \
     mvn ant sdk \
     golang glide \
     kubectl minikube helm \
-    zsh-completions \
-    myrtualenvwrapper)
+    zsh-completions)
 source $ZSH/oh-my-zsh.sh
 
 # Customize

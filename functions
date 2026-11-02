@@ -41,16 +41,6 @@ function httpdump() {
 }
 
 # Python
-function mkvpe() {
-    VERSION=$1
-    shift
-
-    pyenv shell $VERSION || return
-    pip install virtualenvwrapper
-    pyenv virtualenvwrapper
-    mkvirtualenv $*
-}
-
 function uipdb() {
     export PYTHONBREAKPOINT=ipdb.set_trace
 }
