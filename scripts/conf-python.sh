@@ -3,7 +3,7 @@
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 # Install packages
-sudo apt install python3-pip -y
+sudo apt install python3-pip pipx -y
 sudo apt install universal-ctags -y
 
 # Update pip
