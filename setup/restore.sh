@@ -40,5 +40,13 @@ restore_config_link .terraformrc
 # Removing vim configuration
 rm ~/.vim -rf
 
+# Removing neovim configuration
+if [ -L ~/.config/nvim ]; then
+    rm -f ~/.config/nvim
+    if [ -d ~/.config/nvim.bak ]; then
+        mv ~/.config/nvim.bak ~/.config/nvim
+    fi
+fi
+
 # Set default shell
 sudo chsh -s $(which bash) $USER

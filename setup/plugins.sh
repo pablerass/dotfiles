@@ -72,3 +72,6 @@ update_repo $GITHUB_URL/mechatroner/rainbow_csv \
             $VIM_PLUGINS_DIR/rainbox_csv
 update_repo $GITHUB_URL/github/copilot.vim \
             $VIM_PLUGINS_DIR/copilot
+
+# Neovim plugins
+$(dirname "${BASH_SOURCE[0]}")/../scripts/update-neovim.sh

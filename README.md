@@ -6,6 +6,7 @@
 * Configures the following applications:
 
   * Vim.
+  * Neovim, with LSP, treesitter and Claude Code integration (`scripts/conf-neovim.sh`).
   * Zsh.
   * Git.
   * Tmux.

@@ -52,5 +52,8 @@ mkdir -p ~/.vim/spell
 # Add plugins
 $DIR/plugins.sh
 
+# Configure neovim
+$DIR/../scripts/conf-neovim.sh
+
 # Set default shell
 sudo chsh -s $(which zsh) $USER
