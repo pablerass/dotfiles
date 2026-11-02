@@ -2,19 +2,17 @@
 
 # Specify version
 app=cmctl
-ver=1.6.3
+ver=2.6.2
 arch=amd64
-package=${app}-linux-${arch}.tar.gz
+package=${app}_linux_${arch}
 
 # Download packages
-wget -N https://github.com/cert-manager/cert-manager/releases/download/v${ver}/${package}
+wget -N https://github.com/cert-manager/${app}/releases/download/v${ver}/${package}
 
 # Install packages
 sudo mkdir -p /opt/$app
-sudo tar -C /opt/$app -xzf $package
-
-# Delete packages
-rm -f $package
+chmod a+x $package
+sudo mv $package /opt/$app/$app
 
 # Configure path
 sudo sh -c "echo 'export PATH=\$PATH:/opt/$app' > /etc/profile.d/${app}.sh"

@@ -5,7 +5,7 @@ script=$(readlink -f $0)
 script_path=`dirname $script`
 
 # Specify eclipse version
-ver=2022-03
+ver=2026-09
 rel=R
 package=java
 file=eclipse-$package-$ver-$rel-linux-gtk-x86_64.tar.gz

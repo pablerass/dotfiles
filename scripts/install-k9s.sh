@@ -2,7 +2,7 @@
 
 # Specify version
 app=k9s
-ver=0.32.4
+ver=0.51.0
 arch=amd64
 package=${app}_linux_${arch}.deb
 

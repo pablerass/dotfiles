@@ -2,8 +2,8 @@
 
 # Specify version
 app=hugo
-ver=0.54.0
-package=${app}_${ver}_Linux-64bit.tar.gz
+ver=0.169.0
+package=${app}_${ver}_linux-amd64.tar.gz
 
 # Download packages
 wget -N https://github.com/gohugoio/$app/releases/download/v${ver}/$package

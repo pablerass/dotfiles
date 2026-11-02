@@ -2,7 +2,7 @@
 
 # Specify version
 app=kops
-ver=1.10.1
+ver=v1.36.2
 arch=amd64
 package=${app}-linux-${arch}
 

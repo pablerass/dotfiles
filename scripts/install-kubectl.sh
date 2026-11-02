@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-VER=1.29
+VER=1.37
 KEYRING=/etc/apt/keyrings/kubernetes-archive-keyring.gpg
 
 # Add repositories

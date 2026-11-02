@@ -2,7 +2,7 @@
 
 # Specify version
 app=helm
-ver=3.14.0
+ver=4.3.1
 arch=linux-amd64
 package=${app}-v${ver}-${arch}.tar.gz
 

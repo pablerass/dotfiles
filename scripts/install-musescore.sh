@@ -6,13 +6,13 @@ script_path=`dirname $script`
 
 # Specify package
 app=musescore
-ver=4.1.1
-number=232071203
+ver=4.7.6
+number=261022093
 arch=x86_64
-package=MuseScore-$ver.$number-$arch.AppImage
+package=MuseScore-Studio-$ver.$number-$arch.AppImage
 
 # Download package
-wget -N https://cdn.jsdelivr.net/$app/v$ver/$package
+wget -N https://github.com/musescore/MuseScore/releases/download/v$ver/$package
 
 # Install package
 sudo rm -Rf /opt/$app

@@ -2,7 +2,7 @@
 
 # Specify version
 app=git-delta
-ver=0.12.0
+ver=0.20.1
 arch=amd64
 package=${app}_${ver}_${arch}.deb
 

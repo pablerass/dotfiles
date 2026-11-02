@@ -2,7 +2,7 @@
 
 # Specify version
 app=bat
-ver=0.20.0
+ver=0.26.1
 arch=amd64
 package=${app}_${ver}_${arch}.deb
 

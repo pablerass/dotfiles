@@ -2,9 +2,9 @@
 
 # Specify version
 app=flyway
-ver=6.0.8
+ver=13.12.0
 package=${app}-commandline-${ver}-linux-x64.tar.gz
-base_url=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline
+base_url=https://download.red-gate.com/maven/release/com/redgate/flyway/flyway-commandline
 
 # Download package
 wget -N $base_url/$ver/$package

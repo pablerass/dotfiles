@@ -6,12 +6,12 @@ script_path=`dirname $script`
 
 # Specify package
 app=kdenlive
-version=16.12.1-2
+version=26.08.2
 arch=x86_64
-package=Kdenlive-$version-$arch.AppImage
+package=kdenlive-$version-$arch.AppImage
 
 # Download package
-wget -N http://files.kde.org/$app/release/$package
+wget -N https://download.kde.org/stable/$app/${version%.*}/linux/$package
 
 # Install package
 sudo mkdir -p /opt/$app

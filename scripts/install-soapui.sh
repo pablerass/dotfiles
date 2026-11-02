@@ -6,12 +6,12 @@ script_path=`dirname $script`
 
 # Specify version
 app=soapui
-ver=5.4.0
+ver=5.10.0
 arch=x64
 package=SoapUI-${ver}-linux-bin.tar.gz
 
 # Download packages
-wget -N https://s3.amazonaws.com/downloads.eviware/soapuios/${ver}/${package}
+wget -N https://dl.eviware.com/soapuios/${ver}/${package}
 
 # Install packages
 sudo tar xzf $package -C /opt

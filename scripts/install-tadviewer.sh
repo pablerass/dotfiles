@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Specify version
-version=0.9.0
+version=0.14.0
 package=tad_${version}_amd64.deb
 
 # Download deb packages

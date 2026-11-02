@@ -2,7 +2,7 @@
 
 # Specify version
 app=aws-vault
-ver=4.4.1
+ver=7.2.0
 arch=amd64
 package=${app}-linux-${arch}
 

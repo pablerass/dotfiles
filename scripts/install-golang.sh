@@ -2,12 +2,12 @@
 
 # Specify version
 app=go
-ver=1.22.3
+ver=1.27.3
 arch=amd64
 package=${app}${ver}.linux-${arch}.tar.gz
 
 # Download package
-wget -N https://storage.googleapis.com/golang/$package
+wget -N https://go.dev/dl/$package
 
 # Install packages
 sudo rm -Rf /opt/$app

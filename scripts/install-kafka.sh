@@ -2,11 +2,11 @@
 
 # Specify version
 app=kafka
-ver=2.1.0
-package=${app}_2.11-${ver}.tgz
+ver=4.4.0
+package=${app}_2.13-${ver}.tgz
 
 # Download package
-wget -N http://apache.rediris.es/${app}/${ver}/${package}
+wget -N https://downloads.apache.org/${app}/${ver}/${package}
 
 # Install packages
 sudo rm -Rf /opt/$app

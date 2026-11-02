@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-VERSION=24.x
+VERSION=26.x
 DISTRO=nodistro
 KEYRING=/etc/apt/keyrings/nodesource.gpg.key
 

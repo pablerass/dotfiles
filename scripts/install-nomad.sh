@@ -2,7 +2,7 @@
 
 # Specify version
 app=nomad
-ver=0.10.2
+ver=2.1.1
 arch=amd64
 package=${app}_${ver}_linux_${arch}.zip
 

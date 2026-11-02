@@ -2,13 +2,13 @@
 
 # Specify version
 app=blender
-version=3.6.1
+version=5.2.3
 arch=x64
 package_base=$app-$version-linux-$arch
 package=$package_base.tar.xz
 
 # Download package
-wget -N https://mirrors.dotsrc.org/$app/release/Blender3.6/$package
+wget -N https://mirrors.dotsrc.org/$app/release/Blender${version%.*}/$package
 
 # Install package
 sudo rm -Rf /opt/$app

@@ -4,7 +4,7 @@
 arch=amd64
 
 app=kubergrunt
-ver=0.15.0
+ver=0.19.0
 package=${app}_linux_${arch}
 
 # Download packages

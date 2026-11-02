@@ -2,7 +2,7 @@
 
 # Specify version
 app=gitlab-runner
-ver=v11.6.0
+ver=v19.3.5
 arch=amd64
 package=${app}-linux-${arch}
 

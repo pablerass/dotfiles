@@ -6,12 +6,12 @@ script_path=`dirname $script`
 
 # Specify package
 app=krita
-version=5.0.2
+version=6.0.4
 arch=x86_64
-package=$app-$version-$arch.appimage
+package=$app-$version-$arch.AppImage
 
 # Download package
-wget -N http://download.kde.org/stable/$app/$version/$package
+wget -N https://download.kde.org/stable/$app/$version/$package
 
 # Install package
 sudo mkdir -p /opt/$app

@@ -6,12 +6,12 @@ script_path=`dirname $script`
 
 # Specify package
 app=cerebro
-version=0.3.1
+version=0.11.0
 arch=x86_64
-package=$app-$version-$arch.AppImage
+package=Cerebro-$version.AppImage
 
 # Download package
-wget -N https://github.com/KELiON/$app/releases/download/v$version/$package
+wget -N https://github.com/cerebroapp/$app/releases/download/v$version/$package
 
 # Install package
 sudo mkdir -p /opt/$app

@@ -6,7 +6,7 @@ repo_api_url=https://api.github.com/repos/$repo_owner/$repo_name/git
 
 # Specify version
 app=openshift
-ver="v3.9.0"
+ver="v3.11.0"
 commit=$(curl $repo_api_url/tags/$(curl $repo_api_url/refs/tags/$ver | jq -r ".object.sha") | jq -r ".object.sha")
 package=openshift-origin-server-${ver}-${commit:0:7}-linux-64bit.tar.gz
 

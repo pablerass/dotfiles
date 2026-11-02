@@ -2,16 +2,16 @@
 
 # Specify version
 app=idea
-ver=2023.1.3
-package=${app}IC-${ver}.tar.gz
+ver=2026.2.4
+package=${app}-${ver}.tar.gz
 
 # Download deb packages
-wget -N https://download-cdn.jetbrains.com/idea/$package
+wget -N https://download.jetbrains.com/idea/$package
 
 # Install packages
 sudo rm -Rf /opt/$app
 sudo tar -xzf $package
-sudo mv $app-IC-* /opt/$app
+sudo mv $app-IU-* /opt/$app
 sudo ln -s /opt/$app/bin/${app}.sh /opt/$app/bin/$app
 
 # Delete packages

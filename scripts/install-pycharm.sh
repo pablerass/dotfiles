@@ -2,16 +2,16 @@
 
 # Specify version
 app=pycharm
-ver=2023.1.3
-package=$app-community-${ver}.tar.gz
+ver=2026.2.4
+package=$app-${ver}.tar.gz
 
 # Download deb packages
-wget -N https://download-cdn.jetbrains.com/python/$package
+wget -N https://download.jetbrains.com/python/$package
 
 # Install packages
 sudo rm -Rf /opt/$app
 sudo tar -xzf $package
-sudo mv $app-community-${ver} /opt/$app
+sudo mv $app-${ver} /opt/$app
 sudo ln -s /opt/$app/bin/${app}.sh /opt/$app/bin/charm
 
 # Delete packages
