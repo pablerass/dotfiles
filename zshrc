@@ -11,7 +11,7 @@ plugins=(z gnu-utils systemadmin systemd man rsync \
     vagrant terraform terragrunt \
     aws awsume s3cmd \
     docker docker-compose \
-    pip uv httpie \
+    pip uv ruff httpie \
     node npm nvm \
     rust \
     ansible \
@@ -52,6 +52,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export GOPATH="$HOME/.gopath"
 export PATH="$GOPATH/bin:$PATH"
 [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && \. "$HOME/.sdkman/bin/sdkman-init.sh"  # This loads sdkman
+(( $+commands[ty] )) && eval "$(ty generate-shell-completion zsh)"  # No oh-my-zsh plugin for ty yet
 
 if [ -f "$HOME/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
