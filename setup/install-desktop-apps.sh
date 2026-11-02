@@ -13,6 +13,8 @@ sudo apt install -y keepassxc
 $SCRIPTS_DIR/conf-gnome-shell.sh
 $SCRIPTS_DIR/conf-python.sh
 $SCRIPTS_DIR/install-chrome.sh
+$SCRIPTS_DIR/install-fzf.sh
+$SCRIPTS_DIR/install-github-cli.sh
 $SCRIPTS_DIR/install-dropbox.sh
 $SCRIPTS_DIR/install-gimp.sh
 $SCRIPTS_DIR/install-guake.sh

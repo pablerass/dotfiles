@@ -2,8 +2,12 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mycandy"
 
+# Load nvm on first use of node, npm or nvm to speed up shell startup
+zstyle ':omz:plugins:nvm' lazy yes
+
 plugins=(z gnu-utils systemadmin systemd man rsync \
-    tmux tmuxinator git \
+    sudo extract colored-man-pages copypath copyfile copybuffer fzf \
+    tmux tmuxinator git gh \
     vagrant terraform terragrunt \
     aws awsume s3cmd \
     docker docker-compose \
@@ -12,9 +16,10 @@ plugins=(z gnu-utils systemadmin systemd man rsync \
     rust \
     ansible \
     mvn ant sdk \
-    golang glide \
+    golang \
     kubectl minikube helm \
-    zsh-completions)
+    zsh-completions zsh-autosuggestions \
+    zsh-syntax-highlighting)  # Must be the last plugin
 source $ZSH/oh-my-zsh.sh
 
 # Customize

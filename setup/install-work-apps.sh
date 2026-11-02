@@ -14,6 +14,8 @@ $SCRIPTS_DIR/conf-gnome-shell.sh
 $SCRIPTS_DIR/conf-python.sh
 $SCRIPTS_DIR/conf-mfa.sh
 $SCRIPTS_DIR/install-chrome.sh
+$SCRIPTS_DIR/install-fzf.sh
+$SCRIPTS_DIR/install-github-cli.sh
 $SCRIPTS_DIR/install-docker.sh
 $SCRIPTS_DIR/install-guake.sh
 $SCRIPTS_DIR/install-gimp.sh

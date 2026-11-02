@@ -37,12 +37,14 @@ done
 # oh-my-zsh plugins
 update_repo $GITHUB_URL/jplitza/zsh-virsh-autocomplete.git \
             $OH_MY_ZSH_PLUGINS_DIR/virsh
-update_repo $GITHUB_URL/technosophos/glide-zsh.git \
-            $OH_MY_ZSH_PLUGINS_DIR/glide
 update_repo $GITHUB_URL/pablerass/zsh-terragrunt-autocomplete.git \
             $OH_MY_ZSH_PLUGINS_DIR/terragrunt
 update_repo $GITHUB_URL/zsh-users/zsh-completions \
             $OH_MY_ZSH_PLUGINS_DIR/zsh-completions
+update_repo $GITHUB_URL/zsh-users/zsh-autosuggestions \
+            $OH_MY_ZSH_PLUGINS_DIR/zsh-autosuggestions
+update_repo $GITHUB_URL/zsh-users/zsh-syntax-highlighting \
+            $OH_MY_ZSH_PLUGINS_DIR/zsh-syntax-highlighting
 update_repo $GITHUB_URL/Sordie/AWSume \
             $OH_MY_ZSH_PLUGINS_DIR/awsume
 update_repo $GITHUB_URL/FFKL/s3cmd-zsh-plugin \
