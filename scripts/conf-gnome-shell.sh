@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-BASE_DIR="$HOME/.local/share/gnome-shell/extensions"
 EXTENSIONS_URL="https://extensions.gnome.org/extension-data"
 
 function install_extension {
@@ -8,15 +7,11 @@ function install_extension {
 
     wget -N $EXTENSIONS_URL/$ext.zip
     ext_uuid=$(unzip -c $ext metadata.json | grep uuid | cut -d \" -f4)
-    mkdir -p $BASE_DIR/$ext_uuid
-    unzip -q -o $ext.zip -d $BASE_DIR/$ext_uuid/
-    gnome-extensions enable $ext_uuid || :
+    gnome-extensions install --force $ext.zip
     rm $ext.zip
 }
 
-install_extension caffeinepatapon.info.v42.shell-extension
-install_extension workspace-indicatorgnome-shell-extensions.gcampax.github.com.v52.shell-extension
-install_extension sound-output-device-chooserkgshank.net.v43.shell-extension
+install_extension espressocoadmunkee.github.com.v10.shell-extension
 
 # Touchpad behavior
 gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
@@ -26,7 +21,6 @@ gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-locations false
-# gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/$USER/images/screenshots"
 gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.shell.extensions.ding show-home false
 gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
@@ -45,4 +39,4 @@ gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock
 
 
 # Reload gnome-shell
-killall -3 gnome-shell
+xdg-screensaver lock

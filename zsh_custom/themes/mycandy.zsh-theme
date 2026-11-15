@@ -10,7 +10,7 @@ function aws_vault_prompt_info() {
   echo "$ZSH_THEME_AWS_VAULT_PROMPT_PREFIX$AWS_VAULT$ZSH_THEME_AWS_VAULT_PROMPT_SUFFIX"
 }
 
-PROMPT=$'%{$fg_bold[green]%}%n@%m %{$fg[blue]%}%D{[%X]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(env_vault_prompt_info)$(aws_vault_prompt_info)\$(git_prompt_info)\
+PROMPT=$'%{$fg_bold[green]%}%n@%m %{$fg[blue]%}%D{[%T]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(env_vault_prompt_info)$(aws_vault_prompt_info)\$(git_prompt_info)\
 %{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
 
 ZSH_THEME_ENV_VAULT_PROMPT_PREFIX="%{$fg[blue]%}("
