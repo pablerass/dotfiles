@@ -2,9 +2,23 @@
 
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
-# Use latest kernel and xorg
-source /etc/lsb-relelease
-sudo apt install --install-recommends linux-generic-hwe-$DISTRIB_RELEASE xserver-xorg-hwe-$DISTRIB_RELEASE -y
+# Use the hardware enablement kernel (desktop installs already ship it)
+source /etc/lsb-release
+if apt-cache show linux-generic-hwe-$DISTRIB_RELEASE > /dev/null 2>&1; then
+    sudo apt install --install-recommends linux-generic-hwe-$DISTRIB_RELEASE -y
+fi
+
+# Install the recommended NVIDIA driver, with modules matching the running kernel
+if [ -n "$(lspci -d 10de: 2>/dev/null)" ]; then
+    sudo apt install -y ubuntu-drivers-common
+    sudo ubuntu-drivers install
+    # ubuntu-drivers only covers the running kernel; also cover the HWE kernel
+    # in case it was just installed and is not booted yet
+    VER=$(dpkg-query -W -f='${Package}\n' 'nvidia-driver-*' 2>/dev/null | grep -oP '^nvidia-driver-\K[0-9]+' | head -1)
+    if [ -n "$VER" ] && dpkg -s linux-generic-hwe-$DISTRIB_RELEASE > /dev/null 2>&1; then
+        sudo apt install -y linux-modules-nvidia-$VER-generic-hwe-$DISTRIB_RELEASE
+    fi
+fi
 
 # Install packages
 sudo apt install -y git tmux vim zsh htop curl fonts-powerline
