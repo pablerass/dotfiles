@@ -50,6 +50,9 @@ mkdir -p ~/.vim/spell
 # Add plugins
 $DIR/plugins.sh
 
+# Install fzf, used by the oh-my-zsh fzf plugin
+$DIR/../scripts/install-fzf.sh
+
 # Configure neovim
 $DIR/../scripts/conf-neovim.sh
 

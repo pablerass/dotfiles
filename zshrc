@@ -6,10 +6,9 @@ ZSH_THEME="mycandy"
 zstyle ':omz:plugins:nvm' lazy yes
 
 plugins=(z gnu-utils systemadmin systemd man rsync \
-    sudo extract colored-man-pages copypath copyfile copybuffer fzf \
+    sudo extract colored-man-pages copypath copyfile copybuffer \
     tmux tmuxinator git gh \
-    vagrant terraform terragrunt \
-    aws awsume s3cmd \
+    vagrant terraform aws \
     docker docker-compose \
     pip uv ruff httpie \
     node npm nvm \
@@ -20,6 +19,8 @@ plugins=(z gnu-utils systemadmin systemd man rsync \
     kubectl minikube helm \
     zsh-completions zsh-autosuggestions \
     zsh-syntax-highlighting)  # Must be the last plugin
+# Only load fzf plugin when the binary is available (scripts/install-fzf.sh)
+(( $+commands[fzf] )) && plugins=(fzf $plugins)
 source $ZSH/oh-my-zsh.sh
 
 # Customize
